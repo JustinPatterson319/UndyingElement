@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Collisions
+  - Encounters
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2664925853
+    locked: 0
+  - name: SolidObjects
+    uniqueID: 3862226159
+    locked: 0
+  - name: Animated
+    uniqueID: 1453812179
+    locked: 0
+  - name: Player
+    uniqueID: 985106605
     locked: 0
