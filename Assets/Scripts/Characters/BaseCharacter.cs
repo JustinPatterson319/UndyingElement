@@ -10,8 +10,9 @@ public class BaseCharacter : ScriptableObject
     [TextArea]
     [SerializeField] string description;
 
-    [SerializeField] Sprite backSprite;
-    [SerializeField] Sprite frontSprite;
+    [SerializeField] Sprite battleSprite;
+    [SerializeField] Sprite faceSprite;
+    [SerializeField] Sprite elementSprite;
 
     [SerializeField] CharacterElement type;
 
@@ -46,14 +47,19 @@ public class BaseCharacter : ScriptableObject
         get { return type; }
     }
 
-    public Sprite FrontSprite
+    public Sprite BattleSprite
     {
-        get { return frontSprite; }
+        get { return battleSprite; }
     }
 
-    public Sprite BackSprite
+    public Sprite FaceSprite
     {
-        get { return backSprite; }
+        get { return faceSprite; }
+    }
+
+    public Sprite ElementSprite
+    {
+        get { return elementSprite; }
     }
 
     public int HP

@@ -1,0 +1,1971 @@
+fileFormatVersion: 2
+guid: 3922e71c5098f0048839f65393998642
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0300b780a7e730147a06bf07fd2f545c
+      internalID: -695762242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2b60fe82763d3438ab8db14f679040
+      internalID: 1538240183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cb6119fcf4ed445b5b9b1700b4d4b4
+      internalID: -453395664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf31500e2b5383499f73587fa2082f8
+      internalID: 1899439250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33467f1cd17d7a944ab8c64e21e38904
+      internalID: 1927130364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 652
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090d9bbfd61d99444895687cb88f362a
+      internalID: -1003905678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d5c08dc17885c4283cad6c04698d81
+      internalID: -1136433574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d589bb42e387745bdcbf86b8f99cf6
+      internalID: 1614213592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0f7a6185a385a48a00a0dae361ec72
+      internalID: -1046950825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e860803b886a8914899230f5e28db962
+      internalID: -1136486648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4425ff75732a34796db8d6402811ba
+      internalID: -490659171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 604
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf575b6e8cd4854ab21ebb77b216257
+      internalID: 588939200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d7e083113a38a48b0e9aef667d24ff
+      internalID: -1049943900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7dfdc8a58e424418c88b7395e90f03
+      internalID: -909894743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e86bc605ea678149ba9a8792964ca93
+      internalID: 235024353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fde2e50a65aa648950f342bd0e916f
+      internalID: -971723173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc47c9279a2b854e837c7221199ba94
+      internalID: -1978382760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 556
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaa221607f8ba3479c5e5af6c4206e0
+      internalID: -636063164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4f4db37363e2842afd6957ffa1efa5
+      internalID: -96495079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dab61c5e38501743916ca67738460f4
+      internalID: 400667929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4575fe2f7681b104e8be359ae292a2fe
+      internalID: 374225563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c25577c3962614f9df2a655eb210b7
+      internalID: 117195492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d297afa049e7f34fb1ca63158502ab9
+      internalID: 1361703075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 508
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f468d6465accebf40a56f286b18cbf26
+      internalID: -40120339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcda752553a96be46901aeebaf70d06d
+      internalID: 1927391278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9892462d6e73cae47b3abcdd998f32da
+      internalID: 1759452633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4594dc0710af0f4e845ca20cdaa0984
+      internalID: 650329250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a822385370084841a45aad202df774b
+      internalID: 411246107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3c7181b5b83a64d8812e7ecfbf8285
+      internalID: 1899973462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_29
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 460
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6082f57b4eaaa344cb6b0ebdad13d1b3
+      internalID: 1258696540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fd75107425bc84faf08022ecf10b57
+      internalID: 346932400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddbc2dbc196aa748a15c40e88590d25
+      internalID: -1279306118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b70903fc573d734abaf0e5ae460607f
+      internalID: 39427647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f0d651fa9e22a46a7edeffc0955259
+      internalID: -1205579286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a55885e850e2c3468587d9361a9f2dc
+      internalID: 642529800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 412
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c266212d08055e542bf371162508e256
+      internalID: -656582028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f3a7e0ef279214f872c382ac8b4637
+      internalID: 1589521876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cb8d77e6cf99f4ab8ed329e4678de0
+      internalID: -260979866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3ebd3c3c57b2242a6820298f11ac6f
+      internalID: -2090040360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c114fd4f8f5e7744a6a639d486d2fe6
+      internalID: 1154632046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dcc7dd3d33bd84bbf6fc308108bcb7
+      internalID: -304336197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_41
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 364
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac13b0f5de36f21438e9bff8997539f1
+      internalID: 33003257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9d7f0015a04004881553fcebe1ed2b
+      internalID: -919453272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579f582fae913e148bdaf6f3cef9e329
+      internalID: -1734637609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30800d8f64776de4cb0937848fc0efc7
+      internalID: -521035675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_45
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9152ba54b6277af419f56d365e33caff
+      internalID: 1487087870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224087db8e9acee428c008913352d685
+      internalID: 494330299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_47
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 316
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dad582067ca6a498fd9ed359c22787
+      internalID: -36156007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03018d4e2cb78af4dbc57928f448b42c
+      internalID: -1332916092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_49
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a782cb5fabc284fa68ae82c9198ab2
+      internalID: 513498330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96243fd15c956941a25708793f6c37f
+      internalID: 2123321083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_51
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837a308d3f451f547ad85f9933475efb
+      internalID: 761476699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc90782aa2633ac4eb8fcab3f5a3b153
+      internalID: -1331970868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_53
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c439eba88fe95e84d9a3fe47630bfe62
+      internalID: 1786560515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0d67efb53b6b34c81a75cda51160fe
+      internalID: 38834367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2478f7234312704aa898ca545af7f9c
+      internalID: -1699714353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_56
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cbe624fa6db534fa202ec19b6e9dec
+      internalID: 935022249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_57
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3093c98dc37efdd45b8a4f979971280c
+      internalID: -2004371589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df54ac4903ce144e89947b5f0dfb34f
+      internalID: -1707134952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_59
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cd805904c6b32459dd7cab5c1f29cc
+      internalID: -1776896626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f359780d5a0028428e92af3bbca09fa
+      internalID: -1753218915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_61
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ecbc0a299ef52459e1d09f516423fd
+      internalID: 1840338456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bb5116b25d5d14fad443d11ea2e5ff
+      internalID: -957084233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_63
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db70ceff2b6d584f862fbe4769ac0a7
+      internalID: 163591155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b58c572a4531aa4ba6e8a849f39c0a7
+      internalID: 1652754707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_65
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 172
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0478bdc31cf854e9ef3eab15ac3f8d
+      internalID: -231167002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fe8b8bddb908c4d836f27abcf63eec
+      internalID: -496310734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_67
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84ff3bd004e89847895864eabab28b4
+      internalID: -1860500274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce7b46c435de25408ad3bcb57acb463
+      internalID: 371704434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_69
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d2aa54e9348114cb37e4a811b990a5
+      internalID: 875548389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_70
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c9f8ae6ad68b34b8fdc4d0abc11fa6
+      internalID: 1438145051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_71
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 124
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be672eeaa203187488b27c8444bf3306
+      internalID: -1939977935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13acffdf2560294db97bb0b55f7db7e
+      internalID: -768878084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_73
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a760037d27866f14b817df6ccd37bd9b
+      internalID: 373484051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ba103b36eafb44ca2285fb11a51a99
+      internalID: 1191615039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_75
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83370c097f6498428c9dea0bf9e6620
+      internalID: 2096468683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_76
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c297254f521ce49ba2a5269323cafe
+      internalID: -1209529090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_77
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 76
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a286daca9841aa448d1ea8254edcc79
+      internalID: 227718970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f397df9aa5417974ea120f39dfaa26a7
+      internalID: 1571808706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_79
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f18c79e88aa4a4ebc4e136b37fe205
+      internalID: -1031476957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_80
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0761ec54f009aa546b33c69e7cc2b5ae
+      internalID: -2000445818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_81
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6952b1aaba3a26d4c99f7ac7f7447a3f
+      internalID: -1421823690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4dfeadb0ffc3e42bf24bc531844479
+      internalID: -274090169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_83
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 28
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e324f5cc6656414a8a9100c77846243
+      internalID: -626937955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_20: 374225563
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_34: 642529800
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_38: -2090040360
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_18: -96495079
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_59: -1776896626
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_4: 1927130364
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_60: -1753218915
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_70: 1438145051
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_80: -2000445818
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_76: -1209529090
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_83: -626937955
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_14: 235024353
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_15: -971723173
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_79: -1031476957
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_11: 588939200
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_40: -304336197
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_19: 400667929
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_24: 1927391278
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_31: -1279306118
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_53: 1786560515
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_63: 163591155
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_48: -1332916092
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_49: 513498330
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_56: 935022249
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_71: -1939977935
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_5: -1003905678
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_23: -40120339
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_66: -496310734
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_75: 2096468683
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_42: -919453272
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_51: 761476699
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_57: -2004371589
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_7: 1614213592
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_0: -695762242
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_72: -768878084
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_65: -231167002
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_9: -1136486648
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_55: -1699714353
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_8: -1046950825
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_44: -521035675
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_50: 2123321083
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_77: 227718970
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_12: -1049943900
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_46: 494330299
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_54: 38834367
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_30: 346932400
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_26: 650329250
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_28: 1899973462
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_74: 1191615039
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_16: -1978382760
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_21: 117195492
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_36: 1589521876
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_64: 1652754707
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_73: 373484051
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_13: -909894743
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_37: -260979866
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_67: -1860500274
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_3: 1899439250
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_1: 1538240183
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_2: -453395664
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_6: -1136433574
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_41: 33003257
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_62: -957084233
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_29: 1258696540
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_43: -1734637609
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_10: -490659171
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_33: -1205579286
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_45: 1487087870
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_32: 39427647
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_52: -1331970868
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_69: 875548389
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_22: 1361703075
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_68: 371704434
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_82: -274090169
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_61: 1840338456
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_27: 411246107
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_25: 1759452633
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_58: -1707134952
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_17: -636063164
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_35: -656582028
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_39: 1154632046
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_47: -36156007
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_78: 1571808706
+      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_81: -1421823690
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

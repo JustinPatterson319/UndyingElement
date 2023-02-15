@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
-  m_Name: Grey
+  m_Name: Lock
   m_EditorClassIdentifier: 
-  name: Grey
+  name: 
   description: 
-  battleSprite: {fileID: 1811238740, guid: d41f2afeacc996548b7da82a67dccd7f, type: 3}
-  faceSprite: {fileID: 1935339234, guid: 84eb9606a5f35b14d83356e0a1997f52, type: 3}
-  elementSprite: {fileID: 2142175693, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
-  type: 4
+  battleSprite: {fileID: -492913148, guid: fa84e202715ff9348abd9fc9adb73493, type: 3}
+  faceSprite: {fileID: 1183520557, guid: a81b35f48903c744aaee36d2a57869ae, type: 3}
+  elementSprite: {fileID: -303649665, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  type: 11
   hp: 100
   mp: 100
   regAttack: 100
