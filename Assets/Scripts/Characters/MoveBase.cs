@@ -14,6 +14,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int magCost;
+    [SerializeField] Sprite[] sprite;
 
     public string Name
     {
@@ -43,5 +44,10 @@ public class MoveBase : ScriptableObject
     public int MagCost
     {
         get { return magCost; }
+    }
+
+    public Sprite[] Sprite
+    {
+        get { return sprite; }
     }
 }

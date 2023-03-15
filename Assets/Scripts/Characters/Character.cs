@@ -58,7 +58,7 @@ public class Character
 
     public int HP
     {
-        get { return Mathf.FloorToInt((Base.HP * Level) / 100f) + 10; }
+        get { return Mathf.FloorToInt((2 * Base.HP * Level) / 100f) + 10 + Level; }
     }
 
     public int MP
@@ -70,4 +70,49 @@ public class Character
     {
         get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
     }
+
+    public DamageDetails TakeDamage(Move move, Character attacker)
+    {
+        float critical = 1f;
+        if (Random.value * 100f <= 5.0f)
+        {
+            critical = 2f;
+        }
+
+        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type);
+
+        var damageDetails = new DamageDetails()
+        {
+            Type = type,
+            Critical = critical,
+            Fainted = false
+        };
+
+        float modifiers = Random.Range(.85f, 1f) * type * critical;
+        float a = (2 * attacker.Level + 10) / 250f;
+        float d = a * move.Base.Power * ((float)attacker.RegAttack / RegDefense) + 2;
+        int damage = Mathf.FloorToInt(d * modifiers);
+
+        currentHP -= damage;
+        if (currentHP <= 0)
+        {
+            currentHP = 0;
+            damageDetails.Fainted = true;
+        }
+
+        return damageDetails;
+    }
+
+    public Move GetRandomMove()
+    {
+        int r = Random.Range(0, Moves.Count);
+        return Moves[r];
+    }
+}
+
+public class DamageDetails
+{
+    public bool Fainted { get; set; }
+    public float Critical { get; set; }
+    public float Type { get; set; }
 }

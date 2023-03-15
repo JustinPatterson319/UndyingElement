@@ -18,3 +18,8 @@ MonoBehaviour:
   power: 80
   accuracy: 80
   magCost: 40
+  sprite:
+  - {fileID: -225819366, guid: 83d9d42d8da25414dbc091102f05cd4c, type: 3}
+  - {fileID: 878758254, guid: 84eb9606a5f35b14d83356e0a1997f52, type: 3}
+  - {fileID: 606442408, guid: a81b35f48903c744aaee36d2a57869ae, type: 3}
+  - {fileID: 442523681, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}

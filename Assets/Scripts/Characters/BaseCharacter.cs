@@ -105,19 +105,50 @@ public class BaseCharacter : ScriptableObject
 
 public enum CharacterElement
 {
+    Non,
     None,
-    Neutral,
-    Flame,
-    Lightning,
+    Flm,
+    Ltng,
     Mind,
-    Nature,
+    Ntre,
     Ice,
-    Earth,
+    Erth,
     Wind,
     Aqua,
-    Light,
-    Darkness
+    Lght,
+    Dark
 }
+
+public class TypeChart
+{
+    static float[][] chart =
+    {
+      //                      Fl    Lg    Md    Nt    Ic    Er    Wd    Aq    Lt    Dk
+      /*Flme*/ new float[] { 0.5f, 1.0f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 0.5f, 0.5f, 1.0f },
+      /*Ltng*/ new float[] { 1.0f, 0.5f, 1.0f, 0.5f, 1.0f, 0.5f, 2.0f, 2.0f, 0.5f, 1.0f },
+      /*Mind*/ new float[] { 0.5f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 2.0f, 2.0f },
+      /*Ntre*/ new float[] { 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 2.0f, 0.5f, 1.0f },
+      /* Ice*/ new float[] { 1.0f, 2.0f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f, 1.0f, 1.0f, 0.5f },
+      /*Erth*/ new float[] { 1.0f, 2.0f, 1.0f, 0.5f, 2.0f, 1.0f, 2.0f, 1.0f, 1.0f, 0.5f },
+      /*Wind*/ new float[] { 2.0f, 1.0f, 1.0f, 2.0f, 0.5f, 0.5f, 1.0f, 1.0f, 0.5f, 1.0f },
+      /*Aqua*/ new float[] { 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f, 0.5f },
+      /*Lght*/ new float[] { 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 2.0f },
+      /*Dark*/ new float[] { 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f },
+    };
+
+    public static float GetEffectiveness(CharacterElement attackType, CharacterElement defenseType)
+    {
+        if (attackType == CharacterElement.None || defenseType == CharacterElement.None)
+        {
+            return 1;
+        }
+
+        int row = (int)attackType - 2;
+        int col = (int)defenseType - 2;
+        return chart[row][col];
+    }
+}
+
 
 [System.Serializable]
 public class LearnableMove

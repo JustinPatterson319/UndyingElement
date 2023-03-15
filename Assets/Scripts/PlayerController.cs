@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask collisionLayer;
     public LayerMask encounterLayer;
+
+    public event Action OnEncountered;
 
     // Start is called before the first frame update
    
@@ -27,7 +30,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
         if (isMoving == false)
         {
@@ -87,9 +90,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, 0.2f, encounterLayer) != null)
         {
-            if (Random.Range(1, 101) <= 10)
+            if (UnityEngine.Random.Range(1, 101) <= 10)
             {
                 Debug.Log("Battle!");
+                animator.SetBool("isMoving", false);
+                OnEncountered();
             }
         }
     }
