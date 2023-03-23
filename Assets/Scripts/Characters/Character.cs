@@ -2,10 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Character
 {
-    public BaseCharacter Base { get; set; }
-    public int Level { get; set; }
+    [SerializeField] BaseCharacter _base;
+    [SerializeField] int level;
+
+
+    public BaseCharacter Base 
+    { 
+        get
+        {
+            return _base;
+        }
+    }
+    public int Level
+    {
+        get
+        {
+            return level;
+        }
+    }
 
     public int currentHP { get; set; }
     public int currentMP { get; set; }
@@ -13,10 +30,8 @@ public class Character
     //moves
     public List<Move> Moves { get; set; }
 
-    public Character(BaseCharacter cBase, int cLevel)
+    public void Init()
     {
-        Base = cBase;
-        Level = cLevel;
         currentHP = HP;
         currentMP = MP;
 
@@ -63,7 +78,7 @@ public class Character
 
     public int MP
     {
-        get { return Mathf.FloorToInt((Base.MP * Level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((2 * Base.MP * Level) / 100f) + Level; }
     }
 
     public int Speed
@@ -88,9 +103,12 @@ public class Character
             Fainted = false
         };
 
+        float attack = (move.Base.IsSpecial) ? attacker.MagAttack : attacker.RegAttack;
+        float defense = (move.Base.IsSpecial) ? MagDefense : RegDefense;
+
         float modifiers = Random.Range(.85f, 1f) * type * critical;
         float a = (2 * attacker.Level + 10) / 250f;
-        float d = a * move.Base.Power * ((float)attacker.RegAttack / RegDefense) + 2;
+        float d = a * move.Base.Power * ((float)attack / defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
 
         currentHP -= damage;

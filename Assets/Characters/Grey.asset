@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Grey
+  m_EditorClassIdentifier: 
+  name: Grey
+  description: 
+  battleSprite: {fileID: -1187530077, guid: d92825ebfdfe8b34f8d896134ba2f74e, type: 3}
+  partySprite: {fileID: -175037275, guid: d92825ebfdfe8b34f8d896134ba2f74e, type: 3}
+  faceSprite: {fileID: 1935339234, guid: 84eb9606a5f35b14d83356e0a1997f52, type: 3}
+  elementSprite: {fileID: 2142175693, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: -1020286514, guid: 9908d1ba784bc714f83534d3ad1b8785, type: 3}
+  type: 4
+  hp: 70
+  mp: 110
+  regAttack: 60
+  magAttack: 140
+  regDefense: 80
+  magDefense: 80
+  speed: 110
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 458ddc441cda10e439ab717d3c14d7f9, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 35dc32664d8ce5c43a0d9a3bc0e2e630, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: d77c18957306db540b0deb9fc4c01308, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 9ad38d7d23e027a45b9f310afd2a3925, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 374e749a404aeba40a64c5d00673579e, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 13043cc8d354ede42ae8a143709550fd, type: 2}
+    level: 0

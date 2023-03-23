@@ -50,4 +50,19 @@ public class MoveBase : ScriptableObject
     {
         get { return sprite; }
     }
+
+    public bool IsSpecial
+    {
+        get
+        {
+            if (type == CharacterElement.None)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
 }

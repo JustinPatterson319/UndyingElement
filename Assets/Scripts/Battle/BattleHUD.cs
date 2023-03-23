@@ -34,7 +34,12 @@ public class BattleHUD : MonoBehaviour
     public IEnumerator UpdateHP()
     {
         healthText.text = _character.currentHP + "/" + _character.HP;
-        magicText.text = _character.currentMP + "/" + _character.MP;
         yield return hpBar.SetHPSmooth((float)_character.currentHP / _character.HP);
+    }
+
+    public IEnumerator UpdateMP()
+    {
+        magicText.text = _character.currentMP + "/" + _character.MP;
+        yield return mpBar.SetMPSmooth((float)_character.currentMP / _character.MP);
     }
 }

@@ -34,9 +34,8 @@ public class BatlleDialogue : MonoBehaviour
         foreach (var letter in dialog.ToCharArray())
         {
             dialogText.text += letter;
-            yield return new WaitForSeconds(1f / lettersPerSecond);
+            yield return new WaitForSeconds(.7f / lettersPerSecond);
         }
-
         yield return new WaitForSeconds(1f);
     }
 

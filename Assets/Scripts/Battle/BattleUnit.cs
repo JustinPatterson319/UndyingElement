@@ -6,8 +6,6 @@ using DG.Tweening;
 
 public class BattleUnit : MonoBehaviour
 {
-    [SerializeField] BaseCharacter _base;
-    [SerializeField] int level;
     [SerializeField] bool isPlayerUnit;
 
     public Character Character { get; set; }
@@ -24,9 +22,9 @@ public class BattleUnit : MonoBehaviour
         originalColor = image.color;
     }
 
-    public void Setup()
+    public void Setup(Character character)
     {
-        Character = new Character(_base, level);
+        Character = character;
         image.sprite = Character.Base.BattleSprite;
 
         image.color = originalColor;
@@ -37,14 +35,14 @@ public class BattleUnit : MonoBehaviour
     {
         if(isPlayerUnit)
         {
-            
+            image.transform.localPosition = new Vector3(-500f, originalPos.y);
         }
         else
         {
             image.transform.localPosition = new Vector3(500f, originalPos.y);
         }
 
-        image.transform.DOLocalMoveX(originalPos.x, 1.5f);
+        image.transform.DOLocalMoveX(originalPos.x, 1f);
     }
 
     public void PlayAttackAnimation()
@@ -74,5 +72,11 @@ public class BattleUnit : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(image.DOColor(Color.red, .1f));
         sequence.Append(image.DOFade(0f, 0.5f));
+    }
+
+    public void PlayRetreatAnimation()
+    {
+        image.sprite = Character.Base.FleeSprite;
+        image.transform.DOLocalMoveX(-500f, 1f);
     }
 }

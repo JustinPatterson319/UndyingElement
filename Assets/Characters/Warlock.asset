@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Warlock
+  m_EditorClassIdentifier: 
+  name: Warlock
+  description: 
+  battleSprite: {fileID: -1491995329, guid: 3ed34881b7a427f45aef0e304721dde2, type: 3}
+  partySprite: {fileID: -868402230, guid: 3ed34881b7a427f45aef0e304721dde2, type: 3}
+  faceSprite: {fileID: 1183520557, guid: a81b35f48903c744aaee36d2a57869ae, type: 3}
+  elementSprite: {fileID: -303649665, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: -1675993691, guid: 3ed34881b7a427f45aef0e304721dde2, type: 3}
+  type: 11
+  hp: 100
+  mp: 100
+  regAttack: 100
+  magAttack: 100
+  regDefense: 100
+  magDefense: 100
+  speed: 100
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 35dc32664d8ce5c43a0d9a3bc0e2e630, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 6c742c0dad93eaa4c946e2daf532cfd2, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 1709c6a6faf32da42a8e92f6663ee4bf, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 7ff9ed17a3564dc4681fff80fd8a07a9, type: 2}
+    level: 0

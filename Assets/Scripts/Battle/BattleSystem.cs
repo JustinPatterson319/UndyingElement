@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum BattleState { Start, PlayerAction, PlayerMove, EnemyMove, Busy}
+public enum BattleState { Start, PlayerAction, PlayerMove, EnemyMove, Busy, PartyScreen}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -15,43 +15,62 @@ public class BattleSystem : MonoBehaviour
 
     [SerializeField] BatlleDialogue dialogBox;
 
+    [SerializeField] PartyScreen partyScreen;
+
     public event Action<bool> OnBattleOver;
 
     BattleState state;
     int currentAction;
+    int currentMember;
 
-    public void StartBattle()
+    PlayerParty playerParty;
+    Character wildEncounter;
+
+    public void StartBattle(PlayerParty playerParty, Character wildEncounter)
     {
+        this.playerParty = playerParty;
+        this.wildEncounter = wildEncounter;
         StartCoroutine(SetupBattle());
     }
 
     public IEnumerator SetupBattle()
     {
-        playerUnit.Setup();
+        playerUnit.Setup(playerParty.GetHealthy());
         playerHUD.SetData(playerUnit.Character);
 
-        enemyUnit.Setup();
+        enemyUnit.Setup(wildEncounter);
         enemyHUD.SetData(enemyUnit.Character);
+
+        partyScreen.Init();
 
         dialogBox.SetMoveNames(playerUnit.Character.Moves);
 
         yield return dialogBox.TypeDialog($"Enemy {enemyUnit.Character.Base.name} stands in the way!");
 
-        PlayerAction();
+        StartCoroutine(PlayerAction());
     }
 
-    void PlayerAction()
+    public IEnumerator PlayerAction()
     {
+        StartCoroutine(dialogBox.TypeDialog("Choose an action..."));
+        yield return new WaitForSeconds(.7f);
         state = BattleState.PlayerAction;
-        StartCoroutine(dialogBox.TypeDialog("Choosing an action..."));
         dialogBox.EnableActionSelector(true);
     }
 
-    void PlayerMove()
+    void OpenPartyScreen()
+    {
+        state = BattleState.PartyScreen;
+        partyScreen.SetPartyData(playerParty.Characters);
+        partyScreen.gameObject.SetActive(true);
+    }
+
+    public IEnumerator PlayerMove()
     {
         state = BattleState.PlayerMove;
         dialogBox.EnableActionSelector(false);
-        StartCoroutine(dialogBox.TypeDialog("Choosing an attack..."));
+        StartCoroutine(dialogBox.TypeDialog("Choose an attack..."));
+        yield return new WaitForSeconds(.7f);
         dialogBox.EnableMoveSelector(true);
     }
 
@@ -66,7 +85,9 @@ public class BattleSystem : MonoBehaviour
 
         enemyUnit.PlayHitAnimation(move);
         var damageDetails = enemyUnit.Character.TakeDamage(move, playerUnit.Character);
+        playerUnit.Character.currentMP -= move.Base.MagCost;
         yield return enemyHUD.UpdateHP();
+        yield return playerHUD.UpdateMP();
         yield return ShowDamageDetails(damageDetails);
 
         if (damageDetails.Fainted)
@@ -94,20 +115,31 @@ public class BattleSystem : MonoBehaviour
 
         playerUnit.PlayHitAnimation(move);
         var damageDetails = playerUnit.Character.TakeDamage(move, enemyUnit.Character);
+        enemyUnit.Character.currentMP -= move.Base.MagCost;
         yield return playerHUD.UpdateHP();
+        yield return enemyHUD.UpdateMP();
         yield return ShowDamageDetails(damageDetails);
 
         if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.Name} defeated!");
-            playerUnit.PlayFaintAnimation();
+            playerUnit.PlayRetreatAnimation();
 
             yield return new WaitForSeconds(2f);
-            OnBattleOver(false);
+            
+            var nextCharacter = playerParty.GetHealthy();
+            if (nextCharacter != null)
+            {
+                OpenPartyScreen();
+            }
+            else
+            {
+                OnBattleOver(false);
+            }
         }
         else
         {
-            PlayerAction();
+            StartCoroutine(PlayerAction());
         }
     }
 
@@ -139,6 +171,10 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.PlayerMove)
         {
             HandleMoveSelection();
+        }
+        else if (state == BattleState.PartyScreen)
+        {
+            HandlePartySelection();
         }
     }
 
@@ -181,12 +217,14 @@ public class BattleSystem : MonoBehaviour
             {
                 currentAction = 0;
                 //attack
-                PlayerMove();
+                StartCoroutine(PlayerMove());
             }
             if (currentAction == 1)
             {
                 currentAction = 0;
                 //swap
+                dialogBox.EnableActionSelector(false);
+                OpenPartyScreen();
             }
             if (currentAction == 2)
             {
@@ -240,5 +278,86 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(PerformPlayerMove());
             currentAction = 0;
         }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            StartCoroutine(PlayerAction());
+        }
+    }
+
+    void HandlePartySelection()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentMember == 0 || currentMember == 2)
+            {
+                currentMember++;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentMember == 1 || currentMember == 3)
+            {
+                currentMember--;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (currentMember == 0 || currentMember == 1)
+            {
+                currentMember = currentMember + 2;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (currentMember == 2 || currentMember == 3)
+            {
+                currentMember = currentMember - 2;
+            }
+        }
+        partyScreen.UpdateMemberSelection(currentMember);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            var selectedMember = playerParty.Characters[currentMember];
+            if (selectedMember.currentHP <= 0)
+            {
+                partyScreen.SetMessageText("That member is too weak to fight!");
+                return;
+            }
+            if (selectedMember == playerUnit.Character)
+            {
+                partyScreen.SetMessageText("That member is already fighting!");
+                return;
+            }
+
+            partyScreen.gameObject.SetActive(false);
+            state = BattleState.Busy;
+            StartCoroutine(SwitchCharacter(selectedMember));
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            partyScreen.gameObject.SetActive(false);
+            StartCoroutine(PlayerAction());
+        }
+    }
+
+    IEnumerator SwitchCharacter(Character newCharacter)
+    {
+        if (playerUnit.Character.currentHP > 0)
+        {
+            yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.Name} retreats!");
+            playerUnit.PlayRetreatAnimation();
+            yield return new WaitForSeconds(2f);
+        }
+
+        playerUnit.Setup(newCharacter);
+        playerHUD.SetData(newCharacter);
+        dialogBox.SetMoveNames(newCharacter.Moves);
+
+        yield return dialogBox.TypeDialog($"{newCharacter.Base.name} steps in to defend!");
+
+        StartCoroutine(EnemyMove());
     }
 }

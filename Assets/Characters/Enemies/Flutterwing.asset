@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Flutterwing
+  m_EditorClassIdentifier: 
+  name: Flutterwing
+  description: 
+  battleSprite: {fileID: 1156691555, guid: e80fefe00830484408f466a409354a9c, type: 3}
+  faceSprite: {fileID: 21300000, guid: f854b24b4364dbe49a16a0ae2ef3bf3e, type: 3}
+  elementSprite: {fileID: 938314626, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  type: 8
+  hp: 50
+  mp: 50
+  regAttack: 50
+  magAttack: 50
+  regDefense: 50
+  magDefense: 50
+  speed: 50
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 458ddc441cda10e439ab717d3c14d7f9, type: 2}
+    level: 0
