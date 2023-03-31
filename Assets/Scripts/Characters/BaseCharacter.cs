@@ -84,29 +84,29 @@ public class BaseCharacter : ScriptableObject
         get { return mp; }
     }
 
-    public int RegAttack
+    public int Strength
     {
         get { return regAttack; }
     }
 
-    public int MagAttack
+    public int Magic
     {
         get { return magAttack; }
     }
 
-    public int RegDefense
+    public int Defense
     {
         get { return regDefense; }
     }
 
-    public int MagDefense
+    public int Warding
     {
         get { return magDefense; }
     }
 
     public int Speed
     {
-        get { return Speed; }
+        get { return speed; }
     }
 
     public List<LearnableMove> LearnableMoves
@@ -129,6 +129,15 @@ public enum CharacterElement
     Aqua,
     Lght,
     Dark
+}
+
+public enum Stat
+{
+    Strength,
+    Magic,
+    Defense,
+    Warding,
+    Speed
 }
 
 public class TypeChart

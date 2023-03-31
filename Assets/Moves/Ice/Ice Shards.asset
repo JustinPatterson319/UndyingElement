@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
+  m_Name: Ice Shards
+  m_EditorClassIdentifier: 
+  name: Ice Shards
+  description: 
+  type: 6
+  power: 25
+  accuracy: 95
+  magCost: 1
+  attackAnimationName: Shards
+  attackColor: {r: 0.3066038, g: 1, b: 0.8803195, a: 1}
+  attackSound: {fileID: 8300000, guid: b33de185ea36db74c809d93c60743374, type: 3}
+  category: 1
+  effects:
+    boosts: []
+  target: 0

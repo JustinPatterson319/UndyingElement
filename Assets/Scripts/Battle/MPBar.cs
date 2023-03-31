@@ -15,12 +15,23 @@ public class MPBar : MonoBehaviour
     {
         float curMp = magic.transform.localScale.x;
         float changeAmt = curMp - newMp;
-
-        while (curMp - newMp > Mathf.Epsilon)
+        if(changeAmt < 0)
         {
-            curMp -= changeAmt * Time.deltaTime;
-            magic.transform.localScale = new Vector3(curMp, 1f);
-            yield return null;
+            while (curMp - newMp < Mathf.Epsilon)
+            {
+                curMp += changeAmt * -1 * Time.deltaTime;
+                magic.transform.localScale = new Vector3(curMp, 1f);
+                yield return null;
+            }
+        }
+        else
+        {
+            while (curMp - newMp > Mathf.Epsilon)
+            {
+                curMp -= changeAmt * Time.deltaTime;
+                magic.transform.localScale = new Vector3(curMp, 1f);
+                yield return null;
+            }
         }
         magic.transform.localScale = new Vector3(newMp, 1f);
     }

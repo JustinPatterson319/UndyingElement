@@ -7,13 +7,29 @@ using DG.Tweening;
 public class BattleUnit : MonoBehaviour
 {
     [SerializeField] bool isPlayerUnit;
+    [SerializeField] BattleHUD hud;
+
+    public bool IsPlayerUnit
+    {
+        get
+        {
+            return isPlayerUnit;
+        }
+    }
+
+    public BattleHUD Hud
+    {
+        get
+        {
+            return hud;
+        }
+    }
 
     public Character Character { get; set; }
 
     Image image;
     Vector3 originalPos;
     Color originalColor;
-    public GameObject hitbox;
 
     private void Awake()
     {
@@ -26,6 +42,8 @@ public class BattleUnit : MonoBehaviour
     {
         Character = character;
         image.sprite = Character.Base.BattleSprite;
+
+        hud.SetData(character);
 
         image.color = originalColor;
         PlayEnterAnimation();

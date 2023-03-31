@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
+  m_Name: Piercing Spikes
+  m_EditorClassIdentifier: 
+  name: Piercing Spikes
+  description: 'Pierce the target with sharp spikes of earth. Causes bleeding. '
+  type: 7
+  power: 0
+  accuracy: 100
+  magCost: 1
+  attackAnimationName: Spikes
+  attackColor: {r: 1, g: 0.5194335, b: 0.3443396, a: 1}
+  attackSound: {fileID: 8300000, guid: 17f8601c67f33fc499ced9e434027106, type: 3}
+  category: 2
+  effects:
+    boosts: []
+    status: 1
+  target: 0

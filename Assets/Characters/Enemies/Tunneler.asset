@@ -15,8 +15,10 @@ MonoBehaviour:
   name: Tunneler
   description: 
   battleSprite: {fileID: 1873333423, guid: 069817b2643b0c04fba7255d667f4464, type: 3}
+  partySprite: {fileID: 0}
   faceSprite: {fileID: 21300000, guid: 96edb275fd14a7e4c9762e791083a7fd, type: 3}
   elementSprite: {fileID: -1950387844, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: 0}
   type: 7
   hp: 50
   mp: 50
@@ -26,5 +28,5 @@ MonoBehaviour:
   magDefense: 50
   speed: 50
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: b1b95c72689794448b11b797ee0b3bc0, type: 2}
+  - moveBase: {fileID: 11400000, guid: 675a1151362a0f24e8e2e11e4f51427d, type: 2}
     level: 0

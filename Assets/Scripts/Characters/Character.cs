@@ -30,11 +30,20 @@ public class Character
     //moves
     public List<Move> Moves { get; set; }
 
+    public Dictionary<Stat, int> Stats { get; private set; }
+
+    public Dictionary<Stat, int> StatBoosts { get; private set; }
+
+    public Condition Status { get; private set; }
+
+    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+
+    public bool HpChanged { get; set; }
+
+    public bool MpChanged { get; set; }
+
     public void Init()
     {
-        currentHP = HP;
-        currentMP = MP;
-
         //generate moves
         Moves = new List<Move>();
         foreach (var move in Base.LearnableMoves)
@@ -49,41 +58,115 @@ public class Character
                 break;
             }
         }
+        CalculateStats();
+        currentHP = HP;
+        currentMP = MP;
+
+        ResetStatBoost();
     }
 
-    public int RegAttack
+    void ResetStatBoost()
     {
-        get { return Mathf.FloorToInt((Base.RegAttack * Level) / 100f) + 5; }
+        StatBoosts = new Dictionary<Stat, int>()
+        {
+            {Stat.Strength, 0},
+            {Stat.Magic, 0},
+            {Stat.Defense, 0},
+            {Stat.Warding, 0},
+            {Stat.Speed, 0},
+        };
     }
 
-    public int MagAttack
+    void CalculateStats()
     {
-        get { return Mathf.FloorToInt((Base.MagAttack * Level) / 100f) + 5; }
+        Stats = new Dictionary<Stat, int>();
+        Stats.Add(Stat.Strength, Mathf.FloorToInt((Base.Strength * Level) / 100f) + 5);
+        Stats.Add(Stat.Defense, Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5);
+        Stats.Add(Stat.Magic, Mathf.FloorToInt((Base.Magic * Level) / 100f) + 5);
+        Stats.Add(Stat.Warding, Mathf.FloorToInt((Base.Warding * Level) / 100f) + 5);
+        Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
+
+        HP = Mathf.FloorToInt((2 * Base.HP * Level) / 100f) + 10 + Level;
+        MP = Mathf.FloorToInt((2 * Base.MP * Level) / 100f) + Level;
     }
 
-    public int RegDefense
+    int GetStat(Stat stat)
     {
-        get { return Mathf.FloorToInt((Base.RegDefense * Level) / 100f) + 5; }
+        int statVal = Stats[stat];
+
+        //stat boost
+        int boost = StatBoosts[stat];
+        var boostValues = new float[] { 1f, 1.5f, 2f, 2.5f, 3f, 3.5f, 4f };
+
+        if (boost >= 0)
+        {
+            statVal = Mathf.FloorToInt(statVal * boostValues[boost]);
+        }
+        else
+        {
+            statVal = Mathf.FloorToInt(statVal / boostValues[-boost]);
+        }
+
+        return statVal;
     }
 
-    public int MagDefense
+    public void ApplyBoosts(List<StatBoost> statBoosts)
     {
-        get { return Mathf.FloorToInt((Base.MagDefense * Level) / 100f) + 5; }
+        foreach (var statBoost in statBoosts)
+        {
+            var stat = statBoost.stat;
+            var boost = statBoost.boost;
+
+            StatBoosts[stat] = Mathf.Clamp(StatBoosts[stat] + boost, -6, 6);
+
+            if (boost > 0)
+            {
+                StatusChanges.Enqueue($"{Base.Name}'s {stat} improved!");
+            }
+            else
+            {
+                StatusChanges.Enqueue($"{Base.Name}'s {stat} decreased!");
+            }
+
+            Debug.Log($"{stat} has been boosted to {StatBoosts[stat]}");
+        }
+    }
+
+    public int Strength
+    {
+        get { return GetStat(Stat.Strength); }
+    }
+
+    public int Magic
+    {
+        get { return GetStat(Stat.Magic); }
+    }
+
+    public int Defense
+    {
+        get { return GetStat(Stat.Defense); }
+    }
+
+    public int Warding
+    {
+        get { return GetStat(Stat.Warding); }
     }
 
     public int HP
     {
-        get { return Mathf.FloorToInt((2 * Base.HP * Level) / 100f) + 10 + Level; }
+        get;
+        private set;
     }
 
     public int MP
     {
-        get { return Mathf.FloorToInt((2 * Base.MP * Level) / 100f) + Level; }
+        get;
+        private set;
     }
 
     public int Speed
     {
-        get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
+        get { return GetStat(Stat.Speed); }
     }
 
     public DamageDetails TakeDamage(Move move, Character attacker)
@@ -103,28 +186,73 @@ public class Character
             Fainted = false
         };
 
-        float attack = (move.Base.IsSpecial) ? attacker.MagAttack : attacker.RegAttack;
-        float defense = (move.Base.IsSpecial) ? MagDefense : RegDefense;
+        float attack = (move.Base.Category == MoveCategory.Special) ? attacker.Magic : attacker.Strength;
+        float defense = (move.Base.Category == MoveCategory.Special) ? Warding : Defense;
 
         float modifiers = Random.Range(.85f, 1f) * type * critical;
         float a = (2 * attacker.Level + 10) / 250f;
         float d = a * move.Base.Power * ((float)attack / defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
 
-        currentHP -= damage;
-        if (currentHP <= 0)
-        {
-            currentHP = 0;
-            damageDetails.Fainted = true;
-        }
+        UpdateHP(damage);
 
         return damageDetails;
     }
+
+    public void UpdateHP(int damage)
+    {
+        currentHP = Mathf.Clamp(currentHP - damage, 0, HP);
+        HpChanged = true;
+    }
+
+    public void UpdateMP(int damage)
+    {
+        currentMP = Mathf.Clamp(currentMP - damage, 0, MP);
+        MpChanged = true;
+    }
+
+    public void UpdateHp(int damage)
+    {
+        currentHP = Mathf.Clamp(currentHP + damage, 0, HP);
+        HpChanged = true;
+    }
+
+    public void UpdateMp(int damage)
+    {
+        currentMP = Mathf.Clamp(currentMP + damage, 0, MP);
+        MpChanged = true;
+    }
+
+    public void SetStatus(ConditionID conditionId)
+    {
+        Status = ConditionsDB.Conditions[conditionId];
+        StatusChanges.Enqueue($"{Base.Name} {Status.StartMessage}!");
+    }
+
 
     public Move GetRandomMove()
     {
         int r = Random.Range(0, Moves.Count);
         return Moves[r];
+    }
+
+    public bool OnBeforeMove()
+    {
+        if (Status?.OnBeforeMove != null)
+        {
+            return Status.OnBeforeMove(this); 
+        }
+        return true;
+    }
+
+    public void OnAfterTurn()
+    {
+        Status?.OnAfterTurn?.Invoke(this);
+    }
+
+    public void OnBattleOver()
+    {
+        ResetStatBoost();
     }
 }
 

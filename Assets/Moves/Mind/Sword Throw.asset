@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Sword Throw
   m_EditorClassIdentifier: 
   name: Sword Throw
-  description: 'Throw your sword at the enemy and slash in a wide arc. '
+  description: 
   type: 4
-  power: 35
-  accuracy: 95
-  magCost: 5
+  power: 20
+  accuracy: 100
+  magCost: 1
+  attackAnimationName: Swipe
+  attackColor: {r: 0.9245283, g: 0.33579564, b: 0.7917575, a: 1}
+  attackSound: {fileID: 8300000, guid: e8f7e150d1abd9a4d9273077cb1484ca, type: 3}
+  category: 1
+  effects:
+    boosts: []
+  target: 0

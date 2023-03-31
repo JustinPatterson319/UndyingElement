@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   name: Slash
-  description: Swing your sword in a wide arc.
+  description: 
   type: 1
-  power: 25
-  accuracy: 90
+  power: 30
+  accuracy: 100
   magCost: 0
-  sprite: []
+  attackAnimationName: Swipe
+  attackColor: {r: 1, g: 1, b: 1, a: 1}
+  attackSound: {fileID: 8300000, guid: 6e2bf78cf7673dd45935cef7ed568a91, type: 3}
+  category: 0
+  effects:
+    boosts: []
+    status: 0
+  target: 0

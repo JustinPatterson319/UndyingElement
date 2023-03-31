@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
+  m_Name: Shadowblade
+  m_EditorClassIdentifier: 
+  name: Shadow Blade
+  description: 
+  type: 11
+  power: 50
+  accuracy: 95
+  magCost: 4
+  attackAnimationName: Swipe
+  attackColor: {r: 0.4367783, g: 0, b: 0.4433962, a: 1}
+  attackSound: {fileID: 8300000, guid: 5fd02c7f813915e4db4755bf5811f2a3, type: 3}
+  category: 1
+  effects:
+    boosts: []
+  target: 0

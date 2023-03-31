@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Move", menuName = "Character/Create new move")]
 public class MoveBase : ScriptableObject
@@ -14,7 +15,27 @@ public class MoveBase : ScriptableObject
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int magCost;
-    [SerializeField] Sprite[] sprite;
+    [SerializeField] string attackAnimationName;
+    [SerializeField] Color attackColor;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] MoveCategory category;
+    [SerializeField] MoveEffects effects;
+    [SerializeField] MoveTarget target;
+
+    public AudioClip AttackSound
+    {
+        get { return attackSound; }
+    }
+
+    public Color AttackColor
+    {
+        get { return attackColor; }
+    }
+
+    public string AttackAnimationName
+    {
+        get { return attackAnimationName; }
+    }
 
     public string Name
     {
@@ -46,23 +67,64 @@ public class MoveBase : ScriptableObject
         get { return magCost; }
     }
 
-    public Sprite[] Sprite
+    public MoveCategory Category
     {
-        get { return sprite; }
+        get { return category; }
     }
 
-    public bool IsSpecial
+    public MoveEffects Effects
     {
         get
         {
-            if (type == CharacterElement.None)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return effects;
         }
     }
+
+    public MoveTarget Target
+    {
+        get
+        {
+            return target;
+        }
+    }
+}
+
+[System.Serializable]
+public class MoveEffects
+{
+    [SerializeField] List<StatBoost> boosts;
+    [SerializeField] ConditionID status;
+
+    public List<StatBoost> Boosts
+    {
+        get
+        {
+            return boosts;
+        }
+    }
+
+    public ConditionID Status
+    {
+        get
+        {
+            return status;
+        }
+    }
+}
+
+[System.Serializable]
+public class StatBoost
+{
+    public Stat stat;
+    public int boost;
+}
+
+public enum MoveCategory
+{
+    Physical, Special, Status
+}
+
+public enum MoveTarget
+{
+    Foe, Self
 }
