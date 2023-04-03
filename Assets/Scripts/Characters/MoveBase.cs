@@ -14,12 +14,15 @@ public class MoveBase : ScriptableObject
     [SerializeField] CharacterElement type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
+    [SerializeField] bool alwaysHits;
     [SerializeField] int magCost;
+    [SerializeField] int priority;
     [SerializeField] string attackAnimationName;
     [SerializeField] Color attackColor;
     [SerializeField] AudioClip attackSound;
     [SerializeField] MoveCategory category;
     [SerializeField] MoveEffects effects;
+    [SerializeField] List<SecondaryEffects> secondaryEffects;
     [SerializeField] MoveTarget target;
 
     public AudioClip AttackSound
@@ -62,9 +65,19 @@ public class MoveBase : ScriptableObject
         get { return accuracy; }
     }
 
+    public bool AlwaysHits
+    {
+        get { return alwaysHits; }
+    }
+
     public int MagCost
     {
         get { return magCost; }
+    }
+
+    public int Priority
+    {
+        get { return priority; }
     }
 
     public MoveCategory Category
@@ -77,6 +90,14 @@ public class MoveBase : ScriptableObject
         get
         {
             return effects;
+        }
+    }
+
+    public List<SecondaryEffects> SecondaryEffects
+    {
+        get
+        {
+            return secondaryEffects;
         }
     }
 
@@ -108,6 +129,29 @@ public class MoveEffects
         get
         {
             return status;
+        }
+    }
+}
+
+[System.Serializable]
+public class SecondaryEffects : MoveEffects
+{
+    [SerializeField] int chance;
+    [SerializeField] MoveTarget target;
+
+    public int Chance
+    {
+        get
+        {
+            return chance;
+        }
+    }
+
+    public MoveTarget Target
+    {
+        get
+        {
+            return target;
         }
     }
 }

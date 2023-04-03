@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class MPBar : MonoBehaviour
 {
     [SerializeField] GameObject magic;
+    public Image magicColor;
 
     public void SetMP(float mpNormalized)
     {

@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Rising Earth
+  m_Name: Dust Cloud
   m_EditorClassIdentifier: 
-  name: Rising Earth
-  description: 'Slam the target with a risen fragment of the ground. '
+  name: Dust Cloud
+  description: Kicks up a dust cloud and lowers the opponents accuracy.
   type: 7
-  power: 20
-  accuracy: 100
+  power: 0
+  accuracy: 95
   alwaysHits: 0
-  magCost: 8
-  priority: 0
-  attackAnimationName: Rise
-  attackColor: {r: 0.56396437, g: 0.6037736, b: 0, a: 1}
-  attackSound: {fileID: 8300000, guid: bb2dea04b247cc04694d90cc21589694, type: 3}
-  category: 1
+  magCost: 4
+  attackAnimationName: Cloud
+  attackColor: {r: 1, g: 0.5928961, b: 0.1462264, a: 0.69411767}
+  attackSound: {fileID: 8300000, guid: 687a0403c4759df42866e601571ce5ac, type: 3}
+  category: 2
   effects:
-    boosts: []
+    boosts:
+    - stat: 5
+      boost: -1
     status: 0
   secondaryEffects: []
   target: 0

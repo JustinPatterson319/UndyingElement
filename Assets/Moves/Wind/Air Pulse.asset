@@ -17,11 +17,15 @@ MonoBehaviour:
   type: 8
   power: 20
   accuracy: 100
-  magCost: 1
+  alwaysHits: 0
+  magCost: 3
+  priority: 0
   attackAnimationName: Ring
   attackColor: {r: 1, g: 0.96603644, b: 0.6556604, a: 1}
   attackSound: {fileID: 8300000, guid: 3b683c632bae9c4499011f4ec57cf35a, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

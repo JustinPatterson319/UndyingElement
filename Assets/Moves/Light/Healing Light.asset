@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Rising Earth
+  m_Name: Healing Light
   m_EditorClassIdentifier: 
-  name: Rising Earth
-  description: 'Slam the target with a risen fragment of the ground. '
-  type: 7
-  power: 20
+  name: Healing Light
+  description: 'Applies cure to the user. '
+  type: 10
+  power: 0
   accuracy: 100
-  alwaysHits: 0
-  magCost: 8
-  priority: 0
-  attackAnimationName: Rise
-  attackColor: {r: 0.56396437, g: 0.6037736, b: 0, a: 1}
-  attackSound: {fileID: 8300000, guid: bb2dea04b247cc04694d90cc21589694, type: 3}
-  category: 1
+  magCost: 5
+  attackAnimationName: Rays
+  attackColor: {r: 1, g: 0.99869794, b: 0.5330188, a: 1}
+  attackSound: {fileID: 8300000, guid: 9938b7d98c183fe45ab24ea944b17b44, type: 3}
+  category: 2
   effects:
     boosts: []
-    status: 0
-  secondaryEffects: []
-  target: 0
+    status: 3
+  target: 1

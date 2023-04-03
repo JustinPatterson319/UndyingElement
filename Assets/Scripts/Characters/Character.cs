@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [System.Serializable]
 public class Character
@@ -30,17 +31,23 @@ public class Character
     //moves
     public List<Move> Moves { get; set; }
 
+    public Move CurrentMove { get; set; }
+
     public Dictionary<Stat, int> Stats { get; private set; }
 
     public Dictionary<Stat, int> StatBoosts { get; private set; }
 
     public Condition Status { get; private set; }
 
+    public int StatusTime { get; set; }
+
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
 
     public bool HpChanged { get; set; }
 
     public bool MpChanged { get; set; }
+
+    public event System.Action OnStatusChanged;
 
     public void Init()
     {
@@ -74,6 +81,8 @@ public class Character
             {Stat.Defense, 0},
             {Stat.Warding, 0},
             {Stat.Speed, 0},
+            {Stat.Accuracy, 0},
+            {Stat.Evasion, 0},
         };
     }
 
@@ -225,15 +234,29 @@ public class Character
 
     public void SetStatus(ConditionID conditionId)
     {
+        if (Status != null)
+        {
+            return;
+        }
+
         Status = ConditionsDB.Conditions[conditionId];
+        Status?.OnStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name} {Status.StartMessage}!");
+        OnStatusChanged?.Invoke();
     }
 
+    public void CureStatus()
+    {
+        Status = null;
+        OnStatusChanged?.Invoke();
+    }
 
     public Move GetRandomMove()
     {
-        int r = Random.Range(0, Moves.Count);
-        return Moves[r];
+        var movesWithMag = Moves.Where(x => x.Base.MagCost <= currentMP).ToList();
+
+        int r = Random.Range(0, movesWithMag.Count);
+        return movesWithMag[r];
     }
 
     public bool OnBeforeMove()
@@ -252,6 +275,7 @@ public class Character
 
     public void OnBattleOver()
     {
+        CureStatus();
         ResetStatBoost();
     }
 }

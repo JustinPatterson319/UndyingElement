@@ -4,7 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartyScreen, BattleOver}
+public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, BattleOver}
+public enum BattleAction { Move, SwitchCharacter, UseItem, Run}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     public event Action<bool> OnBattleOver;
 
     BattleState state;
+    BattleState? prevState;
     int currentAction;
     int currentMember;
 
@@ -54,20 +56,9 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"Enemy {enemyUnit.Character.Base.name} stands in the way!");
 
-        ChooseFirstTurn();
+        StartCoroutine(ActionSelection());
     }
 
-    void ChooseFirstTurn()
-    {
-        if (playerUnit.Character.Speed >= enemyUnit.Character.Speed)
-        {
-            StartCoroutine(ActionSelection());
-        }
-        else
-        {
-            StartCoroutine(EnemyMove());
-        }
-    }
 
     void BattleOver(bool won)
     {
@@ -101,25 +92,79 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableMoveSelector(true);
     }
 
-    IEnumerator PlayerMove()
+    IEnumerator RunTurns(BattleAction playerAction)
     {
-        state = BattleState.PerformMove;
-        var move = playerUnit.Character.Moves[currentAction];
-        yield return RunMove(playerUnit, enemyUnit, move, enemyHitBox, enemyHit, playerHitBox, playerHit);
-        
-        if (state == BattleState.PerformMove)
+        state = BattleState.RunningTurn;
+        if (playerAction == BattleAction.Move)
         {
-            StartCoroutine(EnemyMove());
+            playerUnit.Character.CurrentMove = playerUnit.Character.Moves[currentAction];
+            enemyUnit.Character.CurrentMove = enemyUnit.Character.GetRandomMove();
+
+            int playerMovePriority = playerUnit.Character.CurrentMove.Base.Priority;
+            int enemyMovePriority = enemyUnit.Character.CurrentMove.Base.Priority;
+
+            //check who goes first
+            bool playerGoesFirst = true;
+            if(enemyMovePriority > playerMovePriority)
+            {
+                playerGoesFirst = false;
+            }
+            else if (enemyMovePriority == playerMovePriority)
+            {
+                playerGoesFirst = playerUnit.Character.Speed >= enemyUnit.Character.Speed;
+            }
+
+            var firstUnit = (playerGoesFirst) ? playerUnit : enemyUnit;
+            var secondUnit = (playerGoesFirst) ? enemyUnit : playerUnit;
+
+            var secondCharacter = secondUnit.Character;
+
+            //First turn
+            if(firstUnit == playerUnit)
+            {
+                yield return RunMove(firstUnit, secondUnit, firstUnit.Character.CurrentMove, enemyHitBox, enemyHit, playerHitBox, playerHit);
+            }
+            else
+            {
+                yield return RunMove(firstUnit, secondUnit, firstUnit.Character.CurrentMove, playerHitBox, playerHit, enemyHitBox, enemyHit);
+            }
+
+            yield return RunAfterTurn(firstUnit);
+            if (state == BattleState.BattleOver) yield break;
+
+            if (secondCharacter.currentHP > 0)
+            {
+                //Second Turn
+                if (secondUnit == playerUnit)
+                {
+                    yield return RunMove(secondUnit, firstUnit, secondUnit.Character.CurrentMove, enemyHitBox, enemyHit, playerHitBox, playerHit);
+                }
+                else
+                {
+                    yield return RunMove(secondUnit, firstUnit, secondUnit.Character.CurrentMove, playerHitBox, playerHit, enemyHitBox, enemyHit);
+                }
+
+                yield return RunAfterTurn(secondUnit);
+                if (state == BattleState.BattleOver) yield break;
+            }
         }
-    }
+        else
+        {
+            if (playerAction == BattleAction.SwitchCharacter)
+            {
+                var selectedCharacter = playerParty.Characters[currentMember];
+                state = BattleState.Busy;
+                yield return SwitchCharacter(selectedCharacter);
+            }
 
-    IEnumerator EnemyMove()
-    {
-        state = BattleState.PerformMove;
-        var move = enemyUnit.Character.GetRandomMove();
-        yield return RunMove(enemyUnit, playerUnit, move, playerHitBox, playerHit, enemyHitBox, enemyHit);
+            //Enemy Turn
+            var enemyMove = enemyUnit.Character.GetRandomMove();
+            yield return RunMove(enemyUnit, playerUnit, enemyMove, playerHitBox, playerHit, enemyHitBox, enemyHit);
+            yield return RunAfterTurn(enemyUnit);
+            if (state == BattleState.BattleOver) yield break;
+        }
 
-        if (state == BattleState.PerformMove)
+        if (state != BattleState.BattleOver)
         {
             StartCoroutine(ActionSelection());
         }
@@ -144,43 +189,132 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog($"Enemy attacks with {move.Base.Name}!");
         }
 
-        sourceUnit.PlayAttackAnimation();
-        yield return new WaitForSeconds(1f);
 
-        if (move.Base.Category == MoveCategory.Status)
+        //Move accuracy check
+        if (CheckIfMoveHits(move, sourceUnit.Character, targetUnit.Character))
         {
-            yield return RunMoveEffects(move, sourceUnit.Character, targetUnit.Character, sourceHitBox, targetHitBox, targetUnit, sourceUnit, targetHit, sourceHit);
-        }
-        else
-        {
-            PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit);
-            var damageDetails = targetUnit.Character.TakeDamage(move, sourceUnit.Character);
-            sourceUnit.Character.currentMP -= move.Base.MagCost;
-            yield return targetUnit.Hud.UpdateHP();
-            yield return sourceUnit.Hud.UpdateMP();
-            yield return ShowDamageDetails(damageDetails);
-        }
-
-        if (targetUnit.Character.currentHP <= 0)
-        {
-            if (targetUnit == playerUnit)
+            sourceUnit.PlayAttackAnimation();
+            yield return new WaitForSeconds(1f);
+            if (move.Base.Category == MoveCategory.Status)
             {
-                GetComponent<AudioSource>().clip = playerDefeatSound;
-                GetComponent<AudioSource>().Play(0);
-                targetUnit.PlayRetreatAnimation();
-                yield return dialogBox.TypeDialog($"{targetUnit.Character.Base.name} retreats!");
+                yield return RunMoveEffects(move.Base.Effects, sourceUnit.Character, targetUnit.Character, sourceHitBox, targetHitBox, targetUnit, sourceUnit, targetHit, sourceHit, move.Base.Target, move, false);
             }
             else
             {
-                GetComponent<AudioSource>().clip = enemyDefeatSound;
-                GetComponent<AudioSource>().Play(0);
-                targetUnit.PlayFaintAnimation();
-                yield return dialogBox.TypeDialog($"Enemy {targetUnit.Character.Base.name} defeated!");
+                PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit, true);
+                var damageDetails = targetUnit.Character.TakeDamage(move, sourceUnit.Character);
+                sourceUnit.Character.currentMP -= move.Base.MagCost;
+                yield return targetUnit.Hud.UpdateHP();
+                yield return sourceUnit.Hud.UpdateMP();
+                yield return ShowDamageDetails(damageDetails);
             }
 
-            yield return new WaitForSeconds(2f);
-            CheckForBattleOver(targetUnit);
+            //run any possible secondary effects of a move
+            if (move.Base.SecondaryEffects != null && move.Base.SecondaryEffects.Count > 0 && targetUnit.Character.currentHP > 0)
+            {
+                foreach (var secondary in move.Base.SecondaryEffects)
+                {
+                    var rnd = UnityEngine.Random.Range(1, 101);
+                    if (rnd <= secondary.Chance)
+                    {
+                        yield return RunMoveEffects(secondary, sourceUnit.Character, targetUnit.Character, sourceHitBox, targetHitBox, targetUnit, sourceUnit, targetHit, sourceHit, secondary.Target, move, true);
+                    }
+                }
+            }
+
+            if (targetUnit.Character.currentHP <= 0)
+            {
+                if (targetUnit == playerUnit)
+                {
+                    GetComponent<AudioSource>().clip = playerDefeatSound;
+                    GetComponent<AudioSource>().Play(0);
+                    targetUnit.PlayRetreatAnimation();
+                    yield return dialogBox.TypeDialog($"{targetUnit.Character.Base.name} retreats!");
+                }
+                else
+                {
+                    GetComponent<AudioSource>().clip = enemyDefeatSound;
+                    GetComponent<AudioSource>().Play(0);
+                    targetUnit.PlayFaintAnimation();
+                    yield return dialogBox.TypeDialog($"Enemy {targetUnit.Character.Base.name} defeated!");
+                }
+
+                yield return new WaitForSeconds(2f);
+                CheckForBattleOver(targetUnit);
+            }
         }
+        else
+        {
+            PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit, false);
+            targetUnit.PlayDodgeAnimation();
+            yield return new WaitForSeconds(1f);
+            yield return dialogBox.TypeDialog($"The attack was dodged!");
+        }
+    }
+
+    void PlaySoundsAndAnimations(Move move, Image hit, Animator hitbox, BattleUnit target, bool doesHit)
+    {
+        hit.color = move.Base.AttackColor;
+        hitbox.Play(move.Base.AttackAnimationName);
+        GetComponent<AudioSource>().clip = move.Base.AttackSound;
+        GetComponent<AudioSource>().Play(0);
+        if(doesHit)
+        {
+            target.PlayHitAnimation(move);
+        }
+    }
+
+    IEnumerator RunMoveEffects(MoveEffects effects, Character source, Character target, Animator sourceHitBox, Animator targetHitBox, BattleUnit targetUnit, BattleUnit sourceUnit, Image targetHit, Image sourceHit, MoveTarget moveTarget, Move move, bool isSecondary)
+    {
+
+        //Stat Boosting
+        if (effects.Boosts != null)
+        {
+            if (moveTarget == MoveTarget.Self)
+            {
+                if (!isSecondary)
+                {
+                    PlaySoundsAndAnimations(move, sourceHit, sourceHitBox, sourceUnit, false);
+                    source.currentMP -= move.Base.MagCost;
+                    yield return sourceUnit.Hud.UpdateMP();
+                }
+
+                source.ApplyBoosts(effects.Boosts);
+            }
+            else
+            {
+                if (!isSecondary)
+                {
+                    PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit, true);
+                    source.currentMP -= move.Base.MagCost;
+                    yield return sourceUnit.Hud.UpdateMP();
+                }
+
+                target.ApplyBoosts(effects.Boosts);
+            }
+        }
+
+        //Status Condition
+        if (effects.Status != ConditionID.none)
+        {
+            if (moveTarget == MoveTarget.Foe)
+            {
+                target.SetStatus(effects.Status);
+            }
+            else
+            {
+                source.SetStatus(effects.Status);
+            }
+        }
+
+        yield return ShowStatusChanges(source);
+        yield return ShowStatusChanges(target);
+    }
+
+    IEnumerator RunAfterTurn(BattleUnit sourceUnit)
+    {
+        if (state == BattleState.BattleOver) yield break;
+        yield return new WaitUntil(() => state == BattleState.RunningTurn);
 
         //status like bleed or venom will hurt after turn ends
         sourceUnit.Character.OnAfterTurn();
@@ -209,57 +343,39 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void PlaySoundsAndAnimations(Move move, Image hit, Animator hitbox, BattleUnit target)
+    bool CheckIfMoveHits(Move move, Character source, Character target)
     {
-        hit.color = move.Base.AttackColor;
-        hitbox.Play(move.Base.AttackAnimationName);
-        GetComponent<AudioSource>().clip = move.Base.AttackSound;
-        GetComponent<AudioSource>().Play(0);
-        target.PlayHitAnimation(move);
-    }
-
-    IEnumerator RunMoveEffects(Move move, Character source, Character target, Animator sourceHitBox, Animator targetHitBox, BattleUnit targetUnit, BattleUnit sourceUnit, Image targetHit, Image sourceHit)
-    {
-        var effects = move.Base.Effects;
-
-        //Stat Boosting
-        if (effects.Boosts != null)
+        if (move.Base.AlwaysHits)
         {
-            if (move.Base.Target == MoveTarget.Self)
-            {
-                PlaySoundsAndAnimations(move, sourceHit, sourceHitBox, sourceUnit);
-
-                source.currentMP -= move.Base.MagCost;
-                yield return sourceUnit.Hud.UpdateMP();
-
-                source.ApplyBoosts(effects.Boosts);
-            }
-            else
-            {
-                PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit);
-
-                source.currentMP -= move.Base.MagCost;
-                yield return sourceUnit.Hud.UpdateMP();
-
-                target.ApplyBoosts(effects.Boosts);
-            }
+            return true;
         }
 
-        //Status Condition
-        if (effects.Status != ConditionID.none)
+        float moveAccuracy = move.Base.Accuracy;
+
+        int accuracy = source.StatBoosts[Stat.Accuracy];
+        int evasion = target.StatBoosts[Stat.Evasion];
+
+        var boostValues = new float[] { 1f, 4f / 3f, 5f / 3f, 2f, 7f / 3f, 8f / 3f, 3f };
+
+        if (accuracy > 0)
         {
-            if (move.Base.Target == MoveTarget.Foe)
-            {
-                target.SetStatus(effects.Status);
-            }
-            else
-            {
-                source.SetStatus(effects.Status);
-            }
+            moveAccuracy *= boostValues[accuracy];
+        }
+        else
+        {
+            moveAccuracy /= boostValues[-accuracy];
         }
 
-        yield return ShowStatusChanges(source);
-        yield return ShowStatusChanges(target);
+        if (evasion > 0)
+        {
+            moveAccuracy /= boostValues[evasion];
+        }
+        else
+        {
+            moveAccuracy *= boostValues[-evasion];
+        }
+
+        return UnityEngine.Random.Range(1, 100) <= moveAccuracy;
     }
 
     IEnumerator ShowStatusChanges(Character character)
@@ -384,6 +500,7 @@ public class BattleSystem : MonoBehaviour
                 currentAction = 0;
                 //swap
                 dialogBox.EnableActionSelector(false);
+                prevState = state;
                 OpenPartyScreen();
             }
             if (currentAction == 2)
@@ -441,15 +558,21 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            var move = playerUnit.Character.Moves[currentAction];
+            if (playerUnit.Character.currentMP < move.Base.MagCost)
+            {
+                return;
+            }
             GetComponent<AudioSource>().clip = select;
             GetComponent<AudioSource>().Play(0);
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
-            StartCoroutine(PlayerMove());
+            StartCoroutine(RunTurns(BattleAction.Move));
             currentAction = 0;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            currentAction = 0;
             GetComponent<AudioSource>().clip = select;
             GetComponent<AudioSource>().Play(0);
             dialogBox.EnableMoveSelector(false);
@@ -515,8 +638,17 @@ public class BattleSystem : MonoBehaviour
             }
 
             partyScreen.gameObject.SetActive(false);
-            state = BattleState.Busy;
-            StartCoroutine(SwitchCharacter(selectedMember));
+
+            if (prevState == BattleState.ActionSelection)
+            {
+                prevState = null;
+                StartCoroutine(RunTurns(BattleAction.SwitchCharacter));
+            }
+            else
+            {
+                state = BattleState.Busy;
+                StartCoroutine(SwitchCharacter(selectedMember));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.X) && playerUnit.Character.currentHP > 0)
         {
@@ -529,10 +661,10 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SwitchCharacter(Character newCharacter)
     {
-        bool stillAlive = false;
+        playerUnit.Character.CureStatus();
+
         if (playerUnit.Character.currentHP > 0)
         {
-            stillAlive = true;
             yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.Name} retreats!");
             GetComponent<AudioSource>().clip = playerDefeatSound;
             GetComponent<AudioSource>().Play(0);
@@ -542,16 +674,8 @@ public class BattleSystem : MonoBehaviour
 
         playerUnit.Setup(newCharacter);
         dialogBox.SetMoveNames(newCharacter.Moves);
-
         yield return dialogBox.TypeDialog($"{newCharacter.Base.name} steps in to defend!");
 
-        if(stillAlive)
-        {
-            StartCoroutine(EnemyMove());
-        }
-        else
-        {
-            ChooseFirstTurn();
-        }
+        state = BattleState.RunningTurn;
     }
 }

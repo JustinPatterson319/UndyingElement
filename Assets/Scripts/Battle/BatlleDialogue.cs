@@ -21,7 +21,7 @@ public class BatlleDialogue : MonoBehaviour
     [SerializeField] TextMeshProUGUI magicCostText;
 
     [SerializeField] Color highlightedColor;
-
+    [SerializeField] BattleUnit playerUnit;
 
     public void SetDialog(string dialog)
     {
@@ -91,6 +91,14 @@ public class BatlleDialogue : MonoBehaviour
         elementText.text = $"Element: {move.Base.Type}";
         powerText.text = $"Power: {move.Base.Power}";
         magicCostText.text = $"MP Cost: {move.Base.MagCost}";
+        if (move.Base.MagCost > playerUnit.Character.currentMP)
+        {
+            magicCostText.color = Color.red;
+        }
+        else
+        {
+            magicCostText.color = Color.white;
+        }
     }
 
     public void SetMoveNames(List<Move> moves)

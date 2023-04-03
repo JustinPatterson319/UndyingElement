@@ -17,7 +17,9 @@ MonoBehaviour:
   type: 1
   power: 30
   accuracy: 100
-  magCost: 0
+  alwaysHits: 0
+  magCost: 50
+  priority: 0
   attackAnimationName: Swipe
   attackColor: {r: 1, g: 1, b: 1, a: 1}
   attackSound: {fileID: 8300000, guid: 6e2bf78cf7673dd45935cef7ed568a91, type: 3}
@@ -25,4 +27,9 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 0
+  secondaryEffects:
+  - boosts: []
+    status: 1
+    chance: 10
+    target: 0
   target: 0

@@ -137,7 +137,10 @@ public enum Stat
     Magic,
     Defense,
     Warding,
-    Speed
+    Speed,
+    //Not actual stats but can change accuracy
+    Accuracy,
+    Evasion
 }
 
 public class TypeChart

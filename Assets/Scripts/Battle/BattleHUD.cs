@@ -15,6 +15,16 @@ public class BattleHUD : MonoBehaviour
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI magicText;
 
+    [SerializeField] Color bleedColor;
+    [SerializeField] Color venomColor;
+    [SerializeField] Color cureColor;
+    [SerializeField] Color chargeColor;
+    [SerializeField] Color shockColor;
+    [SerializeField] Color chillColor;
+    [SerializeField] Color slumberColor;
+
+    Dictionary<ConditionID, Color> statusColors;
+
     Character _character;
 
     public void SetData(Character character)
@@ -26,9 +36,38 @@ public class BattleHUD : MonoBehaviour
         hpBar.SetHP((float) character.currentHP / character.HP);
         mpBar.SetMP((float) character.currentMP / character.MP);
 
+        statusColors = new Dictionary<ConditionID, Color>()
+        {
+            {ConditionID.bleed, bleedColor },
+            {ConditionID.venom, venomColor },
+            {ConditionID.cure, cureColor },
+            {ConditionID.charge, chargeColor },
+            {ConditionID.shock, shockColor },
+            {ConditionID.chill, chillColor },
+            {ConditionID.slumber, slumberColor },
+        };
+
         //changes element and character face
         element.sprite = character.Base.ElementSprite;
         face.sprite = character.Base.FaceSprite;
+        _character.OnStatusChanged += SetStatusColor;
+    }
+
+    void SetStatusColor()
+    {
+        if (_character.Status == null)
+        {
+            hpBar.healthColor.color = Color.green;
+            mpBar.magicColor.color = Color.blue;
+        }
+        else if (_character.Status.Id == ConditionID.venom || _character.Status.Id == ConditionID.charge)
+        {
+            mpBar.magicColor.color = statusColors[_character.Status.Id];
+        }
+        else
+        {
+            hpBar.healthColor.color = statusColors[_character.Status.Id];
+        }
     }
 
     public IEnumerator UpdateHP()

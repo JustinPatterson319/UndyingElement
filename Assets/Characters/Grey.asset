@@ -28,15 +28,15 @@ MonoBehaviour:
   magDefense: 80
   speed: 110
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 36363521a431a44408a61661acd1b7c1, type: 2}
+  - moveBase: {fileID: 11400000, guid: b38811614c68e894f842a3f21739f334, type: 2}
     level: 0
   - moveBase: {fileID: 11400000, guid: d098453b526469942bcdc99c9c8f34a0, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 484c64e0a2b424f459fa2e1082051bc6, type: 2}
+  - moveBase: {fileID: 11400000, guid: 63247fce91adce94d9f0a5d2a0efa3f4, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 3ee3f39fb0f8a7c4a8071ed98877e190, type: 2}
+  - moveBase: {fileID: 11400000, guid: d74897508d794f943b7b41be0fd8e033, type: 2}
     level: 0
   - moveBase: {fileID: 11400000, guid: aa3e87b0f11537c409432c61f371ad60, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 675a1151362a0f24e8e2e11e4f51427d, type: 2}
+  - moveBase: {fileID: 11400000, guid: 997a2b8c1e2367a4ba710798f7a7ec61, type: 2}
     level: 0

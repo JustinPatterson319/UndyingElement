@@ -18,10 +18,11 @@ MonoBehaviour:
   power: 25
   accuracy: 95
   magCost: 1
-  attackAnimationName: Shards
+  attackAnimationName: ShardsOut
   attackColor: {r: 0.3066038, g: 1, b: 0.8803195, a: 1}
   attackSound: {fileID: 8300000, guid: b33de185ea36db74c809d93c60743374, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
   target: 0

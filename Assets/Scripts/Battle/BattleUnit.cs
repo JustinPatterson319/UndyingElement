@@ -78,11 +78,26 @@ public class BattleUnit : MonoBehaviour
         sequence.Append(image.transform.DOLocalMoveX(originalPos.x, .25f));
     }
 
+    public void PlayDodgeAnimation()
+    {
+        var sequence = DOTween.Sequence();
+        if (isPlayerUnit)
+        {
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x - 80f, .8f));
+        }
+        else
+        {
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x + 80f, .8f));
+        }
+
+        sequence.Append(image.transform.DOLocalMoveX(originalPos.x, .35f));
+    }
+
     public void PlayHitAnimation(Move move)
     {
         var sequence = DOTween.Sequence();
-        sequence.Append(image.DOColor(Color.gray, .1f));
-        sequence.Append(image.DOColor(originalColor, .1f));
+        sequence.Append(image.DOColor(Color.red, .08f));
+        sequence.Append(image.DOColor(originalColor, .08f));
     }
 
     public void PlayFaintAnimation()

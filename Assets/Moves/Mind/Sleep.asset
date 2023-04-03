@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Rising Earth
+  m_Name: Sleep
   m_EditorClassIdentifier: 
-  name: Rising Earth
-  description: 'Slam the target with a risen fragment of the ground. '
-  type: 7
-  power: 20
+  name: Sleep
+  description: Causes the slumber status effect on the target.
+  type: 4
+  power: 0
   accuracy: 100
-  alwaysHits: 0
-  magCost: 8
-  priority: 0
-  attackAnimationName: Rise
-  attackColor: {r: 0.56396437, g: 0.6037736, b: 0, a: 1}
-  attackSound: {fileID: 8300000, guid: bb2dea04b247cc04694d90cc21589694, type: 3}
-  category: 1
+  magCost: 10
+  attackAnimationName: Cloud
+  attackColor: {r: 1, g: 0.6273585, b: 0.7714048, a: 0.5803922}
+  attackSound: {fileID: 8300000, guid: 94c20fd2f75475c4f8df52b2f796d6a9, type: 3}
+  category: 2
   effects:
     boosts: []
-    status: 0
-  secondaryEffects: []
+    status: 7
   target: 0

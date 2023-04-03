@@ -17,6 +17,7 @@ MonoBehaviour:
   type: 2
   power: 50
   accuracy: 100
+  alwaysHits: 0
   magCost: 4
   attackAnimationName: Burst
   attackColor: {r: 1, g: 0.31603393, b: 0.1273585, a: 1}
@@ -24,4 +25,6 @@ MonoBehaviour:
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

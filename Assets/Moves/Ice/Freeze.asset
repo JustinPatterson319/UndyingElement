@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Rising Earth
+  m_Name: Freeze
   m_EditorClassIdentifier: 
-  name: Rising Earth
-  description: 'Slam the target with a risen fragment of the ground. '
-  type: 7
-  power: 20
+  name: Freeze
+  description: Causes the chill status effect on the target.
+  type: 6
+  power: 0
   accuracy: 100
   alwaysHits: 0
-  magCost: 8
+  magCost: 10
   priority: 0
-  attackAnimationName: Rise
-  attackColor: {r: 0.56396437, g: 0.6037736, b: 0, a: 1}
-  attackSound: {fileID: 8300000, guid: bb2dea04b247cc04694d90cc21589694, type: 3}
-  category: 1
+  attackAnimationName: Shards
+  attackColor: {r: 0, g: 1, b: 0.9301295, a: 1}
+  attackSound: {fileID: 8300000, guid: 0024c151b82e7c84789064077f596cc3, type: 3}
+  category: 2
   effects:
     boosts: []
-    status: 0
+    status: 6
   secondaryEffects: []
   target: 0
