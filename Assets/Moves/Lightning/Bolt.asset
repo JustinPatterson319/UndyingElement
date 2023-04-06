@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Bolt
   m_EditorClassIdentifier: 
   name: Bolt
-  description: 
+  description: 'Strike a target with a bolt of lightning. '
   type: 3
   power: 40
   accuracy: 100
+  alwaysHits: 0
   magCost: 2
+  priority: 0
   attackAnimationName: Bolt
   attackColor: {r: 1, g: 1, b: 1, a: 1}
   attackSound: {fileID: 8300000, guid: d2e476b6c4a646b4a9b8321b57d1aada, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

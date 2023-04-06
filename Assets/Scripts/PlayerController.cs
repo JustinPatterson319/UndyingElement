@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     public LayerMask collisionLayer;
+    public LayerMask interactableLayer;
     public LayerMask encounterLayer;
 
     public event Action OnEncountered;
@@ -58,6 +59,11 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isMoving", isMoving);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Interact();
+        }
     }
 
     IEnumerator Move(Vector3 targetPos)
@@ -76,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     private bool CanWalk(Vector3 targetPos)
     {
-        if (Physics2D.OverlapCircle(targetPos, 0.2f, collisionLayer) != null)
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, collisionLayer | interactableLayer) != null)
         {
             return false;
         }
@@ -96,6 +102,20 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isMoving", false);
                 OnEncountered();
             }
+        }
+    }
+
+    void Interact()
+    {
+        var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var interactPos = transform.position + facingDir;
+
+        //Debug.DrawLine(transform.position, interactPos, Color.red, 0.5f);
+
+        var collider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
         }
     }
 }

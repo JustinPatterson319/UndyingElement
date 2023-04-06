@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Aqua Blast
   m_EditorClassIdentifier: 
   name: Aqua Blast
-  description: 
+  description: 'Damage the target with a burst of water. '
   type: 9
   power: 40
   accuracy: 90
+  alwaysHits: 0
   magCost: 2
+  priority: 0
   attackAnimationName: Firework
   attackColor: {r: 0.13679248, g: 0.6014036, b: 1, a: 1}
   attackSound: {fileID: 8300000, guid: 852f7f09a4bced24cac6e970a3e53340, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

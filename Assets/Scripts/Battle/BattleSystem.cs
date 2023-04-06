@@ -486,32 +486,35 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
+            if (!dialogBox.isTyping)
+            {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
 
-            if (currentAction == 0)
-            {
-                currentAction = 0;
-                //attack
-                StartCoroutine(MoveSelection());
-            }
-            if (currentAction == 1)
-            {
-                currentAction = 0;
-                //swap
-                dialogBox.EnableActionSelector(false);
-                prevState = state;
-                OpenPartyScreen();
-            }
-            if (currentAction == 2)
-            {
-                currentAction = 0;
-                //item
-            }
-            if (currentAction == 3)
-            {
-                currentAction = 0;
-                //flee
+                if (currentAction == 0)
+                {
+                    currentAction = 0;
+                    //attack
+                    StartCoroutine(MoveSelection());
+                }
+                if (currentAction == 1)
+                {
+                    currentAction = 0;
+                    //swap
+                    dialogBox.EnableActionSelector(false);
+                    prevState = state;
+                    OpenPartyScreen();
+                }
+                if (currentAction == 2)
+                {
+                    currentAction = 0;
+                    //item
+                }
+                if (currentAction == 3)
+                {
+                    currentAction = 0;
+                    //flee
+                }
             }
         }
     }
@@ -558,26 +561,32 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            var move = playerUnit.Character.Moves[currentAction];
-            if (playerUnit.Character.currentMP < move.Base.MagCost)
+            if (!dialogBox.isTyping)
             {
-                return;
+                var move = playerUnit.Character.Moves[currentAction];
+                if (playerUnit.Character.currentMP < move.Base.MagCost)
+                {
+                    return;
+                }
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                dialogBox.EnableMoveSelector(false);
+                dialogBox.EnableDialogText(true);
+                StartCoroutine(RunTurns(BattleAction.Move));
+                currentAction = 0;
             }
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            dialogBox.EnableMoveSelector(false);
-            dialogBox.EnableDialogText(true);
-            StartCoroutine(RunTurns(BattleAction.Move));
-            currentAction = 0;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            currentAction = 0;
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            dialogBox.EnableMoveSelector(false);
-            dialogBox.EnableDialogText(true);
-            StartCoroutine(ActionSelection());
+            if (!dialogBox.isTyping)
+            {
+                currentAction = 0;
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                dialogBox.EnableMoveSelector(false);
+                dialogBox.EnableDialogText(true);
+                StartCoroutine(ActionSelection());
+            }
         }
     }
 

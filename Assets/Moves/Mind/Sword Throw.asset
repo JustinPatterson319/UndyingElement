@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Sword Throw
   m_EditorClassIdentifier: 
   name: Sword Throw
-  description: 
+  description: 'Telekinetically throw your sword at a target. '
   type: 4
   power: 20
   accuracy: 100
+  alwaysHits: 0
   magCost: 1
+  priority: 0
   attackAnimationName: Swipe
   attackColor: {r: 0.9245283, g: 0.33579564, b: 0.7917575, a: 1}
   attackSound: {fileID: 8300000, guid: e8f7e150d1abd9a4d9273077cb1484ca, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

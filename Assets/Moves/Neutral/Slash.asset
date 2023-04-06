@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   name: Slash
-  description: 
+  description: 'Slash at a target. '
   type: 1
   power: 30
   accuracy: 100

@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Falling Stars
   m_EditorClassIdentifier: 
   name: Falling Stars
-  description: 
+  description: 'Condense light energy above a target and drop it down on them. '
   type: 10
   power: 30
   accuracy: 100
+  alwaysHits: 0
   magCost: 2
+  priority: 0
   attackAnimationName: Fall
   attackColor: {r: 1, g: 0.99856657, b: 0.5990566, a: 1}
   attackSound: {fileID: 8300000, guid: 7ac14ccafc578394fb8afb537490972b, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

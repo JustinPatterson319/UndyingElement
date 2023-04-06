@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Ice Shards
   m_EditorClassIdentifier: 
   name: Ice Shards
-  description: 
+  description: 'Pierce a target with small shards of ice. '
   type: 6
   power: 25
   accuracy: 95
+  alwaysHits: 0
   magCost: 1
+  priority: 0
   attackAnimationName: ShardsOut
   attackColor: {r: 0.3066038, g: 1, b: 0.8803195, a: 1}
   attackSound: {fileID: 8300000, guid: b33de185ea36db74c809d93c60743374, type: 3}
@@ -25,4 +27,5 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 0
+  secondaryEffects: []
   target: 0

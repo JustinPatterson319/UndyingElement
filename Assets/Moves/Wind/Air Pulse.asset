@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Air Pulse
   m_EditorClassIdentifier: 
   name: Air Pulse
-  description: 
+  description: 'Condense a strong gust of wind into a target. '
   type: 8
   power: 20
   accuracy: 100

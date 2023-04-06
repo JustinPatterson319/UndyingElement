@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Multi-Sword Throw
   m_EditorClassIdentifier: 
   name: Multi-Sword Throw
-  description: 
+  description: 'Telekinetically throw multiple swords at a target. '
   type: 4
   power: 40
   accuracy: 100
+  alwaysHits: 0
   magCost: 2
+  priority: 0
   attackAnimationName: DoubleSwipe
   attackColor: {r: 0.9245283, g: 0.36196154, b: 0.82422566, a: 1}
   attackSound: {fileID: 8300000, guid: dab235036eca4bf4eb26352bdc729723, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

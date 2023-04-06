@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Jolt
   m_EditorClassIdentifier: 
   name: Jolt
-  description: 
+  description: 'Causes the shock status on a target. '
   type: 3
   power: 0
-  accuracy: 100
+  accuracy: 60
+  alwaysHits: 0
   magCost: 3
+  priority: 0
   attackAnimationName: Jolt
   attackColor: {r: 1, g: 1, b: 1, a: 1}
   attackSound: {fileID: 8300000, guid: 3cb1b4c27dd8e344f899ceacba8e67f0, type: 3}
@@ -25,4 +27,5 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 5
+  secondaryEffects: []
   target: 0

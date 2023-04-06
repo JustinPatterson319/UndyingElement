@@ -10,23 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Cosmic Trance
+  m_Name: Splash
   m_EditorClassIdentifier: 
-  name: Cosmic Trance
-  description: 'Pull from the cosmos to look into the mind of an opponent, greatly
-    damaging them in the process. One of Grey''s ultimate attacks. '
-  type: 4
-  power: 150
+  name: Splash
+  description: 'Splash the target with cold water. May cause chill. This move never
+    misses. '
+  type: 9
+  power: 60
   accuracy: 100
-  alwaysHits: 0
-  magCost: 20
+  alwaysHits: 1
+  magCost: 6
   priority: 0
-  attackAnimationName: CosmicTrance
-  attackColor: {r: 1, g: 1, b: 1, a: 1}
-  attackSound: {fileID: 8300000, guid: c84d6289c39db3c49901eec116915ae1, type: 3}
+  attackAnimationName: Blood
+  attackColor: {r: 0.2216981, g: 0.8417395, b: 1, a: 0.88235295}
+  attackSound: {fileID: 8300000, guid: 52f678a6c6f467b46b3429574441222f, type: 3}
   category: 1
   effects:
     boosts: []
     status: 0
-  secondaryEffects: []
+  secondaryEffects:
+  - boosts: []
+    status: 6
+    chance: 5
+    target: 0
   target: 0

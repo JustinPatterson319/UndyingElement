@@ -13,15 +13,20 @@ MonoBehaviour:
   m_Name: Sunfire
   m_EditorClassIdentifier: 
   name: Sunfire
-  description: 
+  description: 'Pull from the power of the sun to unleash a raging fire blast. One
+    of Vanis'' ultimate attacks. '
   type: 2
   power: 150
   accuracy: 100
+  alwaysHits: 0
   magCost: 20
+  priority: 0
   attackAnimationName: Sunfire
   attackColor: {r: 1, g: 1, b: 1, a: 1}
   attackSound: {fileID: 8300000, guid: 88948bfe68640b149a92c134d6aaf5de, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

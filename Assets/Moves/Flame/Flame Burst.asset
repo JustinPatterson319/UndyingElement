@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Flame Burst
   m_EditorClassIdentifier: 
   name: Flame Burst
-  description: 
+  description: 'Blast the target with a burst of flames. '
   type: 2
   power: 50
   accuracy: 100
   alwaysHits: 0
   magCost: 4
+  priority: 0
   attackAnimationName: Burst
   attackColor: {r: 1, g: 0.31603393, b: 0.1273585, a: 1}
   attackSound: {fileID: 8300000, guid: 1ea8e49fab999454fad3e08fb8d8b213, type: 3}

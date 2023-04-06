@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Nature's Shout
   m_EditorClassIdentifier: 
   name: Nature's Shout
-  description: 
+  description: 'Summon nature energy with a powerful shout. Lowers the targets defense
+    and warding. '
   type: 5
   power: 0
   accuracy: 100
+  alwaysHits: 0
   magCost: 1
+  priority: 0
   attackAnimationName: Expand
   attackColor: {r: 0.3066038, g: 1, b: 0.36914545, a: 1}
   attackSound: {fileID: 8300000, guid: 7238fa678acca1448ab27136222c9304, type: 3}
@@ -28,4 +31,6 @@ MonoBehaviour:
       boost: -1
     - stat: 3
       boost: -1
+    status: 0
+  secondaryEffects: []
   target: 0

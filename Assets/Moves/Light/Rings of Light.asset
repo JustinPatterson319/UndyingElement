@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Rings of Light
   m_EditorClassIdentifier: 
   name: Rings of Light
-  description: 
+  description: 'Damages a target with light from all sides. '
   type: 10
   power: 80
   accuracy: 100
+  alwaysHits: 0
   magCost: 10
+  priority: 0
   attackAnimationName: MultiRing
   attackColor: {r: 1, g: 1, b: 0, a: 1}
   attackSound: {fileID: 8300000, guid: 2795bc6c60897b4428f71d36f9a6444a, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

@@ -22,6 +22,7 @@ public class BatlleDialogue : MonoBehaviour
 
     [SerializeField] Color highlightedColor;
     [SerializeField] BattleUnit playerUnit;
+    public bool isTyping;
 
     public void SetDialog(string dialog)
     {
@@ -30,12 +31,15 @@ public class BatlleDialogue : MonoBehaviour
 
     public IEnumerator TypeDialog(string dialog)
     {
+        isTyping = true;
         dialogText.text = "";
         foreach (var letter in dialog.ToCharArray())
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(.7f / lettersPerSecond);
         }
+        yield return new WaitForSeconds(.2f);
+        isTyping = false;
         yield return new WaitForSeconds(1f);
     }
 

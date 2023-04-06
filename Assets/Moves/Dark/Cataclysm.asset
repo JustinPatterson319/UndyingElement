@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Cataclysm
   m_EditorClassIdentifier: 
   name: Cataclysm
-  description: 
+  description: 'Attacks with a small amount of dark energy. '
   type: 11
   power: 20
   accuracy: 100
+  alwaysHits: 0
   magCost: 1
+  priority: 0
   attackAnimationName: Circle
   attackColor: {r: 0.33639044, g: 0, b: 0.3773585, a: 1}
   attackSound: {fileID: 8300000, guid: c1e34c3526b8db54d951cc15e0de9a33, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0

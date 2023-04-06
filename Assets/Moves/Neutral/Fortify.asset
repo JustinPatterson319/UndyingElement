@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Fortify
   m_EditorClassIdentifier: 
   name: Fortify
-  description: 
+  description: 'Greatly boosts the users warding and defense of the user. '
   type: 1
   power: 0
   accuracy: 100
+  alwaysHits: 0
   magCost: 0
+  priority: 0
   attackAnimationName: Shield
   attackColor: {r: 1, g: 1, b: 1, a: 0.7058824}
   attackSound: {fileID: 8300000, guid: cab26f5981744854cbccf4e1e11529dc, type: 3}
@@ -28,4 +30,6 @@ MonoBehaviour:
       boost: 2
     - stat: 3
       boost: 2
+    status: 0
+  secondaryEffects: []
   target: 1

@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: Shadowblade
   m_EditorClassIdentifier: 
   name: Shadow Blade
-  description: 
+  description: 'Slashes a target with a blade made of darkness energy. '
   type: 11
   power: 50
   accuracy: 95
+  alwaysHits: 0
   magCost: 4
+  priority: 0
   attackAnimationName: Swipe
   attackColor: {r: 0.4367783, g: 0, b: 0.4433962, a: 1}
   attackSound: {fileID: 8300000, guid: 5fd02c7f813915e4db4755bf5811f2a3, type: 3}
   category: 1
   effects:
     boosts: []
+    status: 0
+  secondaryEffects: []
   target: 0
