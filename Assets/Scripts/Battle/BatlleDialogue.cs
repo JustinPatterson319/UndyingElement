@@ -38,7 +38,7 @@ public class BatlleDialogue : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(.7f / lettersPerSecond);
         }
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.3f);
         isTyping = false;
         yield return new WaitForSeconds(1f);
     }

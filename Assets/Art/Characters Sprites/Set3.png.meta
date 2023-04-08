@@ -1848,7 +1848,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_83
+      name: Up3
       rect:
         serializedVersion: 2
         x: 256
@@ -1869,7 +1869,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_84
+      name: Up1
       rect:
         serializedVersion: 2
         x: 272
@@ -1890,7 +1890,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_85
+      name: Up2
       rect:
         serializedVersion: 2
         x: 288
@@ -2226,7 +2226,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_101
+      name: Right3
       rect:
         serializedVersion: 2
         x: 256
@@ -2247,7 +2247,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_102
+      name: Right1
       rect:
         serializedVersion: 2
         x: 272
@@ -2268,7 +2268,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_103
+      name: Right2
       rect:
         serializedVersion: 2
         x: 288
@@ -2604,7 +2604,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_119
+      name: Down3
       rect:
         serializedVersion: 2
         x: 256
@@ -2625,7 +2625,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_120
+      name: Down1
       rect:
         serializedVersion: 2
         x: 272
@@ -2646,7 +2646,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_121
+      name: Down2
       rect:
         serializedVersion: 2
         x: 288
@@ -2982,7 +2982,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_137
+      name: Left3
       rect:
         serializedVersion: 2
         x: 256
@@ -3003,7 +3003,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_138
+      name: Left1
       rect:
         serializedVersion: 2
         x: 272
@@ -3024,7 +3024,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_139
+      name: Left2
       rect:
         serializedVersion: 2
         x: 288
@@ -5071,8 +5071,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Set3_120: -534508949
       Set3_213: -202096151
+      Right1: -311650010
       Set3_50: 373137957
       Set3_201: 1243026839
       Set3_34: 337378309
@@ -5122,7 +5122,6 @@ TextureImporter:
       Set3_89: 1391984911
       Set3_16: -2020976335
       Set3_68: -1988200534
-      Set3_101: -931787259
       Set3_107: -1929712653
       Set3_31: -1094560091
       Set3_40: -266447828
@@ -5143,23 +5142,23 @@ TextureImporter:
       Set3_176: 1252241865
       Set3_163: 963608225
       Set3_144: 85162121
-      Set3_85: -1769404749
       Set3_160: -230550778
+      Left2: -1391726917
       GreyUp3: -45567881
       Set3_46: -261862082
       Set3_92: -1242673670
       Set3_205: -2009040861
       Set3_41: 415880504
+      Down2: -331687140
       GreyRight3: -1187530077
       Set3_27: 1497709824
       Set3_142: -2076192246
       Set3_170: 824048890
-      Set3_139: -1391726917
-      Set3_84: 1970166557
       Set3_150: 1379329062
       Set3_43: -1941704284
       Set3_88: 1241088004
       Set3_105: -2097751142
+      Up2: -1769404749
       Set3_5: -757882039
       Set3_47: -1081254911
       Set3_174: -1216408210
@@ -5167,21 +5166,20 @@ TextureImporter:
       Set3_29: 1948410351
       Set3_209: -500027787
       Set3_59: 1354173970
-      Set3_83: 139868252
+      Set3_108: -158540347
       Set3_3: 1122085513
       TownDown2: -1200478841
-      Set3_108: -158540347
-      TownDown1: -1104823771
       Set3_154: -440829582
+      TownDown1: -1104823771
+      Up1: 1970166557
       Set3_198: -1485649277
-      Set3_102: -311650010
+      Left3: -1913671578
       Set3_141: -166511076
       Set3_232: 1602941965
       Set3_24: -1753870338
       Set3_220: -1696046148
       GreyUp2: 1682022556
       Set3_19: 1928199537
-      Set3_121: -331687140
       Set3_72: -720084901
       Set3_188: -111302221
       Set3_168: -1407720670
@@ -5192,6 +5190,7 @@ TextureImporter:
       TownUp1: -265831990
       Set3_171: -1738725036
       Set3_177: 1812698967
+      Right2: 492015093
       Set3_11: -398155777
       GreyLeft2: 110113471
       Set3_193: 1536701599
@@ -5202,12 +5201,12 @@ TextureImporter:
       Set3_36: -108546046
       GreyUp: 1007983302
       Set3_156: -1964508604
+      Up3: 139868252
       Set3_184: -804570000
       Set3_9: 741557946
       Set3_87: 2013752838
       Set3_0: 1143185566
       Set3_186: 903246955
-      Set3_103: 492015093
       Set3_55: -1283126398
       Set3_39: -1356321413
       Set3_161: -1238992
@@ -5227,9 +5226,10 @@ TextureImporter:
       Set3_126: -1548390353
       Set3_49: 25197827
       Set3_106: 1820190811
-      Set3_137: -1913671578
-      TownUp2: 397466522
       Set3_225: -1042809154
+      TownUp2: 397466522
+      Down1: -534508949
+      Right3: -931787259
       Set3_166: -320941316
       Set3_44: -1039454960
       Set3_180: -1602722598
@@ -5237,15 +5237,13 @@ TextureImporter:
       Set3_230: -1372996441
       Set3_227: 427857911
       Set3_222: -2078392353
-      Set3_138: 76482205
       TownRight1: 1686263314
       Set3_122: 1691353651
       Set3_76: -408537231
       Set3_210: 1512879627
       Set3_64: -235357662
-      Set3_119: 2038665829
-      GreyDown2: -175037275
       Set3_187: 350870845
+      GreyDown2: -175037275
       Set3_130: 824241611
       TownUp3: 827726459
       Set3_37: 634505071
@@ -5269,6 +5267,8 @@ TextureImporter:
       Set3_58: 1420480463
       Set3_54: 1310957550
       Set3_65: 1687176600
+      Left1: 76482205
+      Down3: 2038665829
       Set3_145: -990094515
       Set3_13: -1691843179
       Set3_196: -1681946215
