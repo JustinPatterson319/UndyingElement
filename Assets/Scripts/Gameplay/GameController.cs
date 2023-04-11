@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog }
+public enum GameState { FreeRoam, Battle, Dialog, Cutscene }
 
 public class GameController : MonoBehaviour
 {
     GameState state;
+    public static GameController Instance { get; private set; }
 
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
@@ -14,6 +15,7 @@ public class GameController : MonoBehaviour
 
     public void Awake()
     {
+        Instance = this;
         ConditionsDB.Init();
     }
 
@@ -21,6 +23,16 @@ public class GameController : MonoBehaviour
     {
         playerController.OnEncountered += StartBattle;
         battleSystem.OnBattleOver += EndBattle;
+
+        playerController.OnEnterBossView += (Collider2D bossCollider) =>
+        {
+            var boss = bossCollider.GetComponentInParent<BossController>();
+            if (boss != null)
+            {
+                state = GameState.Cutscene;
+                StartCoroutine(boss.TriggerBossBattle(playerController));
+            }
+        };
 
         DialogManager.Instance.OnShowDialog += () =>
         {
@@ -48,8 +60,28 @@ public class GameController : MonoBehaviour
         battleSystem.StartBattle(playerParty, wildEncounter);
     }
 
+    BossController boss;
+    public void StartBossBattle(BossController boss)
+    {
+        state = GameState.Battle;
+        battleSystem.gameObject.SetActive(true);
+        worldCamera.gameObject.SetActive(false);
+
+        this.boss = boss;
+        var playerParty = playerController.GetComponent<PlayerParty>();
+        var bossParty = boss.GetComponent<PlayerParty>();
+
+        battleSystem.StartBossBattle(playerParty, bossParty);
+    }
+
     void EndBattle(bool won)
     {
+        if(boss != null && won == true)
+        {
+            boss.BattleLost();
+            boss = null;
+        }
+
         state = GameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);

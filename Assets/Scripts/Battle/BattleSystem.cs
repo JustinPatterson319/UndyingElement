@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, BattleOver}
 public enum BattleAction { Move, SwitchCharacter, UseItem, Run}
@@ -18,6 +19,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BatlleDialogue dialogBox;
 
     [SerializeField] PartyScreen partyScreen;
+    [SerializeField] Image playerImage;
+    [SerializeField] Image bossImage;
 
     [SerializeField] Animator playerHitBox;
     [SerializeField] Animator enemyHitBox;
@@ -26,6 +29,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip select;
     [SerializeField] AudioClip enemyDefeatSound;
     [SerializeField] AudioClip playerDefeatSound;
+    public GameObject bossMusic;
+    public GameObject encounterMusic;
 
     public event Action<bool> OnBattleOver;
 
@@ -35,27 +40,95 @@ public class BattleSystem : MonoBehaviour
     int currentMember;
 
     PlayerParty playerParty;
+    PlayerParty bossParty;
     Character wildEncounter;
+
+    bool isBossBattle = false;
+    PlayerController player;
+    BossController boss;
 
     public void StartBattle(PlayerParty playerParty, Character wildEncounter)
     {
+        isBossBattle = false;
         this.playerParty = playerParty;
         this.wildEncounter = wildEncounter;
         StartCoroutine(SetupBattle());
     }
 
+    public void StartBossBattle(PlayerParty playerParty, PlayerParty bossParty)
+    {
+        this.playerParty = playerParty;
+        this.bossParty = bossParty;
+
+        isBossBattle = true;
+        player = playerParty.GetComponent<PlayerController>();
+        boss = bossParty.GetComponent<BossController>();
+
+        StartCoroutine(SetupBattle());
+    }
+
     public IEnumerator SetupBattle()
     {
+        playerUnit.Clear();
+        enemyUnit.Clear();
+
+        if(!isBossBattle)
+        {
+            encounterMusic.SetActive(true);
+            bossMusic.SetActive(false);
+            //Wild encounter
+            playerUnit.Setup(playerParty.GetHealthy());
+            enemyUnit.Setup(wildEncounter);
+
+            dialogBox.SetMoveNames(playerUnit.Character.Moves);
+
+            yield return dialogBox.TypeDialog($"Enemy {enemyUnit.Character.Base.name} stands in the way!");
+        }
+        else
+        {
+            encounterMusic.SetActive(false);
+            bossMusic.SetActive(true);
+            //Boss Encounter
+            //Show boss sprite
+            playerUnit.gameObject.SetActive(false);
+            enemyUnit.gameObject.SetActive(false);
+
+            playerImage.gameObject.SetActive(true);
+            bossImage.gameObject.SetActive(true);
+
+            playerImage.sprite = player.Sprite;
+            bossImage.sprite = boss.Sprite;
+
+            var sequence = DOTween.Sequence();
+            sequence.Append(bossImage.DOFade(1f, 0f));
+
+            yield return dialogBox.TypeDialog($"{boss.Name} prepares for conflict!");
+            yield return new WaitForSeconds(0.2f);
+
+            //Send out first enemy
+            //bossImage.gameObject.SetActive(false);
+            sequence.Append(bossImage.DOFade(0f, 0.5f));
+            bossImage.transform.DOLocalMoveX(500f, 1f);
+            yield return new WaitForSeconds(.5f);
+            bossImage.transform.DOLocalMoveX(100f, 1f);
+
+            enemyUnit.gameObject.SetActive(true);
+            var enemyCharacter = bossParty.GetHealthy();
+            enemyUnit.Setup(enemyCharacter);
+            yield return dialogBox.TypeDialog($"{enemyCharacter.Base.Name} is beckoned forward!");
+            yield return new WaitForSeconds(0.2f);
+
+            //Send out first player
+            playerImage.gameObject.SetActive(false);
+            playerUnit.gameObject.SetActive(true);
+            var playerCharacter = playerParty.GetHealthy();
+            playerUnit.Setup(playerCharacter);
+            yield return dialogBox.TypeDialog($"{playerCharacter.Base.Name} takes charge!");
+            dialogBox.SetMoveNames(playerUnit.Character.Moves);
+        }
+        
         AudioSource audio = GetComponent<AudioSource>();
-        playerUnit.Setup(playerParty.GetHealthy());
-        enemyUnit.Setup(wildEncounter);
-
         partyScreen.Init();
-
-        dialogBox.SetMoveNames(playerUnit.Character.Moves);
-
-        yield return dialogBox.TypeDialog($"Enemy {enemyUnit.Character.Base.name} stands in the way!");
-
         StartCoroutine(ActionSelection());
     }
 
@@ -194,7 +267,7 @@ public class BattleSystem : MonoBehaviour
         if (CheckIfMoveHits(move, sourceUnit.Character, targetUnit.Character))
         {
             sourceUnit.PlayAttackAnimation();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.7f);
             if (move.Base.Category == MoveCategory.Status)
             {
                 yield return RunMoveEffects(move.Base.Effects, sourceUnit.Character, targetUnit.Character, sourceHitBox, targetHitBox, targetUnit, sourceUnit, targetHit, sourceHit, move.Base.Target, move, false);
@@ -403,7 +476,23 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            BattleOver(true);
+            if (!isBossBattle)
+            {
+                BattleOver(true);
+            }
+            else
+            {
+                var nextCharacter = bossParty.GetHealthy();
+                if (nextCharacter != null)
+                {
+                    //send out next
+                    StartCoroutine(SendNextBossCharacter(nextCharacter));
+                }
+                else
+                {
+                    BattleOver(true);
+                }
+            }
         }
     }
 
@@ -661,6 +750,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.X) && playerUnit.Character.currentHP > 0)
         {
+            currentMember = 0;
             GetComponent<AudioSource>().clip = select;
             GetComponent<AudioSource>().Play(0);
             partyScreen.gameObject.SetActive(false);
@@ -685,6 +775,14 @@ public class BattleSystem : MonoBehaviour
         dialogBox.SetMoveNames(newCharacter.Moves);
         yield return dialogBox.TypeDialog($"{newCharacter.Base.name} steps in to defend!");
 
+        state = BattleState.RunningTurn;
+    }
+
+    IEnumerator SendNextBossCharacter(Character nextCharacter)
+    {
+        state = BattleState.Busy;
+        enemyUnit.Setup(nextCharacter);
+        yield return dialogBox.TypeDialog($"{nextCharacter.Base.Name} is prepared for battle!");
         state = BattleState.RunningTurn;
     }
 }

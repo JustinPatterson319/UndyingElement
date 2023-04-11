@@ -14,8 +14,8 @@ TagManager:
   - Collisions
   - Encounters
   - Interactable
-  - 
-  - 
+  - Player
+  - FOV Layer
   - 
   - 
   - 

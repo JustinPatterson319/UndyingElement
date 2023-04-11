@@ -43,10 +43,16 @@ public class BattleUnit : MonoBehaviour
         Character = character;
         image.sprite = Character.Base.BattleSprite;
 
+        hud.gameObject.SetActive(true);
         hud.SetData(character);
 
         image.color = originalColor;
         PlayEnterAnimation();
+    }
+
+    public void Clear()
+    {
+        hud.gameObject.SetActive(false);
     }
 
     public void PlayEnterAnimation()
@@ -111,5 +117,12 @@ public class BattleUnit : MonoBehaviour
     {
         image.sprite = Character.Base.FleeSprite;
         image.transform.DOLocalMoveX(-500f, 1f);
+    }
+
+    public void PlayBossAnimation()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.DOFade(0f, 0.5f));
+        image.transform.DOLocalMoveX(500f, 1f);
     }
 }

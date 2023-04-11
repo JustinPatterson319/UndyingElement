@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Lamorak
+  m_EditorClassIdentifier: 
+  name: Lamorak
+  description: 'A knight of the round table. Said to be the weakest, yet most cocky.
+    Uses the power of lightning. '
+  battleSprite: {fileID: -1221519752, guid: 43fc04a1ade03e948b018fb4b4b1b63c, type: 3}
+  partySprite: {fileID: 977680761, guid: 43fc04a1ade03e948b018fb4b4b1b63c, type: 3}
+  faceSprite: {fileID: -1332916092, guid: 3922e71c5098f0048839f65393998642, type: 3}
+  elementSprite: {fileID: -648053907, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: 362777315, guid: 43fc04a1ade03e948b018fb4b4b1b63c, type: 3}
+  type: 3
+  hp: 700
+  mp: 100
+  regAttack: 120
+  magAttack: 120
+  regDefense: 120
+  magDefense: 120
+  speed: 130
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: d290fd65860ac5a4eb71c2393ceaddd7, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: b647b2de75a4e554f987910204f40331, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 18f01f35b61699c42a58ebcd7d5dd032, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 70a30834afeb5ce40a6f527f6fdee1f0, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 70a30834afeb5ce40a6f527f6fdee1f0, type: 2}
+    level: 0
