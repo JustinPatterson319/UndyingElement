@@ -74,11 +74,11 @@ public class BattleUnit : MonoBehaviour
         var sequence = DOTween.Sequence();
         if(isPlayerUnit)
         {
-            sequence.Append(image.transform.DOLocalMoveX(originalPos.x + 50f, .25f));
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x + 30f, .25f));
         }
         else
         {
-            sequence.Append(image.transform.DOLocalMoveX(originalPos.x - 50f, .25f));
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x - 30f, .25f));
         }
 
         sequence.Append(image.transform.DOLocalMoveX(originalPos.x, .25f));

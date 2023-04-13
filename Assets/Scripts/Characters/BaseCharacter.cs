@@ -26,6 +26,7 @@ public class BaseCharacter : ScriptableObject
     [SerializeField] int regDefense;
     [SerializeField] int magDefense;
     [SerializeField] int speed;
+    [SerializeField] int expYield;
 
     [SerializeField] List<LearnableMove> learnableMoves;
 
@@ -112,6 +113,16 @@ public class BaseCharacter : ScriptableObject
     public List<LearnableMove> LearnableMoves
     {
         get { return learnableMoves; }
+    }
+
+    public int ExpYield
+    {
+        get { return expYield; }
+    }
+
+    public int GetExpForLevel(int level)
+    {
+        return level * level * level;
     }
 }
 

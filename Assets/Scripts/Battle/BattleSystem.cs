@@ -297,23 +297,7 @@ public class BattleSystem : MonoBehaviour
 
             if (targetUnit.Character.currentHP <= 0)
             {
-                if (targetUnit == playerUnit)
-                {
-                    GetComponent<AudioSource>().clip = playerDefeatSound;
-                    GetComponent<AudioSource>().Play(0);
-                    targetUnit.PlayRetreatAnimation();
-                    yield return dialogBox.TypeDialog($"{targetUnit.Character.Base.name} retreats!");
-                }
-                else
-                {
-                    GetComponent<AudioSource>().clip = enemyDefeatSound;
-                    GetComponent<AudioSource>().Play(0);
-                    targetUnit.PlayFaintAnimation();
-                    yield return dialogBox.TypeDialog($"Enemy {targetUnit.Character.Base.name} defeated!");
-                }
-
-                yield return new WaitForSeconds(2f);
-                CheckForBattleOver(targetUnit);
+                yield return HandleCharacterFaint(targetUnit);
             }
         }
         else
@@ -397,22 +381,8 @@ public class BattleSystem : MonoBehaviour
 
         if (sourceUnit.Character.currentHP <= 0)
         {
-            if (sourceUnit == playerUnit)
-            {
-                GetComponent<AudioSource>().clip = playerDefeatSound;
-                GetComponent<AudioSource>().Play(0);
-                sourceUnit.PlayRetreatAnimation();
-                yield return dialogBox.TypeDialog($"{sourceUnit.Character.Base.name} retreats!");
-            }
-            else
-            {
-                GetComponent<AudioSource>().clip = enemyDefeatSound;
-                GetComponent<AudioSource>().Play(0);
-                sourceUnit.PlayFaintAnimation();
-                yield return dialogBox.TypeDialog($"Enemy {sourceUnit.Character.Base.name} defeated!");
-            }
-            yield return new WaitForSeconds(2f);
-            CheckForBattleOver(sourceUnit);
+            yield return HandleCharacterFaint(sourceUnit);
+            yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
     }
 
@@ -458,6 +428,50 @@ public class BattleSystem : MonoBehaviour
             var message = character.StatusChanges.Dequeue();
             yield return dialogBox.TypeDialog(message);
         }
+    }
+
+    IEnumerator HandleCharacterFaint(BattleUnit faintedUnit)
+    {
+        if (faintedUnit == playerUnit)
+        {
+            GetComponent<AudioSource>().clip = playerDefeatSound;
+            GetComponent<AudioSource>().Play(0);
+            faintedUnit.PlayRetreatAnimation();
+            yield return dialogBox.TypeDialog($"{faintedUnit.Character.Base.name} retreats!");
+        }
+        else
+        {
+            GetComponent<AudioSource>().clip = enemyDefeatSound;
+            GetComponent<AudioSource>().Play(0);
+            faintedUnit.PlayFaintAnimation();
+            yield return dialogBox.TypeDialog($"Enemy {faintedUnit.Character.Base.name} defeated!");
+        }
+        yield return new WaitForSeconds(1f);
+
+        if (!faintedUnit.IsPlayerUnit)
+        {
+            //exp gain
+            int expYield = faintedUnit.Character.Base.ExpYield;
+            int enemyLevel = faintedUnit.Character.Level;
+            float bossBonus = (isBossBattle) ? 1.5f : 1f;
+
+            int expGain = Mathf.FloorToInt((expYield * enemyLevel * bossBonus) / 7);
+            playerUnit.Character.Exp += expGain;
+            yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.name} gained {expGain} experience!");
+            StartCoroutine(playerUnit.Hud.SetExpSmooth());
+
+            //Check level up
+            while(playerUnit.Character.CheckForLevelUp())
+            {
+                playerUnit.Hud.SetLevel();
+                yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.name}'s level increased!");
+
+                yield return playerUnit.Hud.SetExpSmooth(true);
+            }
+        }
+
+        yield return new WaitForSeconds(2f);
+        CheckForBattleOver(faintedUnit);
     }
 
     void CheckForBattleOver(BattleUnit faintedUnit)
@@ -603,6 +617,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     currentAction = 0;
                     //flee
+                    StartCoroutine(TryToEscape());
                 }
             }
         }
@@ -776,6 +791,21 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{newCharacter.Base.name} steps in to defend!");
 
         state = BattleState.RunningTurn;
+    }
+
+    IEnumerator TryToEscape()
+    {
+        if(isBossBattle)
+        {
+            yield return dialogBox.TypeDialog($"This isn't the time for fleeing!");
+            yield break;
+        }
+        else
+        {
+            dialogBox.EnableActionSelector(false);
+            yield return dialogBox.TypeDialog($"The team fled to safety!");
+            BattleOver(true);
+        }
     }
 
     IEnumerator SendNextBossCharacter(Character nextCharacter)

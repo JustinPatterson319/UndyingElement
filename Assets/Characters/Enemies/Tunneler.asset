@@ -27,6 +27,7 @@ MonoBehaviour:
   regDefense: 50
   magDefense: 50
   speed: 50
+  expYield: 340
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 463bfe5e43a5ca2419cae0897d09fa80, type: 2}
     level: 0

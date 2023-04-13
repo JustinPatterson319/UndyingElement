@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class BattleHUD : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] HPBar hpBar;
     [SerializeField] MPBar mpBar;
+    [SerializeField] GameObject expBar;
     [SerializeField] Image element;
     [SerializeField] Image face;
 
@@ -30,11 +32,12 @@ public class BattleHUD : MonoBehaviour
     public void SetData(Character character)
     {
         _character = character;
-        levelText.text = "Lvl" + character.Level;
+        SetLevel();
         healthText.text = character.currentHP + "/" + character.HP;
         magicText.text = character.currentMP + "/" + character.MP;
         hpBar.SetHP((float) character.currentHP / character.HP);
         mpBar.SetMP((float) character.currentMP / character.MP);
+        SetExp();
 
         statusColors = new Dictionary<ConditionID, Color>()
         {
@@ -80,5 +83,41 @@ public class BattleHUD : MonoBehaviour
     {
             magicText.text = _character.currentMP + "/" + _character.MP;
             yield return mpBar.SetMPSmooth((float)_character.currentMP / _character.MP);
+    }
+
+    public void SetLevel()
+    {
+        levelText.text = "Lvl" + _character.Level;
+    }
+
+    public void SetExp()
+    {
+        if (expBar == null) return;
+
+        float normalizedExp = GetNormalizedExp();
+        expBar.transform.localScale = new Vector3(normalizedExp, 1, 1);
+    }
+
+    public IEnumerator SetExpSmooth(bool reset=false)
+    {
+        if (expBar == null) yield break;
+
+        if(reset)
+        {
+            expBar.transform.localScale = new Vector3(0, 1, 1);
+        }
+
+        float normalizedExp = GetNormalizedExp();
+        
+        yield return expBar.transform.DOScaleX(normalizedExp, 1.5f).WaitForCompletion();
+    }
+
+    float GetNormalizedExp()
+    {
+        int currLevelExp = _character.Base.GetExpForLevel(_character.Level);
+        int nextLevelExp = _character.Base.GetExpForLevel(_character.Level + 1);
+
+        float noramlizedExp = (float)(_character.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
+        return Mathf.Clamp01(noramlizedExp);
     }
 }

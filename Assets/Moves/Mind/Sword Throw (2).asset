@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aaad20bd0d8194dacc0110f6adb596, type: 3}
-  m_Name: Multi-Sword Throw
+  m_Name: Sword Throw (2)
   m_EditorClassIdentifier: 
-  name: Multi-Sword Throw
-  description: 'Telekinetically throw multiple swords at a target. '
+  name: Sword Throw (2)
+  description: 'Telekinetically throw two swords at a target. '
   type: 4
   power: 40
   accuracy: 100

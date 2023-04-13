@@ -25,6 +25,7 @@ public class Character
         }
     }
 
+    public int Exp { get; set; }
     public int currentHP { get; set; }
     public int currentMP { get; set; }
 
@@ -65,6 +66,9 @@ public class Character
                 break;
             }
         }
+
+        Exp = Base.GetExpForLevel(Level);
+
         CalculateStats();
         currentHP = HP;
         currentMP = MP;
@@ -138,6 +142,19 @@ public class Character
             }
 
             Debug.Log($"{stat} has been boosted to {StatBoosts[stat]}");
+        }
+    }
+
+    public bool CheckForLevelUp()
+    {
+        if (Exp > Base.GetExpForLevel(level + 1))
+        {
+            ++level;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
