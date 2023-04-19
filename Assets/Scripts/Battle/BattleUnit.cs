@@ -47,6 +47,7 @@ public class BattleUnit : MonoBehaviour
         hud.SetData(character);
 
         image.color = originalColor;
+        
         PlayEnterAnimation();
     }
 

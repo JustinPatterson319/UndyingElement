@@ -11,10 +11,8 @@ public enum BattleAction { Move, SwitchCharacter, UseItem, Run}
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
-    //[SerializeField] BattleHUD playerHUD;
 
     [SerializeField] BattleUnit enemyUnit;
-    //[SerializeField] BattleHUD enemyHUD;
 
     [SerializeField] BatlleDialogue dialogBox;
 
@@ -37,7 +35,6 @@ public class BattleSystem : MonoBehaviour
     BattleState state;
     BattleState? prevState;
     int currentAction;
-    int currentMember;
 
     PlayerParty playerParty;
     PlayerParty bossParty;
@@ -150,6 +147,7 @@ public class BattleSystem : MonoBehaviour
 
     void OpenPartyScreen()
     {
+        prevState = state;
         state = BattleState.PartyScreen;
         partyScreen.SetPartyData(playerParty.Characters);
         partyScreen.gameObject.SetActive(true);
@@ -225,7 +223,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (playerAction == BattleAction.SwitchCharacter)
             {
-                var selectedCharacter = playerParty.Characters[currentMember];
+                var selectedCharacter = partyScreen.SelectedMember;
                 state = BattleState.Busy;
                 yield return SwitchCharacter(selectedCharacter);
             }
@@ -605,7 +603,6 @@ public class BattleSystem : MonoBehaviour
                     currentAction = 0;
                     //swap
                     dialogBox.EnableActionSelector(false);
-                    prevState = state;
                     OpenPartyScreen();
                 }
                 if (currentAction == 2)
@@ -696,49 +693,11 @@ public class BattleSystem : MonoBehaviour
 
     void HandlePartySelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        Action onSelected = () =>
         {
             GetComponent<AudioSource>().clip = select;
             GetComponent<AudioSource>().Play(0);
-            if (currentMember == 0 || currentMember == 2)
-            {
-                currentMember++;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            if (currentMember == 1 || currentMember == 3)
-            {
-                currentMember--;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            if (currentMember == 0 || currentMember == 1)
-            {
-                currentMember = currentMember + 2;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            if (currentMember == 2 || currentMember == 3)
-            {
-                currentMember = currentMember - 2;
-            }
-        }
-        partyScreen.UpdateMemberSelection(currentMember);
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            var selectedMember = playerParty.Characters[currentMember];
+            var selectedMember = partyScreen.SelectedMember;
             if (selectedMember.currentHP <= 0)
             {
                 partyScreen.SetMessageText("That member is too weak to fight!");
@@ -754,7 +713,6 @@ public class BattleSystem : MonoBehaviour
 
             if (prevState == BattleState.ActionSelection)
             {
-                prevState = null;
                 StartCoroutine(RunTurns(BattleAction.SwitchCharacter));
             }
             else
@@ -762,15 +720,22 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Busy;
                 StartCoroutine(SwitchCharacter(selectedMember));
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.X) && playerUnit.Character.currentHP > 0)
+
+            prevState = null;
+        };
+
+        Action onBack = () =>
         {
-            currentMember = 0;
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            partyScreen.gameObject.SetActive(false);
-            StartCoroutine(ActionSelection());
-        }
+            if (playerUnit.Character.currentHP > 0)
+            {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                partyScreen.gameObject.SetActive(false);
+                StartCoroutine(ActionSelection());
+            }
+        };
+
+        partyScreen.HandleUpdate(onSelected, onBack);
     }
 
     IEnumerator SwitchCharacter(Character newCharacter)
@@ -812,6 +777,7 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.Busy;
         enemyUnit.Setup(nextCharacter);
+
         yield return dialogBox.TypeDialog($"{nextCharacter.Base.Name} is prepared for battle!");
         state = BattleState.RunningTurn;
     }

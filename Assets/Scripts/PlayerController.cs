@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
     
     private Characters characters;
 
-    public event Action OnEncountered;
-    public event Action<Collider2D> OnEnterBossView;
-
     // Start is called before the first frame update
    
     private void Awake()
@@ -58,30 +55,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        checkForEncounter();
-        checkForBoss();
-    }
-
-    private void checkForEncounter()
-    {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.EncounterLayer) != null)
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f, GameLayers.i.TriggerableLayers);
+        foreach (var collider in colliders)
         {
-            if (UnityEngine.Random.Range(1, 101) <= 10)
+            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            if(triggerable != null)
             {
-                Debug.Log("Battle!");
-                characters.Animator.IsMoving = false;
-                OnEncountered();
+                triggerable.OnPlayerTriggered(this);
+                break;
             }
-        }
-    }
-
-    private void checkForBoss()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FOVLayer);
-        if (collider != null)
-        {
-            characters.Animator.IsMoving = false;
-            OnEnterBossView?.Invoke(collider);
         }
     }
 
@@ -108,4 +90,6 @@ public class PlayerController : MonoBehaviour
     {
         get => sprite;
     }
+
+    public Characters Characters => characters;
 }

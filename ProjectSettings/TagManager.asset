@@ -16,7 +16,7 @@ TagManager:
   - Interactable
   - Player
   - FOV Layer
-  - 
+  - Portal
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2664925853
+    locked: 0
+  - name: Foreground
+    uniqueID: 3357146103
     locked: 0
   - name: SolidObjects
     uniqueID: 3862226159

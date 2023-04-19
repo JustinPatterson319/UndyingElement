@@ -1,38 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public enum GameState { FreeRoam, Battle, Dialog, Cutscene }
+public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused, Menu, PartyScreen }
 
 public class GameController : MonoBehaviour
 {
     GameState state;
+    GameState previousState;
     public static GameController Instance { get; private set; }
 
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
+    [SerializeField] PartyScreen partyScreen;
+
+    MenuController menuController;
 
     public void Awake()
     {
         Instance = this;
         ConditionsDB.Init();
+        menuController = GetComponent<MenuController>();
     }
 
     private void Start()
     {
-        playerController.OnEncountered += StartBattle;
         battleSystem.OnBattleOver += EndBattle;
-
-        playerController.OnEnterBossView += (Collider2D bossCollider) =>
-        {
-            var boss = bossCollider.GetComponentInParent<BossController>();
-            if (boss != null)
-            {
-                state = GameState.Cutscene;
-                StartCoroutine(boss.TriggerBossBattle(playerController));
-            }
-        };
+        partyScreen.Init();
 
         DialogManager.Instance.OnShowDialog += () =>
         {
@@ -46,9 +42,29 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
             }
         };
+
+        menuController.onBack += () =>
+        {
+            state = GameState.FreeRoam;
+        };
+
+        menuController.onMenuSelected += OnMenuSelected;
     }
 
-    void StartBattle()
+    public void PauseGame(bool pause)
+    {
+        if(pause)
+        {
+            previousState = state;
+            state = GameState.Paused;
+        }
+        else
+        {
+            state = previousState;
+        }
+    }
+
+    public void StartBattle()
     {
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
@@ -74,6 +90,12 @@ public class GameController : MonoBehaviour
         battleSystem.StartBossBattle(playerParty, bossParty);
     }
 
+    public void OnEnterBossView(BossController boss)
+    {
+        state = GameState.Cutscene;
+        StartCoroutine(boss.TriggerBossBattle(playerController));
+    }
+
     void EndBattle(bool won)
     {
         if(boss != null && won == true)
@@ -92,6 +114,11 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                menuController.OpenMenu();
+                state = GameState.Menu;
+            }
         }
         else if (state == GameState.Battle)
         {
@@ -101,5 +128,42 @@ public class GameController : MonoBehaviour
         {
             DialogManager.Instance.HandleUpdate();
         }
+        else if (state == GameState.Menu)
+        {
+            menuController.HandleUpdate();
+        }
+        else if (state == GameState.PartyScreen)
+        {
+            Action onSelected = () =>
+            {
+                // Show summary
+            };
+
+            Action onBack = () =>
+            {
+                partyScreen.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+
+            partyScreen.HandleUpdate(onSelected, onBack);
+        }
+    }
+
+    void OnMenuSelected(int selectedItem)
+    {
+        if(selectedItem == 0)
+        {
+            //Party
+            partyScreen.gameObject.SetActive(true);
+            partyScreen.SetPartyData(playerController.GetComponent<PlayerParty>().Characters);
+            state = GameState.PartyScreen;
+        }
+        else if (selectedItem == 1)
+        {
+            //Items
+            state = GameState.FreeRoam;
+        }
+
+        //state = GameState.FreeRoam;
     }
 }

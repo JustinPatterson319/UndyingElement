@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class PartyScreen : MonoBehaviour
@@ -8,6 +9,10 @@ public class PartyScreen : MonoBehaviour
     PartyMemberUI[] memberSlots;
     List<Character> characters;
     [SerializeField] TextMeshProUGUI messageText;
+    int currentMember = 0;
+    [SerializeField] AudioClip select;
+
+    public Character SelectedMember => characters[currentMember];
 
     public void Init()
     {
@@ -29,6 +34,7 @@ public class PartyScreen : MonoBehaviour
                 memberSlots[i].gameObject.SetActive(false);
             }
         }
+        UpdateMemberSelection(currentMember);
     }
 
     public void UpdateMemberSelection(int selectedMember)
@@ -49,5 +55,61 @@ public class PartyScreen : MonoBehaviour
     public void SetMessageText(string message)
     {
         messageText.text = message;
+    }
+
+    public void HandleUpdate(Action onSelected, Action onBack)
+    {
+        var prevSelection = currentMember;
+        
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            GetComponent<AudioSource>().clip = select;
+            GetComponent<AudioSource>().Play(0);
+            if (currentMember == 0 || currentMember == 2)
+            {
+                currentMember++;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            GetComponent<AudioSource>().clip = select;
+            GetComponent<AudioSource>().Play(0);
+            if (currentMember == 1 || currentMember == 3)
+            {
+                currentMember--;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            GetComponent<AudioSource>().clip = select;
+            GetComponent<AudioSource>().Play(0);
+            if (currentMember == 0 || currentMember == 1)
+            {
+                currentMember = currentMember + 2;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GetComponent<AudioSource>().clip = select;
+            GetComponent<AudioSource>().Play(0);
+            if (currentMember == 2 || currentMember == 3)
+            {
+                currentMember = currentMember - 2;
+            }
+        }
+        if (currentMember != prevSelection)
+        {
+            UpdateMemberSelection(currentMember);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            onSelected?.Invoke();
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            onBack?.Invoke();
+            currentMember = 0;
+        }
     }
 }

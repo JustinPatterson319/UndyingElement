@@ -32,6 +32,7 @@ public class BattleHUD : MonoBehaviour
     public void SetData(Character character)
     {
         _character = character;
+        SetStatusColor();
         SetLevel();
         healthText.text = character.currentHP + "/" + character.HP;
         magicText.text = character.currentMP + "/" + character.MP;
