@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class MPBar : MonoBehaviour
 {
     [SerializeField] GameObject magic;
     public Image magicColor;
+
+    public bool IsUpdating { get; private set; }
 
     public void SetMP(float mpNormalized)
     {
@@ -15,6 +18,8 @@ public class MPBar : MonoBehaviour
 
     public IEnumerator SetMPSmooth(float newMp)
     {
+        IsUpdating = true;
+
         float curMp = magic.transform.localScale.x;
         float changeAmt = curMp - newMp;
         if(changeAmt < 0)
@@ -36,5 +41,6 @@ public class MPBar : MonoBehaviour
             }
         }
         magic.transform.localScale = new Vector3(newMp, 1f);
+        IsUpdating = false;
     }
 }

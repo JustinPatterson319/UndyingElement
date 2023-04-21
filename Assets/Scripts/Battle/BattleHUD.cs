@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System.Linq;
+using System;
 
 public class BattleHUD : MonoBehaviour
 {
@@ -24,6 +26,10 @@ public class BattleHUD : MonoBehaviour
     [SerializeField] Color shockColor;
     [SerializeField] Color chillColor;
     [SerializeField] Color slumberColor;
+    public PartyMemberUI partyUI;
+
+    //public event System.Action OnHPChanged;
+    //public event System.Action OnMPChanged;
 
     Dictionary<ConditionID, Color> statusColors;
 
@@ -31,6 +37,14 @@ public class BattleHUD : MonoBehaviour
 
     public void SetData(Character character)
     {
+        if(_character != null)
+        {
+            _character.OnStatusChanged -= SetStatusColor;
+            _character.OnHPChanged -= UpdateHP;
+            _character.OnMPChanged -= UpdateMP;
+            _character.OnElementChanged -= UpdateElement;
+        }
+
         _character = character;
         SetStatusColor();
         SetLevel();
@@ -52,9 +66,13 @@ public class BattleHUD : MonoBehaviour
         };
 
         //changes element and character face
-        element.sprite = character.Base.ElementSprite;
+        element.sprite = character.currentElementSprite;
         face.sprite = character.Base.FaceSprite;
+
         _character.OnStatusChanged += SetStatusColor;
+        _character.OnHPChanged += UpdateHP;
+        _character.OnMPChanged += UpdateMP;
+        _character.OnElementChanged += UpdateElement;
     }
 
     void SetStatusColor()
@@ -74,13 +92,29 @@ public class BattleHUD : MonoBehaviour
         }
     }
 
-    public IEnumerator UpdateHP()
+    public void UpdateHP()
     {
+        StartCoroutine(UpdateHPAsync());
+    }
+
+    public void UpdateMP()
+    {
+        StartCoroutine(UpdateMPAsync());
+    }
+
+    public void UpdateElement()
+    {
+        element.sprite = _character.currentElementSprite;
+    }
+
+    public IEnumerator UpdateHPAsync()
+    {
+
             healthText.text = _character.currentHP + "/" + _character.HP;
             yield return hpBar.SetHPSmooth((float)_character.currentHP / _character.HP);
     }
 
-    public IEnumerator UpdateMP()
+    public IEnumerator UpdateMPAsync()
     {
             magicText.text = _character.currentMP + "/" + _character.MP;
             yield return mpBar.SetMPSmooth((float)_character.currentMP / _character.MP);
@@ -120,5 +154,22 @@ public class BattleHUD : MonoBehaviour
 
         float noramlizedExp = (float)(_character.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
         return Mathf.Clamp01(noramlizedExp);
+    }
+
+    public IEnumerator WaitForHUDUpdate()
+    {
+        yield return new WaitUntil(() => hpBar.IsUpdating == false);
+        yield return new WaitUntil(() => mpBar.IsUpdating == false);
+    }
+
+    public void ClearData()
+    {
+        if (_character != null)
+        {
+            _character.OnStatusChanged -= SetStatusColor;
+            _character.OnHPChanged -= UpdateHP;
+            _character.OnMPChanged -= UpdateMP;
+            _character.OnElementChanged -= UpdateElement;
+        }
     }
 }

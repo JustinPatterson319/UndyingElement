@@ -95,13 +95,21 @@ public class BatlleDialogue : MonoBehaviour
         elementText.text = $"Element: {move.Base.Type}";
         powerText.text = $"Power: {move.Base.Power}";
         magicCostText.text = $"MP Cost: {move.Base.MagCost}";
-        if (move.Base.MagCost > playerUnit.Character.currentMP)
+        
+        if(move.Base.Type == playerUnit.Character.currentElement)
+        {
+            magicCostText.color = Color.green;
+            magicCostText.text = $"MP Cost: 0";
+        }
+        else if (move.Base.MagCost > playerUnit.Character.currentMP)
         {
             magicCostText.color = Color.red;
+            magicCostText.text = $"MP Cost: {move.Base.MagCost}";
         }
         else
         {
             magicCostText.color = Color.white;
+            magicCostText.text = $"MP Cost: {move.Base.MagCost}";
         }
     }
 

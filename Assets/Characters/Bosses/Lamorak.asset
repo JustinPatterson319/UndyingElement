@@ -22,7 +22,7 @@ MonoBehaviour:
   fleeSprite: {fileID: 362777315, guid: 43fc04a1ade03e948b018fb4b4b1b63c, type: 3}
   type: 3
   hp: 700
-  mp: 100
+  mp: 200
   regAttack: 120
   magAttack: 120
   regDefense: 120
@@ -30,13 +30,7 @@ MonoBehaviour:
   speed: 130
   expYield: 750
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: d290fd65860ac5a4eb71c2393ceaddd7, type: 2}
-    level: 0
-  - moveBase: {fileID: 11400000, guid: b647b2de75a4e554f987910204f40331, type: 2}
-    level: 0
-  - moveBase: {fileID: 11400000, guid: 18f01f35b61699c42a58ebcd7d5dd032, type: 2}
-    level: 0
   - moveBase: {fileID: 11400000, guid: 70a30834afeb5ce40a6f527f6fdee1f0, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 70a30834afeb5ce40a6f527f6fdee1f0, type: 2}
+  - moveBase: {fileID: 11400000, guid: 3ee3f39fb0f8a7c4a8071ed98877e190, type: 2}
     level: 0

@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class PlayerParty : MonoBehaviour
 {
     [SerializeField] List<Character> characters;
+
+    public event Action OnUpdated;
     
     public List<Character> Characters
     {
@@ -26,5 +29,10 @@ public class PlayerParty : MonoBehaviour
     public Character GetHealthy()
     {
         return characters.Where(x => x.currentHP > 0).FirstOrDefault();
+    }
+
+    public static PlayerParty GetPlayerParty()
+    {
+        return FindObjectOfType<PlayerController>().GetComponent<PlayerParty>();
     }
 }

@@ -5,7 +5,7 @@ using System;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, BattleOver}
+public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, BattleOver, Bag}
 public enum BattleAction { Move, SwitchCharacter, UseItem, Run}
 
 public class BattleSystem : MonoBehaviour
@@ -27,6 +27,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip select;
     [SerializeField] AudioClip enemyDefeatSound;
     [SerializeField] AudioClip playerDefeatSound;
+    [SerializeField] InventoryUI inventoryUI;
+
     public GameObject bossMusic;
     public GameObject encounterMusic;
 
@@ -134,6 +136,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.BattleOver;
         playerParty.Characters.ForEach(p => p.OnBattleOver());
+        playerUnit.Hud.ClearData();
+        enemyUnit.Hud.ClearData();
         OnBattleOver(won);
     }
 
@@ -145,11 +149,17 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(true);
     }
 
+    void OpenBag()
+    {
+        state = BattleState.Bag;
+        inventoryUI.gameObject.SetActive(true);
+    }
+
     void OpenPartyScreen()
     {
         prevState = state;
         state = BattleState.PartyScreen;
-        partyScreen.SetPartyData(playerParty.Characters);
+
         partyScreen.gameObject.SetActive(true);
         partyScreen.SetMessageText("Select a party member...");
     }
@@ -227,6 +237,10 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Busy;
                 yield return SwitchCharacter(selectedCharacter);
             }
+            else if (playerAction == BattleAction.UseItem)
+            {
+                dialogBox.EnableActionSelector(false);
+            }
 
             //Enemy Turn
             var enemyMove = enemyUnit.Character.GetRandomMove();
@@ -274,9 +288,14 @@ public class BattleSystem : MonoBehaviour
             {
                 PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit, true);
                 var damageDetails = targetUnit.Character.TakeDamage(move, sourceUnit.Character);
-                sourceUnit.Character.currentMP -= move.Base.MagCost;
-                yield return targetUnit.Hud.UpdateHP();
-                yield return sourceUnit.Hud.UpdateMP();
+
+                if (sourceUnit.Character.currentElement != move.Base.Type)
+                {
+                    sourceUnit.Character.LoseMp(move);
+                }
+
+                yield return targetUnit.Hud.WaitForHUDUpdate();
+                yield return sourceUnit.Hud.WaitForHUDUpdate();
                 yield return ShowDamageDetails(damageDetails);
             }
 
@@ -330,8 +349,13 @@ public class BattleSystem : MonoBehaviour
                 if (!isSecondary)
                 {
                     PlaySoundsAndAnimations(move, sourceHit, sourceHitBox, sourceUnit, false);
-                    source.currentMP -= move.Base.MagCost;
-                    yield return sourceUnit.Hud.UpdateMP();
+                    //source.currentMP -= move.Base.MagCost;
+                    if (source.currentElement != move.Base.Type)
+                    {
+                        source.LoseMp(move);
+                    }
+                    //yield return sourceUnit.Hud.UpdateMP();
+                    yield return sourceUnit.Hud.WaitForHUDUpdate();
                 }
 
                 source.ApplyBoosts(effects.Boosts);
@@ -341,8 +365,13 @@ public class BattleSystem : MonoBehaviour
                 if (!isSecondary)
                 {
                     PlaySoundsAndAnimations(move, targetHit, targetHitBox, targetUnit, true);
-                    source.currentMP -= move.Base.MagCost;
-                    yield return sourceUnit.Hud.UpdateMP();
+                    //source.currentMP -= move.Base.MagCost;
+                    if (source.currentElement != move.Base.Type)
+                    {
+                        source.LoseMp(move);
+                    }
+                    //yield return sourceUnit.Hud.UpdateMP();
+                    yield return sourceUnit.Hud.WaitForHUDUpdate();
                 }
 
                 target.ApplyBoosts(effects.Boosts);
@@ -374,8 +403,7 @@ public class BattleSystem : MonoBehaviour
         //status like bleed or venom will hurt after turn ends
         sourceUnit.Character.OnAfterTurn();
         yield return ShowStatusChanges(sourceUnit.Character);
-        yield return sourceUnit.Hud.UpdateHP();
-        yield return sourceUnit.Hud.UpdateMP();
+        yield return sourceUnit.Hud.WaitForHUDUpdate();
 
         if (sourceUnit.Character.currentHP <= 0)
         {
@@ -542,6 +570,23 @@ public class BattleSystem : MonoBehaviour
         {
             HandlePartySelection();
         }
+        else if (state == BattleState.Bag)
+        {
+            Action onBack = () =>
+            {
+                inventoryUI.gameObject.SetActive(false);
+                state = BattleState.ActionSelection;
+            };
+
+            Action onItemUsed = () =>
+            {
+                state = BattleState.Busy;
+                inventoryUI.gameObject.SetActive(false);
+                StartCoroutine(RunTurns(BattleAction.UseItem));
+            };
+
+            inventoryUI.HandleUpdate(onBack, onItemUsed);
+        }
     }
 
     void HandleActionSelection()
@@ -609,6 +654,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     currentAction = 0;
                     //item
+                    OpenBag();
                 }
                 if (currentAction == 3)
                 {
@@ -665,7 +711,7 @@ public class BattleSystem : MonoBehaviour
             if (!dialogBox.isTyping)
             {
                 var move = playerUnit.Character.Moves[currentAction];
-                if (playerUnit.Character.currentMP < move.Base.MagCost)
+                if (playerUnit.Character.currentMP < move.Base.MagCost && playerUnit.Character.currentElement != move.Base.Type)
                 {
                     return;
                 }

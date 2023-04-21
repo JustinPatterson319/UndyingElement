@@ -28,6 +28,8 @@ public class Character
     public int Exp { get; set; }
     public int currentHP { get; set; }
     public int currentMP { get; set; }
+    public CharacterElement currentElement { get; set; }
+    public Sprite currentElementSprite { get; set; }
 
     //moves
     public List<Move> Moves { get; set; }
@@ -44,11 +46,10 @@ public class Character
 
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
 
-    public bool HpChanged { get; set; }
-
-    public bool MpChanged { get; set; }
-
     public event System.Action OnStatusChanged;
+    public event System.Action OnHPChanged;
+    public event System.Action OnMPChanged;
+    public event System.Action OnElementChanged;
 
     public void Init()
     {
@@ -72,6 +73,7 @@ public class Character
         CalculateStats();
         currentHP = HP;
         currentMP = MP;
+        
 
         ResetStatBoost();
     }
@@ -101,6 +103,8 @@ public class Character
 
         HP = Mathf.FloorToInt((2 * Base.HP * Level) / 100f) + 10 + Level;
         MP = Mathf.FloorToInt((2 * Base.MP * Level) / 100f) + Level;
+        currentElement = Base.Type;
+        currentElementSprite = Base.ElementSprite;
     }
 
     int GetStat(Stat stat)
@@ -203,7 +207,7 @@ public class Character
             critical = 2f;
         }
 
-        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type);
+        float type = TypeChart.GetEffectiveness(move.Base.Type, this.currentElement);
 
         var damageDetails = new DamageDetails()
         {
@@ -225,28 +229,41 @@ public class Character
         return damageDetails;
     }
 
+    public void LoseMp(Move move)
+    {
+        currentMP -= move.Base.MagCost;
+        OnMPChanged?.Invoke();
+    }
+
     public void UpdateHP(int damage)
     {
         currentHP = Mathf.Clamp(currentHP - damage, 0, HP);
-        HpChanged = true;
+        OnHPChanged?.Invoke();
     }
 
     public void UpdateMP(int damage)
     {
         currentMP = Mathf.Clamp(currentMP - damage, 0, MP);
-        MpChanged = true;
+        OnMPChanged?.Invoke();
     }
 
     public void UpdateHp(int damage)
     {
         currentHP = Mathf.Clamp(currentHP + damage, 0, HP);
-        HpChanged = true;
+        OnHPChanged?.Invoke();
     }
 
     public void UpdateMp(int damage)
     {
         currentMP = Mathf.Clamp(currentMP + damage, 0, MP);
-        MpChanged = true;
+        OnMPChanged?.Invoke();
+    }
+
+    public void UpdateElement(CharacterElement element, Sprite elementSprite)
+    {
+        currentElement = element;
+        currentElementSprite = elementSprite;
+        OnElementChanged?.Invoke();
     }
 
     public void SetStatus(ConditionID conditionId)
@@ -271,6 +288,10 @@ public class Character
     public Move GetRandomMove()
     {
         var movesWithMag = Moves.Where(x => x.Base.MagCost <= currentMP).ToList();
+
+        var matchingMoves = Moves.Where(x => x.Base.Type == this.currentElement).ToList();
+
+        movesWithMag.AddRange(matchingMoves);
 
         int r = Random.Range(0, movesWithMag.Count);
         return movesWithMag[r];

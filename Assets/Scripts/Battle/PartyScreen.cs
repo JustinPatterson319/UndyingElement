@@ -8,6 +8,9 @@ public class PartyScreen : MonoBehaviour
 {   
     PartyMemberUI[] memberSlots;
     List<Character> characters;
+
+    PlayerParty party;
+
     [SerializeField] TextMeshProUGUI messageText;
     int currentMember = 0;
     [SerializeField] AudioClip select;
@@ -17,17 +20,21 @@ public class PartyScreen : MonoBehaviour
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>();
+        party = PlayerParty.GetPlayerParty();
+        SetPartyData();
+
+        party.OnUpdated += SetPartyData;
     }
 
-    public void SetPartyData(List<Character> characters)
+    public void SetPartyData()
     {
-        this.characters = characters;
+        characters = party.Characters;
 
         for (int i = 0; i < memberSlots.Length; i++)
         {
             if (i < characters.Count)
             {
-                memberSlots[i].SetData(characters[i]);
+                memberSlots[i].Init(characters[i]);
             }
             else
             {
@@ -109,7 +116,6 @@ public class PartyScreen : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.X))
         {
             onBack?.Invoke();
-            currentMember = 0;
         }
     }
 }

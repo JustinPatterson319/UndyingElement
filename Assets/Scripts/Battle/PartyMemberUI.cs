@@ -20,22 +20,29 @@ public class PartyMemberUI : MonoBehaviour
 
     Character _character;
 
-    public void SetData(Character character)
+    public void Init(Character character)
     {
         _character = character;
+        UpdateData();
 
-        levelText.text = "Lvl" + character.Level;
-        nameText.text = character.Base.Name;
-        healthText.text = character.currentHP + "/" + character.HP;
-        magicText.text = character.currentMP + "/" + character.MP;
-        hpBar.SetHP((float)character.currentHP / character.HP);
-        mpBar.SetMP((float)character.currentMP / character.MP);
+        _character.OnHPChanged += UpdateData;
+        _character.OnMPChanged += UpdateData;
+        _character.OnElementChanged += UpdateData;
+    }
+
+    public void UpdateData()
+    {
+        levelText.text = "Lvl" + _character.Level;
+        nameText.text = _character.Base.Name;
+        healthText.text = _character.currentHP + "/" + _character.HP;
+        magicText.text = _character.currentMP + "/" + _character.MP;
+        hpBar.SetHP((float)_character.currentHP / _character.HP);
+        mpBar.SetMP((float)_character.currentMP / _character.MP);
 
         //changes element and character face
-        element.sprite = character.Base.ElementSprite;
-        face.sprite = character.Base.FaceSprite;
-        partyIcon.sprite = character.Base.PartySprite;
-        
+        element.sprite = _character.currentElementSprite;
+        face.sprite = _character.Base.FaceSprite;
+        partyIcon.sprite = _character.Base.PartySprite;
     }
 
     public void SetSelected(bool selected)

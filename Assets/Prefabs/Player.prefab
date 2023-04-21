@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5359120245805177576}
   - component: {fileID: 5359120245805177558}
   - component: {fileID: 5359120245805177557}
+  - component: {fileID: 5853537369384168868}
   - component: {fileID: 5359120245805177555}
   - component: {fileID: 5359120245805177556}
-  - component: {fileID: 9211937022064592419}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -173,6 +173,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+--- !u!114 &5853537369384168868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5359120245805177581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c941bb686db20344892db7b30f9cfff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - item: {fileID: 11400000, guid: b65719f5cdae67047bd9005ff1ed30c8, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 3a7b4a60a3ee67c4daca85e7f904c648, type: 2}
+    count: 2
 --- !u!50 &5359120245805177555
 Rigidbody2D:
   serializedVersion: 4
@@ -220,19 +259,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.125}
   m_EdgeRadius: 0
---- !u!114 &9211937022064592419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5359120245805177581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 
 --- !u!1 &5359120246399843403
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused, Menu, PartyScreen }
+public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused, Menu, PartyScreen, Bag }
 
 public class GameController : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
+    [SerializeField] InventoryUI inventoryUI;
 
     MenuController menuController;
 
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour
         Instance = this;
         ConditionsDB.Init();
         menuController = GetComponent<MenuController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Start()
@@ -142,10 +145,22 @@ public class GameController : MonoBehaviour
             Action onBack = () =>
             {
                 partyScreen.gameObject.SetActive(false);
-                state = GameState.FreeRoam;
+                menuController.OpenMenu();
+                state = GameState.Menu;
             };
 
             partyScreen.HandleUpdate(onSelected, onBack);
+        }
+        else if (state == GameState.Bag)
+        {
+            Action onBack = () =>
+            {
+                inventoryUI.gameObject.SetActive(false);
+                menuController.OpenMenu();
+                state = GameState.Menu;
+            };
+
+            inventoryUI.HandleUpdate(onBack);
         }
     }
 
@@ -155,13 +170,13 @@ public class GameController : MonoBehaviour
         {
             //Party
             partyScreen.gameObject.SetActive(true);
-            partyScreen.SetPartyData(playerController.GetComponent<PlayerParty>().Characters);
             state = GameState.PartyScreen;
         }
         else if (selectedItem == 1)
         {
             //Items
-            state = GameState.FreeRoam;
+            inventoryUI.gameObject.SetActive(true);
+            state = GameState.Bag;
         }
 
         //state = GameState.FreeRoam;
