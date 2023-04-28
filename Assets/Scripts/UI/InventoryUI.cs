@@ -4,8 +4,9 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
-public enum InventoryUIState { ItemSelection, PartySelection, Busy }
+public enum InventoryUIState { ItemSelection, PartySelection, MoveToForget, Busy }
 
 public class InventoryUI : MonoBehaviour
 {
@@ -15,14 +16,24 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] AudioClip heal;
 
     [SerializeField] Image itemIcon;
+    [SerializeField] Sprite blank;
+
     [SerializeField] TextMeshProUGUI itemDescription;
+    [SerializeField] TextMeshProUGUI categoryText;
 
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
 
     [SerializeField] PartyScreen partyScreen;
+    [SerializeField] MoveSelectionUI moveSelectionUI;
+    [SerializeField] GameObject dialogBox;
 
     int selectedItem = 0;
+
+    int selectedCategory = 0;
+
+    MoveBase moveToLearn;
+
     InventoryUIState state;
 
     List<ItemSlotUI> slotUIList;
@@ -30,7 +41,7 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
     RectTransform itemListRect;
 
-    Action onItemUsed;
+    Action<ItemBase> onItemUsed;
 
     private void Awake()
     {
@@ -54,7 +65,7 @@ public class InventoryUI : MonoBehaviour
         }
 
         slotUIList = new List<ItemSlotUI>();
-        foreach (var itemSlot in inventory.Slots)
+        foreach (var itemSlot in inventory.GetSlotsByCategory(selectedCategory))
         {
             var slotUIObj = Instantiate(itemSlotUI, itemList.transform);
             slotUIObj.SetData(itemSlot);
@@ -64,7 +75,7 @@ public class InventoryUI : MonoBehaviour
         UpdateItemSelection();
     }
 
-    public void HandleUpdate(Action onBack, Action onItemUsed=null)
+    public void HandleUpdate(Action onBack, Action<ItemBase> onItemUsed=null)
     {
         this.onItemUsed = onItemUsed;
 
@@ -72,6 +83,7 @@ public class InventoryUI : MonoBehaviour
         if(state == InventoryUIState.ItemSelection)
         {
             int prevSelection = selectedItem;
+            int prevCategory = selectedCategory;
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
@@ -85,16 +97,46 @@ public class InventoryUI : MonoBehaviour
                 GetComponent<AudioSource>().Play(0);
                 --selectedItem;
             }
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                ++selectedCategory;
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                --selectedCategory;
+            }
 
-            if (prevSelection != selectedItem)
+            if(selectedCategory > Inventory.ItemCategories.Count - 1)
+            {
+                selectedCategory = 0;
+            }
+            else if (selectedCategory < 0)
+            {
+                selectedCategory = Inventory.ItemCategories.Count - 1;
+            }
+
+            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.GetSlotsByCategory(selectedCategory).Count - 1);
+
+            if (prevCategory != selectedCategory)
+            {
+                ResetSelection();
+                categoryText.text = Inventory.ItemCategories[selectedCategory];
+                UpdateItemList();
+            }
+            else if (prevSelection != selectedItem)
             {
                 UpdateItemSelection();
             }
 
             if(Input.GetKeyDown(KeyCode.Z))
             {
-                OpenPartyScreen();
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                StartCoroutine(CheckUse());
             }
             else if (Input.GetKeyDown(KeyCode.X))
             {
@@ -105,6 +147,8 @@ public class InventoryUI : MonoBehaviour
         {
             Action onSelected = () =>
             {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
                 //Use item on selected character
                 StartCoroutine(UseItem());
             };
@@ -117,32 +161,116 @@ public class InventoryUI : MonoBehaviour
             //Handle party selection
             partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
         }    
+        else if (state == InventoryUIState.MoveToForget)
+        {
+            Action<int> onMoveSelected = (int moveIndex) =>
+            {
+                StartCoroutine(OnMoveToForgetSelected(moveIndex));
+            };
+
+            moveSelectionUI.HandleMoveSelection(onMoveSelected);
+        }
+    }
+
+    IEnumerator CheckUse()
+    {
+        state = InventoryUIState.Busy;
+
+        var item = inventory.GetItem(selectedItem, selectedCategory);
+
+        if (GameController.Instance.state == GameState.Battle)
+        {
+            //In battle
+            if (!item.CanUseInBattle)
+            {
+                yield return DialogManager.Instance.ShowDialogText("This item can't be used in battle!");
+                state = InventoryUIState.ItemSelection;
+                yield break;
+            }
+        }
+
+        OpenPartyScreen();
     }
 
     IEnumerator UseItem()
     {
         state = InventoryUIState.Busy;
 
-        var UsedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
+        yield return HandleTomeItem();
+
+        var UsedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
         if (UsedItem != null)
         {
-            GetComponent<AudioSource>().clip = heal;
-            GetComponent<AudioSource>().Play(0);
-            yield return DialogManager.Instance.ShowDialogText($"Used {UsedItem.Name} on {partyScreen.SelectedMember.Base.Name}");
-            onItemUsed?.Invoke();
+            if (UsedItem is RecoveryItems || UsedItem is CrystalItems)
+            {
+                GetComponent<AudioSource>().clip = heal;
+                GetComponent<AudioSource>().Play(0);
+                yield return DialogManager.Instance.ShowDialogText($"Used {UsedItem.Name} on {partyScreen.SelectedMember.Base.Name}");
+            }
+            onItemUsed?.Invoke(UsedItem);
         }
         else
         {
-            GetComponent<AudioSource>().clip = select;
-            GetComponent<AudioSource>().Play(0);
-            yield return DialogManager.Instance.ShowDialogText("This item has no effect!");
+            if (selectedCategory != 2)
+            {
+                GetComponent<AudioSource>().clip = select;
+                GetComponent<AudioSource>().Play(0);
+                yield return DialogManager.Instance.ShowDialogText("This item has no effect!");
+            }
         }
 
         ClosePartyScreen();
     }
 
+    IEnumerator HandleTomeItem()
+    {
+        var tomeItem = inventory.GetItem(selectedItem, selectedCategory) as TomeItems;
+        if(tomeItem == null)
+        {
+            yield break;
+        }
+
+        var character = partyScreen.SelectedMember;
+
+        if(character.HasMove(tomeItem.Move))
+        {
+            yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} can already use {tomeItem.Move.Name}!");
+            yield break;
+        }
+
+        if (character.Moves.Count < 6)
+        {
+            character.LearnMove(tomeItem.Move);
+            GetComponent<AudioSource>().clip = heal;
+            GetComponent<AudioSource>().Play(0);
+            yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} mastered {tomeItem.Move.Name}!");
+        }
+        else
+        {
+            //yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} is trying to master {tomeItem.Move.Name}.");
+            //yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} is trying to master {tomeItem.Move.Name}.");
+            yield return ChooseMoveToForget(character, tomeItem.Move);
+            yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
+        }
+    }
+
+    IEnumerator ChooseMoveToForget(Character character, MoveBase newMove)
+    {
+        state = InventoryUIState.Busy;
+        yield return DialogManager.Instance.ShowDialogText($"Swap out an ability to master {newMove.Name}?", true, false);
+        moveSelectionUI.gameObject.SetActive(true);
+        moveSelectionUI.SetMoveData(character.Moves.Select(x => x.Base).ToList(), newMove);
+        moveToLearn = newMove;
+
+        state = InventoryUIState.MoveToForget;
+    }
+
     void UpdateItemSelection()
     {
+        var slots = inventory.GetSlotsByCategory(selectedCategory);
+
+        selectedItem = Mathf.Clamp(selectedItem, 0, slots.Count - 1);
+
         for (int i = 0; i < slotUIList.Count; i++)
         {
             if (i == selectedItem)
@@ -155,12 +283,17 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
+        if (slots.Count > 0)
+        {
+            var item = slots[selectedItem].Item;
+            itemIcon.sprite = item.Icon;
+            itemDescription.text = item.Description;
+        }
 
-        var item = inventory.Slots[selectedItem].Item;
-        itemIcon.sprite = item.Icon;
-        itemDescription.text = item.Description;
-
+        else
+        {
+            itemIcon.sprite = blank;
+        }
         HandleScrolling();
     }
 
@@ -183,11 +316,22 @@ public class InventoryUI : MonoBehaviour
         downArrow.gameObject.SetActive(showDownArrow);
     }
 
+    void ResetSelection()
+    {
+        selectedItem = 0;
+        upArrow.gameObject.SetActive(false);
+        downArrow.gameObject.SetActive(false);
+
+        itemIcon.sprite = null;
+        itemDescription.text = "";
+    }
+
     void OpenPartyScreen()
     {
+        state = InventoryUIState.PartySelection;
+        Debug.Log("We've opened the party screen!");
         GetComponent<AudioSource>().clip = select;
         GetComponent<AudioSource>().Play(0);
-        state = InventoryUIState.PartySelection;
         partyScreen.gameObject.SetActive(true);
     }
 
@@ -197,5 +341,35 @@ public class InventoryUI : MonoBehaviour
         GetComponent<AudioSource>().Play(0);
         state = InventoryUIState.ItemSelection;
         partyScreen.gameObject.SetActive(false);
+    }
+
+    IEnumerator OnMoveToForgetSelected(int moveIndex)
+    {
+        var character = partyScreen.SelectedMember;
+
+        DialogManager.Instance.CloseDialog();
+        moveSelectionUI.gameObject.SetActive(false);
+        if (moveIndex == 6)
+        {
+            var selectedMove = character.Moves[moveIndex-1].Base;
+            //Don't learn move
+            GetComponent<AudioSource>().clip = select;
+            GetComponent<AudioSource>().Play(0);
+            yield return DialogManager.Instance.ShowDialogText("Training for this move was abandoned...");
+            state = InventoryUIState.ItemSelection;
+        }
+        else
+        {
+            //swap selected move for new move
+            var selectedMove = character.Moves[moveIndex].Base;
+            GetComponent<AudioSource>().clip = heal;
+            GetComponent<AudioSource>().Play(0);
+            yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} mastered {moveToLearn.Name} in place of {selectedMove.Name}!");
+            character.Moves[moveIndex] = new Move(moveToLearn);
+            state = InventoryUIState.ItemSelection;
+        }
+        ClosePartyScreen();
+        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(true);
     }
 }

@@ -578,15 +578,21 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.ActionSelection;
             };
 
-            Action onItemUsed = () =>
+            Action<ItemBase> onItemUsed = (ItemBase usedItem) =>
             {
-                state = BattleState.Busy;
-                inventoryUI.gameObject.SetActive(false);
-                StartCoroutine(RunTurns(BattleAction.UseItem));
+                StartCoroutine(OnItemUsed(usedItem));
             };
 
             inventoryUI.HandleUpdate(onBack, onItemUsed);
         }
+    }
+
+    IEnumerator OnItemUsed(ItemBase usedItem)
+    {
+        state = BattleState.Busy;
+        yield return new WaitForSeconds(0f);
+        inventoryUI.gameObject.SetActive(false);
+        StartCoroutine(RunTurns(BattleAction.UseItem));
     }
 
     void HandleActionSelection()
@@ -813,6 +819,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            state = BattleState.Busy;
             dialogBox.EnableActionSelector(false);
             yield return dialogBox.TypeDialog($"The team fled to safety!");
             BattleOver(true);

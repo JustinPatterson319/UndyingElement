@@ -7,31 +7,61 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<ItemSlot> slots;
+    [SerializeField] List<ItemSlot> crystalSlots;
+    [SerializeField] List<ItemSlot> tomeSlots;
+
+    List<List<ItemSlot>> allSlots;
 
     public event Action OnUpdated;
 
-    public List<ItemSlot> Slots => slots;
-
-    public ItemBase UseItem(int itemIndex, Character selectedCharacter)
+    private void Awake()
     {
-        var item = slots[itemIndex].Item;
+        allSlots = new List<List<ItemSlot>>() { slots, crystalSlots, tomeSlots };
+    }
+
+    public static List<string> ItemCategories { get; set; } = new List<string>()
+    {
+        "RECOVERY", "CRYSTALS", "TOMES"
+    };
+
+    public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
+    {
+        return allSlots[categoryIndex];
+    }
+
+    public ItemBase GetItem(int itemIndex, int categoryIndex)
+    {
+        var currentSlots = GetSlotsByCategory(categoryIndex);
+        return currentSlots[itemIndex].Item;
+    }
+
+    public ItemBase UseItem(int itemIndex, Character selectedCharacter, int selectedCategory)
+    {
+        var currentSlots = GetSlotsByCategory(selectedCategory);
+
+        var item = currentSlots[itemIndex].Item;
         bool itemUsed = item.Use(selectedCharacter);
         if (itemUsed)
         {
-            RemoveItem(item);
-            return item;
+            if (!item.IsReusable)
+            {
+                RemoveItem(item, selectedCategory);
+                return item;
+            }
         }
 
         return null;
     }
 
-    public void RemoveItem(ItemBase item)
+    public void RemoveItem(ItemBase item, int category)
     {
-        var itemSlot = slots.First(slot => slot.Item == item);
+        var currentSlots = GetSlotsByCategory(category);
+
+        var itemSlot = currentSlots.First(slot => slot.Item == item);
         itemSlot.Count--;
         if(itemSlot.Count == 0)
         {
-            slots.Remove(itemSlot);
+            currentSlots.Remove(itemSlot);
         }
 
         OnUpdated?.Invoke();

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9368c1aef9bea243850010312da2cac, type: 3}
+  m_Name: Shadowblade Tome
+  m_EditorClassIdentifier: 
+  name: Shadowblade Tome
+  description: A book that teaches the user the Shadowblade ability.
+  icon: {fileID: -1837113567, guid: 450b827542103da4a995d1d9011b5945, type: 3}
+  move: {fileID: 11400000, guid: 3959b32acf8844a49a3f7794b8cddf90, type: 2}

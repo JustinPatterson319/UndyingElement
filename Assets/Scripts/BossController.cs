@@ -31,19 +31,17 @@ public class BossController : MonoBehaviour, Interactable
         character.HandleUpdate();
     }
 
-    public void Interact(Transform initiator)
+    public IEnumerator Interact(Transform initiator)
     {
         character.LookTowards(initiator.position);
         if (!battleLost)
         {
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-            {
-                GameController.Instance.StartBossBattle(this);
-            }));
+            yield return DialogManager.Instance.ShowDialog(dialog);
+            GameController.Instance.StartBossBattle(this);
         }
         else
         {
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialogAfterBattle));
+            yield return DialogManager.Instance.ShowDialog(dialogAfterBattle);
         }
     }
 
@@ -62,10 +60,8 @@ public class BossController : MonoBehaviour, Interactable
         yield return character.Move(moveVec);
 
         // Show dialog
-        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
-        {
-            GameController.Instance.StartBossBattle(this);
-        }));
+        yield return DialogManager.Instance.ShowDialog(dialog);
+        GameController.Instance.StartBossBattle(this);
     }
 
     public void BattleLost()

@@ -27,16 +27,15 @@ MonoBehaviour:
   regDefense: 100
   magDefense: 100
   speed: 100
+  expYield: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 059d0d3ce87fb0447b9d791164460cc1, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 09db916d746edb945982912957e65fdb, type: 2}
+  - moveBase: {fileID: 11400000, guid: d74897508d794f943b7b41be0fd8e033, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 997a2b8c1e2367a4ba710798f7a7ec61, type: 2}
+  - moveBase: {fileID: 11400000, guid: 42ed61b62097bd247a13a60704fe4317, type: 2}
     level: 0
   - moveBase: {fileID: 11400000, guid: 18f01f35b61699c42a58ebcd7d5dd032, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 3959b32acf8844a49a3f7794b8cddf90, type: 2}
-    level: 0
-  - moveBase: {fileID: 11400000, guid: bdb1a21f9cbf803499686b34a348b0a1, type: 2}
+  - moveBase: {fileID: 11400000, guid: 997a2b8c1e2367a4ba710798f7a7ec61, type: 2}
     level: 0

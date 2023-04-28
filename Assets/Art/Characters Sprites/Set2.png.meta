@@ -1554,7 +1554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set2_69
+      name: VanisUp
       rect:
         serializedVersion: 2
         x: 32
@@ -1932,7 +1932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set2_87
+      name: VanisRight
       rect:
         serializedVersion: 2
         x: 32
@@ -2688,7 +2688,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set2_123
+      name: VanisLeft
       rect:
         serializedVersion: 2
         x: 32
@@ -3969,7 +3969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set2_184
+      name: WarlockUp
       rect:
         serializedVersion: 2
         x: 176
@@ -4347,7 +4347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warlock
+      name: WarlockRight
       rect:
         serializedVersion: 2
         x: 176
@@ -5103,7 +5103,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarlockFlee
+      name: WarlockLeft
       rect:
         serializedVersion: 2
         x: 176
@@ -5303,7 +5303,6 @@ TextureImporter:
       Set2_237: -833425859
       Set2_163: 1060660181
       Set2_31: -1614046285
-      Set2_69: -1538488440
       WarlockDown: -868402230
       Set2_169: 872730162
       Set2_62: 47960657
@@ -5346,11 +5345,10 @@ TextureImporter:
       Set2_100: -1894528849
       Set2_144: -1705323715
       Set2_108: 8828156
-      Set2_57: -873370451
       Set2_199: 1730508082
+      Set2_57: -873370451
       Set2_176: 1314920355
       Set2_216: 1232908998
-      Warlock: -1491995329
       VanisFlee: -1527766962
       Set2_10: 597612808
       Set2_230: 438121031
@@ -5377,6 +5375,7 @@ TextureImporter:
       Set2_215: 348264315
       Set2_236: 1915415045
       Set2_167: -182250269
+      VanisLeft: 706258735
       Set2_6: -1060727432
       Set2_104: 539036050
       Set2_207: 2017608618
@@ -5399,6 +5398,7 @@ TextureImporter:
       Set2_180: -530259442
       Set2_109: 739921929
       Set2_2: 177938646
+      WarlockLeft: -1675993691
       Set2_148: 38074936
       Set2_3: -372612547
       Set2_187: -2071684274
@@ -5407,6 +5407,7 @@ TextureImporter:
       Set2_45: -1314660757
       Set2_95: -1578070180
       Set2_196: 1618719200
+      WarlockRight: -1491995329
       Set2_26: 1694199537
       Set2_143: 1042237500
       Set2_75: -1925521225
@@ -5438,24 +5439,24 @@ TextureImporter:
       Set2_158: 298186692
       Set2_131: 938354576
       Set2_7: -493349494
-      Set2_123: 706258735
+      VanisRight: 404914607
       Set2_122: -569786662
       Set2_153: -2132270214
       Set2_115: 1570554331
       Set2_146: -1432565298
       Set2_177: -1693207093
-      Set2_53: 237595969
       Set2_165: 480703716
+      Set2_53: 237595969
       Set2_29: 645571889
       Set2_24: 1679343391
       Set2_33: 921205410
       Set2_99: 1754221013
       Set2_139: -572929324
       Set2_103: -1130931008
+      VanisUp: -1538488440
       Set2_32: -1744957407
       Set2_21: -1364519905
       Set2_172: 543562778
-      Set2_184: -1766614194
       Set2_96: -917734212
       Set2_190: 1325053522
       Set2_30: 1707139243
@@ -5467,7 +5468,6 @@ TextureImporter:
       Set2_18: -1066094695
       Set2_20: 301993426
       Set2_226: -244260250
-      WarlockFlee: -1675993691
       Set2_41: 1335681929
       Set2_178: -1203045154
       Set2_211: 236123342
@@ -5501,7 +5501,6 @@ TextureImporter:
       Set2_43: 1489259309
       Set2_194: 2069145236
       Set2_218: -818966790
-      Set2_87: 404914607
       Set2_203: -942355352
       Set2_188: 522946961
       VanisBattle: -1418948956
@@ -5516,6 +5515,7 @@ TextureImporter:
       Set2_35: -157122068
       Set2_116: -1829805046
       Set2_132: 1006896173
+      WarlockUp: -1766614194
       Set2_175: -1235686290
       Set2_154: -1656414399
       Set2_50: 642079201

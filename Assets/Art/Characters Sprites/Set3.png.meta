@@ -3864,7 +3864,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_179
+      name: GirlUp2
       rect:
         serializedVersion: 2
         x: 256
@@ -3885,7 +3885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_180
+      name: GirlUp1
       rect:
         serializedVersion: 2
         x: 272
@@ -3906,7 +3906,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_181
+      name: GirlUp3
       rect:
         serializedVersion: 2
         x: 288
@@ -4242,7 +4242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_197
+      name: GirlRight2
       rect:
         serializedVersion: 2
         x: 256
@@ -4263,7 +4263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_198
+      name: GirlRight1
       rect:
         serializedVersion: 2
         x: 272
@@ -4284,7 +4284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_199
+      name: GirlRight3
       rect:
         serializedVersion: 2
         x: 288
@@ -4620,7 +4620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_215
+      name: GirlDown2
       rect:
         serializedVersion: 2
         x: 256
@@ -4641,7 +4641,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_216
+      name: GirlDown1
       rect:
         serializedVersion: 2
         x: 272
@@ -4662,7 +4662,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_217
+      name: GirlDown3
       rect:
         serializedVersion: 2
         x: 288
@@ -4998,7 +4998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_233
+      name: GirlLeft2
       rect:
         serializedVersion: 2
         x: 256
@@ -5019,7 +5019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_234
+      name: GirlLeft1
       rect:
         serializedVersion: 2
         x: 272
@@ -5040,7 +5040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set3_235
+      name: GirlLeft3
       rect:
         serializedVersion: 2
         x: 288
@@ -5084,6 +5084,7 @@ TextureImporter:
       Set3_71: -1532744163
       Set3_185: -1092681797
       Set3_153: 1852161594
+      GirlDown3: -524996939
       Set3_15: -1174508001
       Set3_218: 883108525
       Set3_208: 1116211593
@@ -5091,6 +5092,7 @@ TextureImporter:
       Set3_191: -1953027356
       Set3_1: 1663856663
       GreyLeft1: 133952859
+      GirlUp3: 458210646
       Set3_6: 1679638784
       Set3_57: 150089567
       Set3_67: 1532195371
@@ -5116,7 +5118,6 @@ TextureImporter:
       Set3_63: 1622808508
       Set3_20: 308917905
       Set3_229: 1460532213
-      Set3_235: 610162174
       TownLeft2: -1572895653
       Set3_66: 805660430
       Set3_89: 1391984911
@@ -5129,6 +5130,7 @@ TextureImporter:
       Set3_212: 578922826
       Set3_128: 2143908785
       Set3_190: -63861064
+      GirlLeft2: -459332194
       Set3_12: 1939169917
       Set3_111: -1811994762
       Set3_7: -265601090
@@ -5139,11 +5141,12 @@ TextureImporter:
       Set3_8: 245793811
       Set3_221: -105852852
       Set3_189: 1777291664
-      Set3_176: 1252241865
-      Set3_163: 963608225
       Set3_144: 85162121
-      Set3_160: -230550778
+      Set3_163: 963608225
+      Set3_176: 1252241865
       Left2: -1391726917
+      Set3_160: -230550778
+      GirlLeft1: 1083127295
       GreyUp3: -45567881
       Set3_46: -261862082
       Set3_92: -1242673670
@@ -5165,6 +5168,7 @@ TextureImporter:
       Set3_214: 1863098438
       Set3_29: 1948410351
       Set3_209: -500027787
+      GirlRight3: -535307509
       Set3_59: 1354173970
       Set3_108: -158540347
       Set3_3: 1122085513
@@ -5172,7 +5176,6 @@ TextureImporter:
       Set3_154: -440829582
       TownDown1: -1104823771
       Up1: 1970166557
-      Set3_198: -1485649277
       Left3: -1913671578
       Set3_141: -166511076
       Set3_232: 1602941965
@@ -5180,11 +5183,12 @@ TextureImporter:
       Set3_220: -1696046148
       GreyUp2: 1682022556
       Set3_19: 1928199537
+      GirlLeft3: 610162174
       Set3_72: -720084901
       Set3_188: -111302221
       Set3_168: -1407720670
       Set3_127: 156576938
-      Set3_217: -524996939
+      GirlDown2: 347044335
       Set3_194: -1940821899
       Set3_22: 972170842
       TownUp1: -265831990
@@ -5193,24 +5197,24 @@ TextureImporter:
       Right2: 492015093
       Set3_11: -398155777
       GreyLeft2: 110113471
-      Set3_193: 1536701599
-      Set3_18: -1527440921
-      Set3_223: -438150053
       Set3_173: -1803572673
+      Set3_193: 1536701599
+      Set3_223: -438150053
+      Up3: 139868252
       Set3_33: 1756751090
       Set3_36: -108546046
       GreyUp: 1007983302
       Set3_156: -1964508604
-      Up3: 139868252
+      Set3_18: -1527440921
       Set3_184: -804570000
       Set3_9: 741557946
+      GirlUp2: 39757023
       Set3_87: 2013752838
       Set3_0: 1143185566
       Set3_186: 903246955
       Set3_55: -1283126398
       Set3_39: -1356321413
       Set3_161: -1238992
-      Set3_199: -535307509
       Set3_42: 1779403895
       Set3_91: 254905132
       Set3_155: 1169973406
@@ -5225,14 +5229,15 @@ TextureImporter:
       Set3_52: 338618840
       Set3_126: -1548390353
       Set3_49: 25197827
-      Set3_106: 1820190811
+      Right3: -931787259
       Set3_225: -1042809154
+      Set3_106: 1820190811
       TownUp2: 397466522
       Down1: -534508949
-      Right3: -931787259
       Set3_166: -320941316
       Set3_44: -1039454960
-      Set3_180: -1602722598
+      GirlRight1: -1485649277
+      GirlRight2: 1801815078
       Set3_124: -251153009
       Set3_230: -1372996441
       Set3_227: 427857911
@@ -5248,11 +5253,8 @@ TextureImporter:
       TownUp3: 827726459
       Set3_37: 634505071
       Set3_110: -1896703655
-      Set3_215: 347044335
-      Set3_216: -74229895
       Set3_143: -2132705874
       Set3_125: -1539510870
-      Set3_197: 1801815078
       Set3_167: 1915054967
       Set3_23: -969294921
       Set3_203: -698897350
@@ -5263,7 +5265,6 @@ TextureImporter:
       TownLeft3: -2059021308
       Set3_172: 284701957
       Set3_53: -847458556
-      Set3_234: 1083127295
       Set3_58: 1420480463
       Set3_54: 1310957550
       Set3_65: 1687176600
@@ -5273,13 +5274,13 @@ TextureImporter:
       Set3_13: -1691843179
       Set3_196: -1681946215
       GreyRight1: 166556247
+      GirlUp1: -1602722598
       Set3_30: -1860664158
       Set3_228: 1631999353
       Set3_183: -810985908
       Set3_104: -766430115
       Set3_90: 406286574
       Set3_69: -501703368
-      Set3_181: 458210646
       Set3_10: -1696858865
       Set3_73: -1582262550
       Set3_147: 326471335
@@ -5293,10 +5294,9 @@ TextureImporter:
       Set3_45: 279136911
       TownDown3: 788356627
       Set3_146: 1206235347
-      Set3_233: -459332194
       TownLeft1: -667902746
+      GirlDown1: -74229895
       Set3_86: 240669635
-      Set3_179: 39757023
       GreyRight2: -999130265
       GreyLeft3: -1672929465
       Set3_74: 1636280343

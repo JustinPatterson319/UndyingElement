@@ -316,6 +316,20 @@ public class Character
         CureStatus();
         ResetStatBoost();
     }
+
+    public void LearnMove(MoveBase moveToLearn)
+    {
+        if (Moves.Count > 6)
+        {
+            return;
+        }
+        Moves.Add(new Move(moveToLearn));
+    }
+
+    public bool HasMove(MoveBase moveToCheck)
+    {
+        return Moves.Count(m => m.Base == moveToCheck) > 0;
+    }
 }
 
 public class DamageDetails

@@ -3192,7 +3192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_147
+      name: KidUp2
       rect:
         serializedVersion: 2
         x: 112
@@ -3213,7 +3213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_148
+      name: KidUp1
       rect:
         serializedVersion: 2
         x: 128
@@ -3234,7 +3234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_149
+      name: KidUp3
       rect:
         serializedVersion: 2
         x: 144
@@ -3612,7 +3612,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_167
+      name: KidRight2
       rect:
         serializedVersion: 2
         x: 112
@@ -3633,7 +3633,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_168
+      name: KidRight1
       rect:
         serializedVersion: 2
         x: 128
@@ -3654,7 +3654,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_169
+      name: KidRight3
       rect:
         serializedVersion: 2
         x: 144
@@ -4032,7 +4032,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_187
+      name: KidDown2
       rect:
         serializedVersion: 2
         x: 112
@@ -4053,7 +4053,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_188
+      name: KidDown1
       rect:
         serializedVersion: 2
         x: 128
@@ -4074,7 +4074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_189
+      name: KidDown3
       rect:
         serializedVersion: 2
         x: 144
@@ -4431,7 +4431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_206
+      name: KidLeft2
       rect:
         serializedVersion: 2
         x: 112
@@ -4452,7 +4452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_207
+      name: KidLeft1
       rect:
         serializedVersion: 2
         x: 128
@@ -4473,7 +4473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_208
+      name: KidLeft3
       rect:
         serializedVersion: 2
         x: 144
@@ -7370,7 +7370,6 @@ TextureImporter:
       Set1_230: 1949571675
       VampL1: 472617131
       Set1_196: 281048355
-      Set1_148: 1288530946
       Set1_220: -1057702607
       Set1_223: -1433366368
       Set1_158: 833570308
@@ -7385,6 +7384,7 @@ TextureImporter:
       Set1_186: 1066167357
       Set1_173: -1989339123
       Set1_134: -872620734
+      KidDown2: 1814878403
       Set1_313: 1026611671
       Set1_45: 1780948040
       Set1_343: 1849682322
@@ -7403,6 +7403,7 @@ TextureImporter:
       Set1_68: -860715683
       Set1_102: -396404640
       Set1_174: -1259532604
+      KidUp3: -2089342288
       Set1_233: -28660553
       Set1_76: 1393157808
       Set1_108: -1414831645
@@ -7420,7 +7421,7 @@ TextureImporter:
       Set1_154: -1293724075
       Set1_183: -1075200435
       Set1_193: -419228212
-      Set1_208: -807326368
+      KidDown3: 43871611
       Set1_246: -929619594
       Set1_115: -336193923
       Set1_51: -1684715520
@@ -7433,10 +7434,9 @@ TextureImporter:
       VampL3: 362777315
       Set1_231: 1130114081
       Set1_178: 943135091
-      Set1_188: 1461541881
+      VampR1: 1953436058
       VampD3: -547821625
       Set1_83: 1047685020
-      VampR1: 1953436058
       Set1_310: 90460461
       Set1_194: 361837076
       Set1_53: -1586962627
@@ -7450,7 +7450,6 @@ TextureImporter:
       VampD1: 1032530596
       Set1_34: 2125043490
       Set1_176: -483732103
-      Set1_169: -1012493191
       Set1_251: 825846044
       Set1_228: -1313582219
       Set1_299: -1678499905
@@ -7470,10 +7469,10 @@ TextureImporter:
       Set1_296: 1350707935
       Set1_0: -29055669
       Set1_75: -794133426
-      Set1_206: 1401292019
       Set1_269: 1961126657
       Set1_279: -1638327101
       Set1_265: 1799222649
+      KidRight3: -1012493191
       Set1_298: -751852270
       Set1_218: 1063967273
       Set1_114: -1359837914
@@ -7529,11 +7528,11 @@ TextureImporter:
       Set1_323: 276821713
       Set1_136: -281810238
       Set1_294: -1946826933
+      KidUp1: 1288530946
       Set1_18: 731246689
       Set1_253: 2069635436
       Set1_305: -464932959
       Set1_268: 985374928
-      Set1_147: 404886736
       Set1_257: 515756195
       Set1_295: -1957483422
       Set1_46: -80220145
@@ -7541,10 +7540,12 @@ TextureImporter:
       Set1_21: -1946217619
       Set1_306: 691959913
       VampU3: -1221519752
+      KidRight1: -796697060
       Set1_87: 2127375882
       Set1_229: -1991062546
       Set1_143: 624606316
       Set1_93: 2000261849
+      KidRight2: -875622001
       Set1_27: -170213736
       Set1_28: 1132727194
       Set1_40: 517496437
@@ -7553,8 +7554,8 @@ TextureImporter:
       Set1_248: 36195722
       Set1_263: 502324449
       Set1_321: -199024176
-      Set1_168: -796697060
       Set1_252: 270414605
+      KidLeft2: 1401292019
       Set1_131: 1585648890
       Set1_128: 1262445916
       Set1_122: -64882067
@@ -7574,9 +7575,11 @@ TextureImporter:
       Set1_138: 46942993
       Set1_156: -1776813769
       Set1_302: 1711400749
+      KidLeft1: -1907969526
       Set1_290: 600517538
       Set1_312: -1749668044
       Set1_292: -1211262085
+      KidUp2: 404886736
       Set1_276: 1704625633
       Set1_275: 1865988447
       Set1_270: 715722891
@@ -7587,9 +7590,9 @@ TextureImporter:
       Set1_77: -1989917129
       Set1_287: 1712257090
       Set1_260: 1814878403
-      Set1_187: 896663368
       Set1_342: 450566114
       Set1_339: -728562928
+      KidLeft3: -807326368
       Set1_11: 1192305074
       Set1_278: -1334625204
       Set1_61: 1291156267
@@ -7597,9 +7600,7 @@ TextureImporter:
       Set1_293: 1554756444
       Set1_291: -1113195137
       Set1_219: -2089342288
-      Set1_149: 1173365750
       Set1_214: -875622001
-      Set1_167: 261111324
       Set1_281: -727690872
       Set1_125: -1773205609
       Set1_166: 873139426
@@ -7612,6 +7613,7 @@ TextureImporter:
       Set1_203: -422511291
       Set1_47: 1941950735
       Set1_225: -2144452719
+      KidDown1: 1461541881
       Set1_81: -1639952453
       Set1_247: -2128822671
       Set1_24: 526957890
@@ -7636,13 +7638,11 @@ TextureImporter:
       Set1_159: 45786758
       Set1_104: -1907969526
       VampR2: -1221519752
-      Set1_207: -44627657
       Set1_29: 127441537
       Set1_261: -984440711
       Set1_132: -586036485
       Set1_329: 1325128348
       Set1_334: 43871611
-      Set1_189: 1474270421
       Set1_65: -1581737731
       Set1_14: 482344120
       Set1_304: 763162632
@@ -7683,9 +7683,9 @@ TextureImporter:
       Set1_245: 1125940859
       Set1_50: 1556726211
       Set1_109: -881325283
-      Set1_212: -2036589647
-      Set1_297: 1042045589
       Set1_146: 1907359418
+      Set1_297: 1042045589
+      Set1_212: -2036589647
       Set1_181: 1536833608
       Set1_256: -1695307189
       Set1_210: 927385038

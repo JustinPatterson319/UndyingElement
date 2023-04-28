@@ -7,9 +7,9 @@ public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused, Menu, PartyS
 
 public class GameController : MonoBehaviour
 {
-    GameState state;
+    public GameState state;
     GameState previousState;
-    public static GameController Instance { get; private set; }
+    public static GameController Instance { get; set; }
 
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;

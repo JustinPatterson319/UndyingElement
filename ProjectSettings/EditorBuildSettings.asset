@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Starting Room.unity
+    guid: 940db6da93acf1c428004c711294d34b
+  - enabled: 1
+    path: Assets/Scenes/Starting Room (Empty).unity
+    guid: 3f93d79919b0e5240be631dc812a993c
+  - enabled: 1
     path: Assets/Scenes/Town.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House 1.unity
     guid: 53822adc6eec0694ead7491fb43e8e2a
+  - enabled: 1
+    path: Assets/Scenes/House 2.unity
+    guid: c66e61f207c6f92498acac78ee79c3d1
+  - enabled: 1
+    path: Assets/Scenes/House 3.unity
+    guid: e4ca7592da482624db05ebae3875450b
   m_configObjects: {}

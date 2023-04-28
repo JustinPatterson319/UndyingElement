@@ -10,6 +10,10 @@ public class CrystalItems : ItemBase
 
     public override bool Use(Character character)
     {
+        if(character.currentElement == type)
+        {
+            return false;
+        }
         character.UpdateElement(type, elementSprite);
         return true;
     }

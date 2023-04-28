@@ -27,6 +27,7 @@ MonoBehaviour:
   regDefense: 100
   magDefense: 100
   speed: 100
+  expYield: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 059d0d3ce87fb0447b9d791164460cc1, type: 2}
     level: 0
@@ -37,6 +38,4 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: d290fd65860ac5a4eb71c2393ceaddd7, type: 2}
     level: 0
   - moveBase: {fileID: 11400000, guid: b38811614c68e894f842a3f21739f334, type: 2}
-    level: 0
-  - moveBase: {fileID: 11400000, guid: 463bfe5e43a5ca2419cae0897d09fa80, type: 2}
     level: 0

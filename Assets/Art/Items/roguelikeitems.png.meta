@@ -3507,7 +3507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_162
+      name: Nature Tome
       rect:
         serializedVersion: 2
         x: 112
@@ -3528,7 +3528,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_163
+      name: Flame Tome
       rect:
         serializedVersion: 2
         x: 128
@@ -3549,7 +3549,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_164
+      name: Aqua Tome
       rect:
         serializedVersion: 2
         x: 144
@@ -3570,7 +3570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_165
+      name: Wind Tome
       rect:
         serializedVersion: 2
         x: 160
@@ -3591,7 +3591,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_166
+      name: Earth Tome
       rect:
         serializedVersion: 2
         x: 176
@@ -3780,7 +3780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_175
+      name: Mind Tome
       rect:
         serializedVersion: 2
         x: 112
@@ -3801,7 +3801,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_176
+      name: Lightning Tome
       rect:
         serializedVersion: 2
         x: 128
@@ -3843,7 +3843,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_178
+      name: Dark Tome
       rect:
         serializedVersion: 2
         x: 160
@@ -3864,7 +3864,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_179
+      name: Light Tome
       rect:
         serializedVersion: 2
         x: 176
@@ -3885,7 +3885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_180
+      name: Ice Tome
       rect:
         serializedVersion: 2
         x: 192
@@ -4171,12 +4171,11 @@ TextureImporter:
       roguelikeitems_171: 1829632966
       roguelikeitems_116: -2120829426
       roguelikeitems_134: 837732281
-      roguelikeitems_176: -1446775660
       roguelikeitems_189: -260541767
-      roguelikeitems_178: -1837113567
       roguelikeitems_177: -1143494363
       Lightning Crystal: 1915381494
       roguelikeitems_106: 2018750070
+      Mind Tome: -376479489
       roguelikeitems_36: 1881369293
       Dark Crystal: -1962097455
       roguelikeitems_125: -537106126
@@ -4200,6 +4199,7 @@ TextureImporter:
       roguelikeitems_82: 297078906
       roguelikeitems_147: -1069829484
       roguelikeitems_16: -633031774
+      Earth Tome: -818589260
       roguelikeitems_8: 390086374
       Earth Crystal: -2092552007
       roguelikeitems_141: -2144720583
@@ -4229,9 +4229,9 @@ TextureImporter:
       roguelikeitems_143: 397173999
       Ice Crystal: -1648021348
       roguelikeitems_105: -514974114
-      roguelikeitems_123: 1502607516
-      roguelikeitems_138: -948652354
       roguelikeitems_53: -631769377
+      roguelikeitems_138: -948652354
+      roguelikeitems_123: 1502607516
       roguelikeitems_137: 2106460114
       roguelikeitems_30: -1989301080
       roguelikeitems_32: -2021903731
@@ -4253,8 +4253,8 @@ TextureImporter:
       roguelikeitems_14: -1717432267
       Light Crystal: -1288377429
       roguelikeitems_151: -1728401101
-      roguelikeitems_166: -818589260
       roguelikeitems_68: 824487335
+      Wind Tome: -719441470
       roguelikeitems_85: -236266076
       roguelikeitems_25: -1289848990
       roguelikeitems_86: 1048521482
@@ -4264,17 +4264,16 @@ TextureImporter:
       roguelikeitems_103: -960252411
       roguelikeitems_84: 616017928
       roguelikeitems_188: -2055342752
-      roguelikeitems_165: -719441470
       roguelikeitems_91: -948498939
       roguelikeitems_181: 120528693
       roguelikeitems_98: 679804000
       roguelikeitems_150: 83226871
       roguelikeitems_174: 1721885334
       Potion: 472769951
+      Aqua Tome: 1498686382
       roguelikeitems_185: 1835415540
       Wind Crystal: 2136397525
       roguelikeitems_146: 1721829885
-      roguelikeitems_180: -971065818
       roguelikeitems_66: -605725712
       roguelikeitems_114: -65776084
       roguelikeitems_127: 485425970
@@ -4288,12 +4287,12 @@ TextureImporter:
       roguelikeitems_104: -1157472903
       roguelikeitems_170: 906299868
       roguelikeitems_3: -820027403
-      roguelikeitems_164: 1498686382
       roguelikeitems_67: 1126379173
       roguelikeitems_21: 1625373423
       roguelikeitems_131: 2055762455
       roguelikeitems_49: -372944103
       roguelikeitems_76: -577782108
+      Dark Tome: -1837113567
       roguelikeitems_90: -1510038734
       roguelikeitems_121: 1879226984
       roguelikeitems_168: 1546359197
@@ -4302,23 +4301,22 @@ TextureImporter:
       roguelikeitems_57: 2016601306
       roguelikeitems_45: -230731072
       roguelikeitems_87: -1063422383
-      roguelikeitems_179: -681227183
       roguelikeitems_144: 1454411342
       roguelikeitems_10: -1079437876
+      Nature Tome: -27104258
       roguelikeitems_154: -1496610961
       roguelikeitems_47: 1192036660
       roguelikeitems_172: 1643533200
       roguelikeitems_4: -1239942593
       roguelikeitems_13: 760830968
       roguelikeitems_186: 16538093
-      roguelikeitems_162: -27104258
+      Fire Crystal: 223430800
       roguelikeitems_182: -1111257263
       roguelikeitems_23: -1077819169
-      Fire Crystal: 223430800
       roguelikeitems_132: -1096782607
+      Light Tome: -681227183
       roguelikeitems_74: -1465517027
       roguelikeitems_94: -1616660830
-      roguelikeitems_163: -1223178561
       roguelikeitems_1: -1020112832
       roguelikeitems_129: -2117850712
       roguelikeitems_59: -526792924
@@ -4328,10 +4326,10 @@ TextureImporter:
       roguelikeitems_24: 236952608
       roguelikeitems_126: 159378569
       roguelikeitems_20: -487997119
-      roguelikeitems_175: -376479489
       roguelikeitems_108: 1545192614
       roguelikeitems_51: -45059128
       roguelikeitems_17: 949711025
+      Flame Tome: -1223178561
       roguelikeitems_75: -1608650309
       roguelikeitems_35: 507314855
       roguelikeitems_95: -1415059325
@@ -4345,12 +4343,14 @@ TextureImporter:
       roguelikeitems_153: -493822261
       roguelikeitems_117: 1266120688
       roguelikeitems_133: 1326491130
+      Ice Tome: -971065818
       roguelikeitems_5: 556111450
       roguelikeitems_118: 2042195996
       roguelikeitems_102: 1999277511
       roguelikeitems_130: 1798250064
       roguelikeitems_56: -1557961544
       roguelikeitems_145: -2129950858
+      Lightning Tome: -1446775660
       roguelikeitems_149: -1401387438
       roguelikeitems_2: 1904569425
       roguelikeitems_101: -1844276696

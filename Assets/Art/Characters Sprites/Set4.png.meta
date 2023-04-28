@@ -3885,7 +3885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_180
+      name: LinaUp
       rect:
         serializedVersion: 2
         x: 128
@@ -4053,7 +4053,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_188
+      name: WomanUp2
       rect:
         serializedVersion: 2
         x: 256
@@ -4074,7 +4074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_189
+      name: WomanUp1
       rect:
         serializedVersion: 2
         x: 272
@@ -4095,7 +4095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_190
+      name: WomanUp3
       rect:
         serializedVersion: 2
         x: 288
@@ -4263,7 +4263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LinaBattle
+      name: LinaRight
       rect:
         serializedVersion: 2
         x: 128
@@ -4431,7 +4431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_206
+      name: WomanRight2
       rect:
         serializedVersion: 2
         x: 256
@@ -4452,7 +4452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_207
+      name: WomanRight1
       rect:
         serializedVersion: 2
         x: 272
@@ -4473,7 +4473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_208
+      name: WomanRight3
       rect:
         serializedVersion: 2
         x: 288
@@ -4809,7 +4809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_224
+      name: WomanDown2
       rect:
         serializedVersion: 2
         x: 256
@@ -4830,7 +4830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_225
+      name: WomanDown1
       rect:
         serializedVersion: 2
         x: 272
@@ -4851,7 +4851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_226
+      name: WomanDown3
       rect:
         serializedVersion: 2
         x: 288
@@ -5019,7 +5019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_234
+      name: LinaLeft
       rect:
         serializedVersion: 2
         x: 128
@@ -5187,7 +5187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_242
+      name: WomanLeft2
       rect:
         serializedVersion: 2
         x: 256
@@ -5208,7 +5208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_243
+      name: WomanLeft1
       rect:
         serializedVersion: 2
         x: 272
@@ -5229,7 +5229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_244
+      name: WomanLeft3
       rect:
         serializedVersion: 2
         x: 288
@@ -5284,7 +5284,7 @@ TextureImporter:
       Set4_158: -1607992166
       Set4_4: 1146218011
       Set4_125: 1629478137
-      Set4_224: 922676222
+      Set4_238: 1257349614
       Set4_52: -1698296267
       Set4_25: -566112291
       Set4_187: 572759731
@@ -5293,8 +5293,6 @@ TextureImporter:
       Set4_17: 626860384
       Set4_239: -877647577
       Set4_7: -330081398
-      Set4_238: 1257349614
-      Set4_188: 1900714807
       Set4_105: -745440072
       Set4_221: 1846547645
       Set4_37: 582071372
@@ -5308,6 +5306,7 @@ TextureImporter:
       Set4_152: -1630743915
       Set4_236: 304243971
       Set4_115: 549523679
+      WomanDown3: -513488456
       Lina: 2108595094
       Set4_217: 697645823
       Set4_160: -15336876
@@ -5320,13 +5319,12 @@ TextureImporter:
       Set4_2: -1295238526
       Set4_29: -945097887
       Set4_71: -1141523143
-      Set4_180: 626012439
       Set4_64: -1615406835
       Set4_67: 2049930166
       Set4_134: -356086628
       Set4_103: -1533999598
       Set4_202: 1394246483
-      Set4_206: 3959307
+      WomanRight3: 322585415
       Set4_109: 1190985548
       Set4_91: 1265771351
       Set4_22: 371980196
@@ -5339,11 +5337,12 @@ TextureImporter:
       Set4_11: 2112894255
       Set4_136: 258966763
       Set4_144: -740127873
+      WomanRight2: 3959307
+      WomanLeft3: -2047973689
       Set4_13: -452036171
       Set4_84: 379679071
       LinaDown: 2120324412
       Set4_73: 1525313288
-      Set4_208: 322585415
       Set4_118: 2146718163
       Set4_154: -312603743
       Set4_140: -1621170318
@@ -5374,28 +5373,33 @@ TextureImporter:
       Set4_32: -1357456053
       Set4_87: -1919541676
       Set4_203: 683497244
+      LinaLeft: 483092129
       Set4_59: -1170803714
       Set4_77: -975316993
       Set4_227: 173252592
       Set4_151: 766843840
       Set4_162: 1280586799
       LinaBattle2: -193878880
+      WomanDown2: 922676222
+      WomanUp2: 1900714807
       Set4_156: -1970821659
       Set4_98: 1567539775
       Set4_211: 1408243073
+      WomanUp3: -1421060726
       Set4_186: 644304401
       Set4_40: 979952398
       Set4_148: 20384400
-      Set4_225: -531335566
       Set4_82: -1994177694
       Set4_147: 1970940058
       Set4_159: -1922233793
       Set4_232: 12013177
       Set4_141: 2108864903
+      LinaUp: 626012439
       Set4_181: -406027580
       Set4_157: -1280131985
       Set4_97: -1914088341
       Set4_31: -2065897202
+      WomanLeft1: 763833018
       Set4_123: 1939400910
       Set4_132: -557457453
       Set4_24: 411579860
@@ -5407,10 +5411,10 @@ TextureImporter:
       Set4_48: 2044812185
       Set4_172: -1866369434
       Set4_51: -2027300864
-      Set4_242: -1675381912
       Set4_30: 1411374345
       Set4_117: -753808646
       Set4_173: 1278327935
+      WomanRight1: -2111552125
       Set4_176: -1498668567
       Set4_179: -1609491386
       Set4_129: -1663113894
@@ -5421,6 +5425,7 @@ TextureImporter:
       Set4_96: -802730526
       Set4_101: 2110257119
       Set4_138: 440969652
+      WomanDown1: -531335566
       Set4_1: -1994417045
       Set4_163: -134229522
       Set4_222: -2097962724
@@ -5428,7 +5433,6 @@ TextureImporter:
       Set4_75: 1115461399
       Set4_113: 929358789
       Set4_201: 567979917
-      Set4_244: -2047973689
       Set4_210: 219176704
       Set4_26: 1074883330
       Set4_8: 2026978596
@@ -5437,6 +5441,7 @@ TextureImporter:
       Set4_99: 1258525913
       Set4_88: 1572987153
       Set4_184: -1451816060
+      WomanLeft2: -1675381912
       Set4_20: -644339668
       Set4_135: 1570589067
       Set4_3: 1223488241
@@ -5444,7 +5449,6 @@ TextureImporter:
       Set4_79: 292179137
       Set4_9: 357225260
       Set4_28: -930767339
-      Set4_207: -2111552125
       Set4_116: 1975896753
       Set4_130: 478237957
       Set4_183: -248905013
@@ -5458,7 +5462,6 @@ TextureImporter:
       Set4_168: -1450220224
       Set4_196: -1123361755
       Set4_228: -1238249224
-      Set4_190: -1421060726
       Set4_241: -1882925102
       Set4_35: -75730249
       Set4_58: -1874679472
@@ -5488,15 +5491,13 @@ TextureImporter:
       Set4_240: 870948752
       Set4_56: -1308995045
       Set4_83: 1266046842
-      Set4_226: -513488456
+      WomanUp1: -1592112217
       Set4_131: 1961486668
       Set4_50: 1159804121
       Set4_182: 1330981600
-      LinaBattle: 1971195882
+      LinaRight: 1971195882
       Set4_204: 316706643
       Set4_169: -1581135545
-      Set4_243: 763833018
-      Set4_234: 483092129
       Set4_175: 1661043368
       Set4_139: -765024963
       Set4_218: -126827016
@@ -5504,7 +5505,6 @@ TextureImporter:
       Set4_114: -1843435268
       Set4_230: -1372961133
       Set4_38: -1298460280
-      Set4_189: -1592112217
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
