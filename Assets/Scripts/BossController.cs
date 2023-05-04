@@ -12,6 +12,11 @@ public class BossController : MonoBehaviour, Interactable
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
 
+    public GameObject ally1;
+    public GameObject ally2;
+    public GameObject winPortal;
+    public GameObject portal;
+
     Characters character;
 
     bool battleLost = false;
@@ -21,8 +26,10 @@ public class BossController : MonoBehaviour, Interactable
         character = GetComponent<Characters>();
     }
 
+    Fader fader;
     private void Start()
     {
+        fader = FindObjectOfType<Fader>();
         SetFovRotation(character.Animator.DefaultDirection);
     }
 
@@ -42,6 +49,13 @@ public class BossController : MonoBehaviour, Interactable
         else
         {
             yield return DialogManager.Instance.ShowDialog(dialogAfterBattle);
+            yield return fader.FadeIn(0.5f);
+            winPortal.SetActive(true);
+            portal.SetActive(false);
+            Destroy(ally1);
+            Destroy(ally2);
+            Destroy(gameObject);
+            yield return fader.FadeOut(0.5f);
         }
     }
 

@@ -162,6 +162,21 @@ public class Character
         }
     }
 
+    public void BoostStatsAfterLevelUp()
+    {
+        var oldMaxHp = HP;
+        CalculateStats();
+        var diff = HP - oldMaxHp;
+
+        UpdateHP(-diff);
+
+        var oldMaxMp = MP;
+        CalculateStats();
+        var diff2 = MP - oldMaxMp;
+
+        UpdateMP(-diff2);
+    }
+
     public int Strength
     {
         get { return GetStat(Stat.Strength); }

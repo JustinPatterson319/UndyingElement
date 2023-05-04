@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360562489574919220, guid: b0de702b427f78246be05f146840c7cc, type: 3}
       propertyPath: sceneToLoad
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6360562489574919220, guid: b0de702b427f78246be05f146840c7cc, type: 3}
       propertyPath: destinationPortal
@@ -28907,6 +28907,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[1149].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 1077225781630969970, guid: 2b8344995b1824940b7bf0c4b18647ed, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077225781630969970, guid: 2b8344995b1824940b7bf0c4b18647ed, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc56562ae71687242a368cc307ae5fc0, type: 3}
     - target: {fileID: 1213163594482148108, guid: 2b8344995b1824940b7bf0c4b18647ed, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 6
@@ -33759,5 +33767,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1077225781630969970, guid: 2b8344995b1824940b7bf0c4b18647ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b8344995b1824940b7bf0c4b18647ed, type: 3}

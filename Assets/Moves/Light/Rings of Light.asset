@@ -15,10 +15,10 @@ MonoBehaviour:
   name: Rings of Light
   description: 'Damages a target with light from all sides. '
   type: 10
-  power: 80
+  power: 50
   accuracy: 100
   alwaysHits: 0
-  magCost: 10
+  magCost: 6
   priority: 0
   attackAnimationName: MultiRing
   attackColor: {r: 1, g: 1, b: 0, a: 1}

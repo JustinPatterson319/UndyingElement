@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 
-public enum InventoryUIState { ItemSelection, PartySelection, MoveToForget, Busy }
+public enum InventoryUIState { ItemSelection, PartySelection, MoveToForget, Busy, Forget }
 
 public class InventoryUI : MonoBehaviour
 {
@@ -56,6 +56,21 @@ public class InventoryUI : MonoBehaviour
         inventory.OnUpdated += UpdateItemList;
     }
 
+    private void Update()
+    {
+        if (state == InventoryUIState.Forget)
+        {
+            Debug.Log("Entering Move Selection");
+            Action<int> onMoveSelected = (int moveIndex) =>
+            {
+                StartCoroutine(OnMoveToForgetSelected(moveIndex));
+            };
+
+            //Debug.Log("Select a move");
+            moveSelectionUI.HandleMoveSelection(onMoveSelected);
+        }
+    }
+
     void UpdateItemList()
     {
         //Clear all existing items
@@ -82,6 +97,7 @@ public class InventoryUI : MonoBehaviour
 
         if(state == InventoryUIState.ItemSelection)
         {
+            Debug.Log("Entering Item Selection");
             int prevSelection = selectedItem;
             int prevCategory = selectedCategory;
 
@@ -145,6 +161,7 @@ public class InventoryUI : MonoBehaviour
         }
         else if(state == InventoryUIState.PartySelection)
         {
+            Debug.Log("Entering Party Selection");
             Action onSelected = () =>
             {
                 GetComponent<AudioSource>().clip = select;
@@ -160,14 +177,22 @@ public class InventoryUI : MonoBehaviour
 
             //Handle party selection
             partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
-        }    
-        else if (state == InventoryUIState.MoveToForget)
+        }   
+        
+        else if (state == InventoryUIState.Busy)
         {
+            Debug.Log("Busy");
+        }
+
+        else if (state == InventoryUIState.Forget)
+        {
+            Debug.Log("Entering Move Selection");
             Action<int> onMoveSelected = (int moveIndex) =>
             {
                 StartCoroutine(OnMoveToForgetSelected(moveIndex));
             };
 
+            //Debug.Log("Select a move");
             moveSelectionUI.HandleMoveSelection(onMoveSelected);
         }
     }
@@ -250,7 +275,7 @@ public class InventoryUI : MonoBehaviour
             //yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} is trying to master {tomeItem.Move.Name}.");
             //yield return DialogManager.Instance.ShowDialogText($"{character.Base.Name} is trying to master {tomeItem.Move.Name}.");
             yield return ChooseMoveToForget(character, tomeItem.Move);
-            yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
+            yield return new WaitUntil(() => state != InventoryUIState.Forget);
         }
     }
 
@@ -262,7 +287,8 @@ public class InventoryUI : MonoBehaviour
         moveSelectionUI.SetMoveData(character.Moves.Select(x => x.Base).ToList(), newMove);
         moveToLearn = newMove;
 
-        state = InventoryUIState.MoveToForget;
+        state = InventoryUIState.Forget;
+        Debug.Log("State is now Forget");
     }
 
     void UpdateItemSelection()

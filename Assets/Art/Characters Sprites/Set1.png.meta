@@ -1701,7 +1701,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_76
+      name: SoldUp
       rect:
         serializedVersion: 2
         x: 224
@@ -1932,7 +1932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_87
+      name: Table Soldie
       rect:
         serializedVersion: 2
         x: 208
@@ -1953,7 +1953,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_88
+      name: SoldRight
       rect:
         serializedVersion: 2
         x: 224
@@ -2205,7 +2205,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_100
+      name: SoldDown
       rect:
         serializedVersion: 2
         x: 224
@@ -2394,7 +2394,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_109
+      name: SoldLeft
       rect:
         serializedVersion: 2
         x: 224
@@ -2415,7 +2415,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set1_110
+      name: Table Soldier
       rect:
         serializedVersion: 2
         x: 240
@@ -7405,12 +7405,10 @@ TextureImporter:
       Set1_174: -1259532604
       KidUp3: -2089342288
       Set1_233: -28660553
-      Set1_76: 1393157808
       Set1_108: -1414831645
       Set1_120: -997987826
       Set1_284: 541332138
       Set1_144: 1614901224
-      Set1_88: 68098738
       Set1_280: -1711082095
       Set1_150: 1211482736
       Set1_153: -967884006
@@ -7453,6 +7451,7 @@ TextureImporter:
       Set1_251: 825846044
       Set1_228: -1313582219
       Set1_299: -1678499905
+      SoldDown: 37280421
       VampU2: -1047054239
       Set1_56: 964160908
       VampD2: -1790316292
@@ -7482,7 +7481,6 @@ TextureImporter:
       Set1_95: -1721935793
       Set1_71: 175622337
       Set1_314: -1110858190
-      Set1_100: 37280421
       Set1_123: 240619046
       Set1_119: 1477999214
       Set1_330: -170359959
@@ -7491,6 +7489,7 @@ TextureImporter:
       Set1_37: 1895390922
       Set1_163: 240537547
       Set1_331: 1968498447
+      Table Soldie: 2127375882
       Set1_121: -1206519094
       Set1_289: -1345684363
       VampR3: 78665090
@@ -7541,7 +7540,6 @@ TextureImporter:
       Set1_306: 691959913
       VampU3: -1221519752
       KidRight1: -796697060
-      Set1_87: 2127375882
       Set1_229: -1991062546
       Set1_143: 624606316
       Set1_93: 2000261849
@@ -7562,6 +7560,7 @@ TextureImporter:
       Set1_33: -1953156061
       Set1_103: 1070036902
       Set1_80: 1617043133
+      SoldRight: 68098738
       Set1_244: -2064081564
       Set1_336: 1065135538
       Set1_195: 413146385
@@ -7579,6 +7578,7 @@ TextureImporter:
       Set1_290: 600517538
       Set1_312: -1749668044
       Set1_292: -1211262085
+      SoldUp: 1393157808
       KidUp2: 404886736
       Set1_276: 1704625633
       Set1_275: 1865988447
@@ -7602,6 +7602,7 @@ TextureImporter:
       Set1_219: -2089342288
       Set1_214: -875622001
       Set1_281: -727690872
+      Table Soldier: 1557345709
       Set1_125: -1773205609
       Set1_166: 873139426
       Set1_57: -1680225281
@@ -7666,10 +7667,10 @@ TextureImporter:
       Set1_36: 222124067
       Set1_285: -2142789
       Set1_82: -1863163844
+      SoldLeft: 1556726211
       Set1_217: 775979953
       Set1_213: -1993702571
       Set1_66: 1557345709
-      Set1_110: -223215357
       Set1_240: -2089037785
       Set1_316: 1058426711
       Set1_215: 1044974474
@@ -7682,13 +7683,12 @@ TextureImporter:
       Set1_209: -898023022
       Set1_245: 1125940859
       Set1_50: 1556726211
-      Set1_109: -881325283
       Set1_146: 1907359418
-      Set1_297: 1042045589
       Set1_212: -2036589647
+      Set1_297: 1042045589
+      Set1_210: 927385038
       Set1_181: 1536833608
       Set1_256: -1695307189
-      Set1_210: 927385038
       Set1_224: 1698518078
       Set1_216: -811093322
       Set1_204: 1129813221

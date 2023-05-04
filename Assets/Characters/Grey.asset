@@ -22,20 +22,22 @@ MonoBehaviour:
   type: 4
   hp: 70
   mp: 110
-  regAttack: 60
-  magAttack: 140
+  regAttack: 90
+  magAttack: 130
   regDefense: 80
   magDefense: 80
-  speed: 110
+  speed: 90
   expYield: 0
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: b38811614c68e894f842a3f21739f334, type: 2}
+  - moveBase: {fileID: 11400000, guid: 997a2b8c1e2367a4ba710798f7a7ec61, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 3ee3f39fb0f8a7c4a8071ed98877e190, type: 2}
+  - moveBase: {fileID: 11400000, guid: bdb1a21f9cbf803499686b34a348b0a1, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: 63247fce91adce94d9f0a5d2a0efa3f4, type: 2}
+  - moveBase: {fileID: 11400000, guid: d098453b526469942bcdc99c9c8f34a0, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 463bfe5e43a5ca2419cae0897d09fa80, type: 2}
     level: 0
   - moveBase: {fileID: 11400000, guid: d74897508d794f943b7b41be0fd8e033, type: 2}
     level: 0
-  - moveBase: {fileID: 11400000, guid: aa3e87b0f11537c409432c61f371ad60, type: 2}
+  - moveBase: {fileID: 11400000, guid: 484c64e0a2b424f459fa2e1082051bc6, type: 2}
     level: 0

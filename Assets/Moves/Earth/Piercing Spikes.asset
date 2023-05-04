@@ -16,8 +16,10 @@ MonoBehaviour:
   description: 'Pierce the target with sharp spikes of earth. Causes bleeding. '
   type: 7
   power: 0
-  accuracy: 100
+  accuracy: 80
+  alwaysHits: 0
   magCost: 1
+  priority: 0
   attackAnimationName: Spikes
   attackColor: {r: 1, g: 0.5194335, b: 0.3443396, a: 1}
   attackSound: {fileID: 8300000, guid: 17f8601c67f33fc499ced9e434027106, type: 3}
@@ -25,4 +27,5 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 1
+  secondaryEffects: []
   target: 0

@@ -2352,7 +2352,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Set4_107
+      name: Archer
       rect:
         serializedVersion: 2
         x: 208
@@ -5272,10 +5272,9 @@ TextureImporter:
       Set4_143: -361733627
       Set4_74: 203794758
       Set4_170: 195106592
-      Set4_107: 1118061940
+      Set4_142: -2105548106
       Set4_5: -1158296456
       Set4_178: 216168720
-      Set4_142: -2105548106
       Set4_165: -1962868091
       Set4_233: 1141225922
       Set4_70: -1691396560
@@ -5483,6 +5482,7 @@ TextureImporter:
       Set4_145: 227645537
       Set4_214: 154005346
       Set4_95: -1487759295
+      Archer: 1118061940
       Set4_53: 855005359
       Set4_27: -1436048887
       Set4_81: 1174606305

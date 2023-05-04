@@ -16,8 +16,10 @@ MonoBehaviour:
   description: Causes the slumber status effect on the target.
   type: 4
   power: 0
-  accuracy: 100
+  accuracy: 60
+  alwaysHits: 0
   magCost: 10
+  priority: 0
   attackAnimationName: Cloud
   attackColor: {r: 1, g: 0.6273585, b: 0.7714048, a: 0.5803922}
   attackSound: {fileID: 8300000, guid: 94c20fd2f75475c4f8df52b2f796d6a9, type: 3}
@@ -25,4 +27,5 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 7
+  secondaryEffects: []
   target: 0

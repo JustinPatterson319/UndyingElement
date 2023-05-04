@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Table Knight
+  m_EditorClassIdentifier: 
+  name: Table Knight
+  description: 
+  battleSprite: {fileID: -1242673670, guid: d92825ebfdfe8b34f8d896134ba2f74e, type: 3}
+  partySprite: {fileID: 0}
+  faceSprite: {fileID: 878758254, guid: 84eb9606a5f35b14d83356e0a1997f52, type: 3}
+  elementSprite: {fileID: -303649665, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: 0}
+  type: 11
+  hp: 70
+  mp: 70
+  regAttack: 70
+  magAttack: 70
+  regDefense: 70
+  magDefense: 70
+  speed: 70
+  expYield: 120
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 3959b32acf8844a49a3f7794b8cddf90, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: b647b2de75a4e554f987910204f40331, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 3ee3f39fb0f8a7c4a8071ed98877e190, type: 2}
+    level: 0

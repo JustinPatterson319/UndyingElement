@@ -1134,7 +1134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_49
+      name: Table Soldier Face
       rect:
         serializedVersion: 2
         x: 48
@@ -1900,7 +1900,6 @@ TextureImporter:
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_31: -1279306118
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_53: 1786560515
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_63: 163591155
-      48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_49: 513498330
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_56: 935022249
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_71: -1939977935
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_5: -1003905678
@@ -1950,6 +1949,7 @@ TextureImporter:
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_32: 39427647
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_52: -1331970868
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_69: 875548389
+      Table Soldier Face: 513498330
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_22: 1361703075
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_68: 371704434
       48x48_Faces_4th_Sheet_Update_CharlesGabriel_OGA_82: -274090169

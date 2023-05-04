@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Causes the chill status effect on the target.
   type: 6
   power: 0
-  accuracy: 100
+  accuracy: 60
   alwaysHits: 0
   magCost: 10
   priority: 0

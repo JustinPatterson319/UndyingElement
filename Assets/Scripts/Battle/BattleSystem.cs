@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, BattleOver, Bag}
@@ -28,6 +29,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip enemyDefeatSound;
     [SerializeField] AudioClip playerDefeatSound;
     [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] GameObject woodsBackground;
+    [SerializeField] GameObject townBackground;
+    [SerializeField] GameObject caveBackground;
+    [SerializeField] GameObject bossBackground;
+    [SerializeField] EssentialObjects forGameOver;
 
     public GameObject bossMusic;
     public GameObject encounterMusic;
@@ -45,6 +51,51 @@ public class BattleSystem : MonoBehaviour
     bool isBossBattle = false;
     PlayerController player;
     BossController boss;
+
+    Scene currentScene;
+    String sceneName;
+
+    public void Update()
+    {
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        
+        if (sceneName == "Town")
+        {
+            townBackground.SetActive(true);
+        }
+        else
+        {
+            townBackground.SetActive(false);
+        }
+
+        if (sceneName == "Woods")
+        {
+            woodsBackground.SetActive(true);
+        }
+        else
+        {
+            woodsBackground.SetActive(false);
+        }
+
+        if (sceneName == "Boss Room")
+        {
+            bossBackground.SetActive(true);
+        }
+        else
+        {
+            bossBackground.SetActive(false);
+        }
+
+        if (sceneName == "Cave Floor 1" || sceneName == "Cave Floor 2" || sceneName == "Cave Floor 3")
+        {
+            caveBackground.SetActive(true);
+        }
+        else
+        {
+            caveBackground.SetActive(false);
+        }
+    }
 
     public void StartBattle(PlayerParty playerParty, Character wildEncounter)
     {
@@ -490,6 +541,7 @@ public class BattleSystem : MonoBehaviour
             while(playerUnit.Character.CheckForLevelUp())
             {
                 playerUnit.Hud.SetLevel();
+                playerUnit.Character.BoostStatsAfterLevelUp();
                 yield return dialogBox.TypeDialog($"{playerUnit.Character.Base.name}'s level increased!");
 
                 yield return playerUnit.Hud.SetExpSmooth(true);
@@ -511,7 +563,9 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
+                forGameOver.gameOver = true;
                 BattleOver(false);
+                SceneManager.LoadScene("Title Screen");
             }
         }
         else
@@ -733,12 +787,12 @@ public class BattleSystem : MonoBehaviour
         {
             if (!dialogBox.isTyping)
             {
+                StartCoroutine(ActionSelection());
                 currentAction = 0;
                 GetComponent<AudioSource>().clip = select;
                 GetComponent<AudioSource>().Play(0);
                 dialogBox.EnableMoveSelector(false);
                 dialogBox.EnableDialogText(true);
-                StartCoroutine(ActionSelection());
             }
         }
     }
@@ -780,10 +834,14 @@ public class BattleSystem : MonoBehaviour
         {
             if (playerUnit.Character.currentHP > 0)
             {
-                GetComponent<AudioSource>().clip = select;
-                GetComponent<AudioSource>().Play(0);
-                partyScreen.gameObject.SetActive(false);
-                StartCoroutine(ActionSelection());
+                //HERE HERE HERE HERE
+                if (!dialogBox.isTyping)
+                {
+                    GetComponent<AudioSource>().clip = select;
+                    GetComponent<AudioSource>().Play(0);
+                    partyScreen.gameObject.SetActive(false);
+                    StartCoroutine(ActionSelection());
+                }
             }
         };
 

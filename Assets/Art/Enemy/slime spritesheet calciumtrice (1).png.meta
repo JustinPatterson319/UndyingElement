@@ -1,0 +1,4435 @@
+fileFormatVersion: 2
+guid: 68c0c6f2f9731f345bfe5d87058b4202
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b7921822574a943bef3b065478b3f3
+      internalID: 1850537504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf11cd24f4b3da74a80891a6cd0db1d0
+      internalID: 158016405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086121657c29f494aa1a19c2c22aa4b8
+      internalID: 1154177361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8b3de9d5ba8834b86e8193f13602c8
+      internalID: -650773162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f164a7750779504db243854b64c0b73
+      internalID: -532149404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8376255184774e34d9ff6bed401bbbab
+      internalID: -1276889363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655bc29a0ecf6cb4ea0fb19d7a5fc8fc
+      internalID: 1853960655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4626d92487d15d94389c4f4849949ed2
+      internalID: 1064063207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa9e710736bb92428c916cf2899ae8c
+      internalID: -1015409386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 608
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eadd03a98532df4babdf5b256610cd5
+      internalID: 194735491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 576
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c40db84139bf84abf39235098bfeea
+      internalID: -1524843590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 576
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7329bc41dfbe442bc8d7332d44f758
+      internalID: -1748361952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95671ecb7430afc45926e8dfadadbe3f
+      internalID: -1484146983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_13
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9016c7980100b141bfa6426c34eaaf1
+      internalID: 948805930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c0e6617166ac043b0cd39b6d84eebf
+      internalID: 90658747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_15
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa95a06ca68c254fa6024b2055d5623
+      internalID: 499083756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_16
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245688f861e8ac74e97a2b84c089cf4f
+      internalID: 124016470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_17
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071f911f863d34b41ba15d70f89a8422
+      internalID: 797028282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_18
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 576
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108f21e1e2ee2e348b9f7f32ca3ee12b
+      internalID: -465778337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_19
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 576
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082b1cc3d30c8a546966bc5a2ab2a840
+      internalID: -1120927903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_20
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 544
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4bc13d3c90e7c4388578e0d61d81c7
+      internalID: -1902937559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_21
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 544
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2b00c1b79a3b444a09cb1f5b32f5e9
+      internalID: 936848881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 544
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b67a16aabf63c4ab475f97c722e141
+      internalID: 1351207392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_23
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 545
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48da3c002051a91438659e5f07d659fd
+      internalID: 197684329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_24
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 547
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e859dfa5243e940b7ea234f71c459e
+      internalID: -943975978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_25
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 548
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee8278ba7bccb941b9d97cf2f25bd79
+      internalID: 1105892227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_26
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 548
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8628555c930b8b5438d4e7d7853f15fe
+      internalID: -160329986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_27
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 546
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2513120871322b47a90cd88d72c4a3a
+      internalID: -142773428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_28
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 544
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566338b94cd86b74d9cc0d5bf946e445
+      internalID: -1808250733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_29
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 544
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a9bd1c420f5a942b7cf91ade1a0ace
+      internalID: -94831240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 512
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b97f2311209044bb7ff349ee9d740c
+      internalID: 1237360779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 512
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473aab47e8af00d4ea5e3dc0a0debd45
+      internalID: -2058722218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 512
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b3768c97c70e1458f9948b201fd401
+      internalID: -1307850332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_33
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 512
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbd85b76ec1aa9428428974d9a18e37
+      internalID: 1281597711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_34
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 512
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b6158a13c2f354eb376d4996621b09
+      internalID: -1886123966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_35
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 512
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88162d2fc79faf5468328ef2183a56de
+      internalID: -1624166245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 512
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29892efd882db3b44a43f99d270dedde
+      internalID: -1549716940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_37
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 512
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8dc7d502cf4b184d958a278a12b0a0d
+      internalID: -2138698205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 512
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77a5e9a830d7344f9886f6787a0b2fd
+      internalID: 1241048957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_39
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 512
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65112930235500549ae25d46c3f5860b
+      internalID: -1053251219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_40
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 480
+        width: 45
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d1577cd5289194c8df639546a74356
+      internalID: -1019800851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_41
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 480
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42bddcaf0822f7428b075da04d4daff
+      internalID: -2078955333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_42
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 480
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd92f87bae80f764fb641be623c040d1
+      internalID: -1270678972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_43
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 480
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41ca2318b9a89d4b88b0f7658ef919e
+      internalID: 1400194821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_44
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 480
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e18c3ab929d6ba4dacbe1cd093c531e
+      internalID: 1344072656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_45
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 480
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b9890302decb14e8b7e01f59d33f18
+      internalID: 540489197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_46
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 480
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c39a958dec7b1c45b170726c2665266
+      internalID: -196965315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 480
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193df52fd17a03640ae935f64a52b079
+      internalID: -223294908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_48
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 480
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986b862e1665fab449fa87f9b7dbe89c
+      internalID: -1258793429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_49
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944a8cffe47b9b04a9364f49d4482e1c
+      internalID: -1161941972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_50
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfad662ca110e94185a6d96a9a8d6c3
+      internalID: 264159646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_51
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d225d020e461d34cb8940572d3018db
+      internalID: 314964916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_52
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da87b23ff1f63a040a60f0c718b98fd7
+      internalID: 130918503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_53
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4884cded0b7f84f9075120467db7b8
+      internalID: 652160576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_54
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f51449d8d1d69046a977aa8e28a4822
+      internalID: -1953727304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_55
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8009585c3f0525f42aa1135a42e22fe1
+      internalID: -2112616323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_56
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4d0241b4eed6e4798f759679bbf7c7
+      internalID: -102557893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_57
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad0edaec41b210498496cfb57eb3fab
+      internalID: -1469847613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_58
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 448
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fab8577add69cc44bf7b5f8f98747b8
+      internalID: 881192708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_59
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 416
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea9163a6d78424479d71fdd0cb9c692
+      internalID: -2052665812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_60
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 416
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71360f9b58f37504b83cca2201d1b3cb
+      internalID: -1585076055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_61
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39a968bf3b273d4da9709ebd6133df9
+      internalID: -2009890011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_62
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517c03a263046c44a99c7638b082bca3
+      internalID: -1966778778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_63
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9655876c3fc51d4aa47a23ca2fb6241
+      internalID: -1491130152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_64
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e60463b3175184cbd87252d7834ffc
+      internalID: -1259921542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_65
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c250954aa921ea46b157e8ca70aa57d
+      internalID: -7576012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_66
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beba158a7da779b48a6fc3858062d80f
+      internalID: -2074122696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_67
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0401990f74e2d7a4e93aefcdb65c0817
+      internalID: 1585073770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_68
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 416
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cec70e5e919a64ab4e71a518fff411
+      internalID: -1409877565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_69
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 384
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72259db10b807e44ba0c220a334f6c56
+      internalID: 380608295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_70
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 384
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e39f14e402cca4e8ed0070611815dc
+      internalID: -379358801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_71
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 384
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eb9ae12e6733a46a7b869bd17d5e60
+      internalID: 1771503796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_72
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 385
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bc7d10d2db7e848ad04b82d29049ee
+      internalID: -1314878155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_73
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 387
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0c5010b0a5087439c0b01642b84572
+      internalID: 1515944811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_74
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 388
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0542f00c0e239c5459a5f1d8c0053120
+      internalID: -120654867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_75
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 388
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69da4db951672f4b9cf3e7f15b6a239
+      internalID: 598768560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_76
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 386
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4263ce24fc329ea4db0b9bfaeb941111
+      internalID: 231877444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_77
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 384
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ce48909fe83f343ab61c4b7d60c03a
+      internalID: -1186634606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_78
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 384
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805bb482f736edd4ea8bd2f4a4b4428f
+      internalID: 355495819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_79
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 352
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31feae7d8c0c8894ba98813f1283d86d
+      internalID: 229023897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_80
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 352
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b935256882e9249ad257dd7e6bcee4
+      internalID: -157889432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SLIME
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 348
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b082bd27719f5d4da892420016e1ffd
+      internalID: -1179442458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_82
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 352
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b220337cacb4ca4aa5284b784700b6a
+      internalID: -966364647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_83
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 352
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6104b9655d48447b3aee1955a4235d
+      internalID: 411500519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_84
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 352
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96958bb6434616842b7828ffda29682a
+      internalID: -559376898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_85
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 352
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d757be642eba0d244908b54a234531f3
+      internalID: 1885821021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_86
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 352
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd999000ee3f80c48b7cffd6939ee8ed
+      internalID: -901800818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_87
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 352
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250f2657fc3d3954ab66d0a1fe950ff8
+      internalID: -854328144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_88
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 352
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67382511de9cc0845bdf39464364e0af
+      internalID: -1295048978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_89
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 320
+        width: 45
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387b3edf6df09ea4f96c644e3e9d9457
+      internalID: -1728620199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_90
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 320
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4054ddc444db7974497c397b5cb97a5f
+      internalID: 1499051025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_91
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 320
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a17cd5dd55fc49419b14ceeaedff468
+      internalID: 80739993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_92
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 320
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b8080fd305f704d9774a4c6fd6484e
+      internalID: 2057499771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_93
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 320
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6158783270c812342b0e62abbead2ca3
+      internalID: -758212768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_94
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 320
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9111678113633ad4b9bfbd57bedca30d
+      internalID: -433793384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_95
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 320
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9209e24eca7f1b042be7cc4684203800
+      internalID: -1261305565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_96
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 320
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cd55f5496f6d2409db442daac02e70
+      internalID: 1628185395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_97
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 320
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42ef29e1f98f3d4bada520ec6bb4f4e
+      internalID: -1365913343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_98
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5c64fce54b0024ea6ec6d45df5f4cc
+      internalID: 1833700369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_99
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c638ca95be68c5045a179d3ae8d66ac3
+      internalID: -728199496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_100
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de4b862a216578448ed89746fa717a9
+      internalID: 2071899842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_101
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26242fb1bd052c642af4720c66f243fd
+      internalID: -258969691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_102
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcd5dd2eda82804dbe763143abdb4d7
+      internalID: -997845857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_103
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63839afed7c3114f8898e9ebaaa036c
+      internalID: 507635061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_104
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e3212f0e7e9504789e5ef2d5cd47f1
+      internalID: -726192129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_105
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a2baf2426a764ba9cbe7b85c0c3cc
+      internalID: 1137897057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_106
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5571ca5e527595343ad55a75e9bdb7d9
+      internalID: -432450299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_107
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 288
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcd2ecc40b87314c99bf68857a973b3
+      internalID: 365047058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_108
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 256
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e68cec41e2eedb4caa8b3fdc0e5c7bc
+      internalID: 1739560687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_109
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 256
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e36b6973a7cbb40a4487e00fab7160
+      internalID: 569494812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_110
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a2e66c8bf4803429e3d118df24f8b5
+      internalID: 1400038932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_111
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedcacd09d8b6a24ca6e0ce665086e29
+      internalID: -341454145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_112
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cef7848d35eb6b4190da24c9f613738
+      internalID: 1572017197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_113
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c53789bac4765f43b335942c9d6689b
+      internalID: -47544279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_114
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acaa48dde9f32ce4099e137199c4a26d
+      internalID: 386690837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_115
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18ff1678929a6c499b25abd6424b8ae
+      internalID: 1194293077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_116
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 256
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8cdff0caf1b6241a3f5d6b066564b6
+      internalID: 1784430751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_117
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 256
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea5ab4efe592654daec3cb3d36069f1
+      internalID: 442288431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_118
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 224
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2eb056433ee21a48acf6411c504db06
+      internalID: -260894035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_119
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 224
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074c62457c2ddfc4293bf7fd6a2d9b2c
+      internalID: 2065522787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_120
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 224
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f26512650fae44b9a8639b19090c55
+      internalID: 2012253612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_121
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 225
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2668156929d331b40861d337fa71c51b
+      internalID: 1335783047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_122
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 227
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1180e79b6fea9bc4b9d924c2ebdb039a
+      internalID: 614380186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_123
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 228
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771d11dac6805e84495f9e62571fae3b
+      internalID: 153485334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_124
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 228
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a8e1c29d01ecf4da9671f5a7744ef3
+      internalID: 1792836945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_125
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 226
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d8e1ff7875d9c4ea0177a61d9f1350
+      internalID: 1993931569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_126
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 224
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb45a8f108887a40a5df3fecbe555e9
+      internalID: -1934207221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_127
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 224
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523bc5d689b1a424e94c21ba67df9039
+      internalID: -1922773111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_128
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 192
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e67ef2ef62c44b4a930f231a693ffee
+      internalID: 712196800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_129
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c5ff36a765f744ca1ece39b828356c
+      internalID: 533628281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_130
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 192
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e737ba8cff6feec4b8661cfb55a92e7f
+      internalID: -1840474077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_131
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 192
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361e937d695d84f4daae685a253d95f5
+      internalID: -1714872222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_132
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 192
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552ad0965602961479d74b6e7e265aba
+      internalID: -1671365520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_133
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 192
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c790d38938b4e5042861ef514c9e83b9
+      internalID: 1182411977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_134
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 192
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c2b0da2a43159429d7f931f6497253
+      internalID: 1967490237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_135
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 192
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e188bbaf98bad45ab963c21fa9b319
+      internalID: -1012506252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_136
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 192
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ab19c8c0ea66f4790f06bc067dfc3a
+      internalID: 1524904799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_137
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 192
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fbffc20d40bcc4f867335cecedce9f
+      internalID: -1461618676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_138
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 160
+        width: 45
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77e255948018624caa80431a2f7cb72
+      internalID: 720818334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_139
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0934c2525ef658f479716996cff11e3e
+      internalID: 225784594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_140
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 160
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032985f7f1aa87e4e820cb92468e3451
+      internalID: -1168141267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_141
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 160
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7779a03c533d04746be6dc1a5c9b84b1
+      internalID: 503974165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_142
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663abff65728f0f478167ab10ca94d5c
+      internalID: -1311925640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_143
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 160
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f45d0326157ad40a05f632bcaedc56
+      internalID: -361132160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_144
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 160
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b4a71d9ebf2fa45a48f3ff218d2619
+      internalID: -36900742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_145
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 160
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d2fafee6017624c9d0758f70929cb9
+      internalID: 77276878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_146
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 160
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7fbe18f461b41478de22d6df7bac30
+      internalID: 250221195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_147
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ae7cb3f8294794cafa951ee81f710b
+      internalID: -96734145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_148
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4418c4d2042e4dc4c89d0d53f883023c
+      internalID: 406151047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_149
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18b37a8cd50b4942b40bfbaf5b10ffc
+      internalID: -937969048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_150
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b87010bd720cba4ba40febb27e14ae0
+      internalID: -655448272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_151
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca89cc97fc0007d49a3888ed538816ae
+      internalID: -1851767597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_152
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d522b498fcef4274d93ae3c2e0e3ade9
+      internalID: -1903672311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_153
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a90ea356c602348ba03e3c014df049
+      internalID: -1151333075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_154
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed79307f9b842f44982fdfaabe058de9
+      internalID: -1825875111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_155
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd89e2c87d5392645825b094fa5bbada
+      internalID: 272553693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_156
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0160948f1ec7d64cb6ebb37498689a9
+      internalID: 173373461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_157
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b029f912e358fd34d8456b024537c8aa
+      internalID: 702758372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_158
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 96
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a460af741f53e64288ee887a09273ce
+      internalID: 681841402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_159
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c56ad1d61ac0704381421db0c5bacf1
+      internalID: 1615301349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_160
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2767e3269773dd4438225820950a8483
+      internalID: 1658951517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_161
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334ae8efa973c4c41b0c4d343816627a
+      internalID: -818853189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_162
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c524437da14948f4797b728e0574d9f7
+      internalID: 491283525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_163
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199f958ddf1881f4faec007db5621a94
+      internalID: -753934312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_164
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14c7dde43fb3714a879daa2ae6e1c8b
+      internalID: -526822803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_165
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 96
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326ffcd0e8f61504ca0a951b66aa4ab0
+      internalID: 874221219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_166
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 96
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3485e56735e573d41b440796b11d5f3d
+      internalID: 1223562762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_167
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 64
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7cdd24ac93e974fa7a21decbf00a3c
+      internalID: 147510344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_168
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 64
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42197b7c7eb0d1543a6db0256f3f4a61
+      internalID: -1373452078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_169
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 64
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e272fa0ae449649b25b7a771f78257
+      internalID: 541258246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_170
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 65
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36de305c6b2244140afed9fbfdd0a90b
+      internalID: -1883575834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_171
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 67
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a263b55eb75b1f43a5ba8c952b99d1f
+      internalID: -14140103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_172
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 68
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5622576f0777f4b93d0ca9c82b8976
+      internalID: -1649861666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_173
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 68
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9c27390e6d2d74f97915d2b07bca3e
+      internalID: 1772197533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_174
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 66
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dfb0d88673abc4988f7e12f121958f
+      internalID: 521076473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_175
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 64
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02ae686bfb1318448cf0069de017149
+      internalID: -478918259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_176
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 64
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b36e6a945a2601449a59098dec87574
+      internalID: -2108285395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_177
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 32
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a64ca95d1a2605459b23ee9e26509e9
+      internalID: 843094903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_178
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 32
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd826969e6996e740ac4520a985bc8b9
+      internalID: 1353258043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_179
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 32
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe4484581762ec479ccd0294e55712f
+      internalID: 591665404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_180
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 32
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719a9ca8444961c4a9c28a4431fb23d6
+      internalID: 1718537590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_181
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 32
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a207e119dfe89bb4388b0e7d26ec887b
+      internalID: -1710608782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_182
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 32
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d6f9e76e753cd4ca6df7dcaf2457f6
+      internalID: -1734005630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_183
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 32
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151b33c764b53d743ae2605236dd3a58
+      internalID: -757764497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_184
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 32
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd33b09aa61fd8e469c85be16a2ad3e8
+      internalID: 170659825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_185
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 32
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d6954740beddf4894b9e07296b250e
+      internalID: -874579143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_186
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 32
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb13e5fb9e944dd4cb98382f7240659c
+      internalID: 1412213533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_187
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 45
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c10f740377d17840a34b8ce4717f9dc
+      internalID: 759203616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_188
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096acf76fb637584e9d9ab74b0f46420
+      internalID: 1987597714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_189
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dda8cedafb321a4494f1ff9f9d4ae8a
+      internalID: -173875307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_190
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace72d2066f3d7347babcb56ffe61cab
+      internalID: -228176776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_191
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c48b7d7f0f2004fa28ce767a97b5b9
+      internalID: -763338470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_192
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6143588941c6c4891aa6715256696e
+      internalID: -1500472596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_193
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cdfc63eca0d36419a687dd0713ab4c
+      internalID: 1848501256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_194
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c45f7cde9cda646a97af938475357f
+      internalID: 1508636917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime spritesheet calciumtrice (1)_195
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcdcd6222a34d24298dc186ac01a098
+      internalID: -1130062005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      slime spritesheet calciumtrice (1)_146: 250221195
+      slime spritesheet calciumtrice (1)_76: 231877444
+      slime spritesheet calciumtrice (1)_29: -94831240
+      slime spritesheet calciumtrice (1)_153: -1151333075
+      slime spritesheet calciumtrice (1)_8: -1015409386
+      slime spritesheet calciumtrice (1)_30: 1237360779
+      slime spritesheet calciumtrice (1)_47: -223294908
+      slime spritesheet calciumtrice (1)_60: -1585076055
+      slime spritesheet calciumtrice (1)_84: -559376898
+      slime spritesheet calciumtrice (1)_179: 591665404
+      slime spritesheet calciumtrice (1)_53: 652160576
+      slime spritesheet calciumtrice (1)_138: 720818334
+      slime spritesheet calciumtrice (1)_172: -1649861666
+      slime spritesheet calciumtrice (1)_100: 2071899842
+      slime spritesheet calciumtrice (1)_175: -478918259
+      slime spritesheet calciumtrice (1)_58: 881192708
+      slime spritesheet calciumtrice (1)_89: -1728620199
+      slime spritesheet calciumtrice (1)_154: -1825875111
+      slime spritesheet calciumtrice (1)_190: -228176776
+      slime spritesheet calciumtrice (1)_188: 1987597714
+      slime spritesheet calciumtrice (1)_155: 272553693
+      slime spritesheet calciumtrice (1)_7: 1064063207
+      slime spritesheet calciumtrice (1)_78: 355495819
+      slime spritesheet calciumtrice (1)_121: 1335783047
+      slime spritesheet calciumtrice (1)_189: -173875307
+      slime spritesheet calciumtrice (1)_131: -1714872222
+      slime spritesheet calciumtrice (1)_183: -757764497
+      slime spritesheet calciumtrice (1)_170: -1883575834
+      slime spritesheet calciumtrice (1)_59: -2052665812
+      slime spritesheet calciumtrice (1)_82: -966364647
+      slime spritesheet calciumtrice (1)_125: 1993931569
+      slime spritesheet calciumtrice (1)_105: 1137897057
+      slime spritesheet calciumtrice (1)_65: -7576012
+      slime spritesheet calciumtrice (1)_106: -432450299
+      slime spritesheet calciumtrice (1)_32: -1307850332
+      slime spritesheet calciumtrice (1)_39: -1053251219
+      slime spritesheet calciumtrice (1)_41: -2078955333
+      slime spritesheet calciumtrice (1)_56: -102557893
+      slime spritesheet calciumtrice (1)_176: -2108285395
+      slime spritesheet calciumtrice (1)_161: -818853189
+      slime spritesheet calciumtrice (1)_137: -1461618676
+      slime spritesheet calciumtrice (1)_5: -1276889363
+      slime spritesheet calciumtrice (1)_145: 77276878
+      slime spritesheet calciumtrice (1)_15: 499083756
+      slime spritesheet calciumtrice (1)_120: 2012253612
+      slime spritesheet calciumtrice (1)_186: 1412213533
+      slime spritesheet calciumtrice (1)_149: -937969048
+      slime spritesheet calciumtrice (1)_93: -758212768
+      slime spritesheet calciumtrice (1)_94: -433793384
+      slime spritesheet calciumtrice (1)_163: -753934312
+      slime spritesheet calciumtrice (1)_66: -2074122696
+      slime spritesheet calciumtrice (1)_132: -1671365520
+      slime spritesheet calciumtrice (1)_69: 380608295
+      slime spritesheet calciumtrice (1)_108: 1739560687
+      slime spritesheet calciumtrice (1)_38: 1241048957
+      slime spritesheet calciumtrice (1)_141: 503974165
+      slime spritesheet calciumtrice (1)_129: 533628281
+      slime spritesheet calciumtrice (1)_148: 406151047
+      slime spritesheet calciumtrice (1)_23: 197684329
+      slime spritesheet calciumtrice (1)_83: 411500519
+      slime spritesheet calciumtrice (1)_21: 936848881
+      slime spritesheet calciumtrice (1)_135: -1012506252
+      slime spritesheet calciumtrice (1)_174: 521076473
+      slime spritesheet calciumtrice (1)_62: -1966778778
+      slime spritesheet calciumtrice (1)_180: 1718537590
+      slime spritesheet calciumtrice (1)_57: -1469847613
+      slime spritesheet calciumtrice (1)_171: -14140103
+      slime spritesheet calciumtrice (1)_173: 1772197533
+      slime spritesheet calciumtrice (1)_20: -1902937559
+      slime spritesheet calciumtrice (1)_36: -1549716940
+      slime spritesheet calciumtrice (1)_193: 1848501256
+      slime spritesheet calciumtrice (1)_166: 1223562762
+      slime spritesheet calciumtrice (1)_70: -379358801
+      slime spritesheet calciumtrice (1)_55: -2112616323
+      slime spritesheet calciumtrice (1)_25: 1105892227
+      slime spritesheet calciumtrice (1)_19: -1120927903
+      slime spritesheet calciumtrice (1)_150: -655448272
+      slime spritesheet calciumtrice (1)_0: 1850537504
+      slime spritesheet calciumtrice (1)_67: 1585073770
+      slime spritesheet calciumtrice (1)_27: -142773428
+      slime spritesheet calciumtrice (1)_102: -997845857
+      slime spritesheet calciumtrice (1)_46: -196965315
+      slime spritesheet calciumtrice (1)_3: -650773162
+      slime spritesheet calciumtrice (1)_12: -1484146983
+      slime spritesheet calciumtrice (1)_31: -2058722218
+      slime spritesheet calciumtrice (1)_169: 541258246
+      slime spritesheet calciumtrice (1)_17: 797028282
+      slime spritesheet calciumtrice (1)_1: 158016405
+      slime spritesheet calciumtrice (1)_115: 1194293077
+      slime spritesheet calciumtrice (1)_139: 225784594
+      slime spritesheet calciumtrice (1)_151: -1851767597
+      slime spritesheet calciumtrice (1)_26: -160329986
+      slime spritesheet calciumtrice (1)_112: 1572017197
+      slime spritesheet calciumtrice (1)_109: 569494812
+      slime spritesheet calciumtrice (1)_159: 1615301349
+      slime spritesheet calciumtrice (1)_33: 1281597711
+      slime spritesheet calciumtrice (1)_168: -1373452078
+      slime spritesheet calciumtrice (1)_195: -1130062005
+      slime spritesheet calciumtrice (1)_181: -1710608782
+      slime spritesheet calciumtrice (1)_61: -2009890011
+      slime spritesheet calciumtrice (1)_96: 1628185395
+      slime spritesheet calciumtrice (1)_92: 2057499771
+      slime spritesheet calciumtrice (1)_52: 130918503
+      slime spritesheet calciumtrice (1)_144: -36900742
+      slime spritesheet calciumtrice (1)_51: 314964916
+      slime spritesheet calciumtrice (1)_63: -1491130152
+      slime spritesheet calciumtrice (1)_75: 598768560
+      slime spritesheet calciumtrice (1)_160: 1658951517
+      slime spritesheet calciumtrice (1)_128: 712196800
+      slime spritesheet calciumtrice (1)_147: -96734145
+      slime spritesheet calciumtrice (1)_68: -1409877565
+      slime spritesheet calciumtrice (1)_42: -1270678972
+      slime spritesheet calciumtrice (1)_9: 194735491
+      slime spritesheet calciumtrice (1)_85: 1885821021
+      slime spritesheet calciumtrice (1)_28: -1808250733
+      slime spritesheet calciumtrice (1)_11: -1748361952
+      slime spritesheet calciumtrice (1)_177: 843094903
+      slime spritesheet calciumtrice (1)_14: 90658747
+      slime spritesheet calciumtrice (1)_37: -2138698205
+      slime spritesheet calciumtrice (1)_73: 1515944811
+      slime spritesheet calciumtrice (1)_152: -1903672311
+      slime spritesheet calciumtrice (1)_77: -1186634606
+      slime spritesheet calciumtrice (1)_40: -1019800851
+      slime spritesheet calciumtrice (1)_111: -341454145
+      slime spritesheet calciumtrice (1)_13: 948805930
+      slime spritesheet calciumtrice (1)_80: -157889432
+      slime spritesheet calciumtrice (1)_6: 1853960655
+      slime spritesheet calciumtrice (1)_22: 1351207392
+      slime spritesheet calciumtrice (1)_4: -532149404
+      slime spritesheet calciumtrice (1)_86: -901800818
+      slime spritesheet calciumtrice (1)_2: 1154177361
+      slime spritesheet calciumtrice (1)_18: -465778337
+      slime spritesheet calciumtrice (1)_45: 540489197
+      slime spritesheet calciumtrice (1)_24: -943975978
+      slime spritesheet calciumtrice (1)_88: -1295048978
+      slime spritesheet calciumtrice (1)_140: -1168141267
+      slime spritesheet calciumtrice (1)_194: 1508636917
+      slime spritesheet calciumtrice (1)_178: 1353258043
+      slime spritesheet calciumtrice (1)_101: -258969691
+      slime spritesheet calciumtrice (1)_64: -1259921542
+      slime spritesheet calciumtrice (1)_187: 759203616
+      slime spritesheet calciumtrice (1)_74: -120654867
+      slime spritesheet calciumtrice (1)_87: -854328144
+      slime spritesheet calciumtrice (1)_95: -1261305565
+      slime spritesheet calciumtrice (1)_104: -726192129
+      slime spritesheet calciumtrice (1)_118: -260894035
+      SLIME: -1179442458
+      slime spritesheet calciumtrice (1)_143: -361132160
+      slime spritesheet calciumtrice (1)_123: 153485334
+      slime spritesheet calciumtrice (1)_185: -874579143
+      slime spritesheet calciumtrice (1)_162: 491283525
+      slime spritesheet calciumtrice (1)_98: 1833700369
+      slime spritesheet calciumtrice (1)_79: 229023897
+      slime spritesheet calciumtrice (1)_158: 681841402
+      slime spritesheet calciumtrice (1)_90: 1499051025
+      slime spritesheet calciumtrice (1)_48: -1258793429
+      slime spritesheet calciumtrice (1)_97: -1365913343
+      slime spritesheet calciumtrice (1)_133: 1182411977
+      slime spritesheet calciumtrice (1)_103: 507635061
+      slime spritesheet calciumtrice (1)_113: -47544279
+      slime spritesheet calciumtrice (1)_122: 614380186
+      slime spritesheet calciumtrice (1)_184: 170659825
+      slime spritesheet calciumtrice (1)_167: 147510344
+      slime spritesheet calciumtrice (1)_119: 2065522787
+      slime spritesheet calciumtrice (1)_71: 1771503796
+      slime spritesheet calciumtrice (1)_10: -1524843590
+      slime spritesheet calciumtrice (1)_182: -1734005630
+      slime spritesheet calciumtrice (1)_35: -1624166245
+      slime spritesheet calciumtrice (1)_54: -1953727304
+      slime spritesheet calciumtrice (1)_134: 1967490237
+      slime spritesheet calciumtrice (1)_165: 874221219
+      slime spritesheet calciumtrice (1)_116: 1784430751
+      slime spritesheet calciumtrice (1)_114: 386690837
+      slime spritesheet calciumtrice (1)_43: 1400194821
+      slime spritesheet calciumtrice (1)_127: -1922773111
+      slime spritesheet calciumtrice (1)_191: -763338470
+      slime spritesheet calciumtrice (1)_16: 124016470
+      slime spritesheet calciumtrice (1)_91: 80739993
+      slime spritesheet calciumtrice (1)_164: -526822803
+      slime spritesheet calciumtrice (1)_142: -1311925640
+      slime spritesheet calciumtrice (1)_156: 173373461
+      slime spritesheet calciumtrice (1)_130: -1840474077
+      slime spritesheet calciumtrice (1)_126: -1934207221
+      slime spritesheet calciumtrice (1)_124: 1792836945
+      slime spritesheet calciumtrice (1)_34: -1886123966
+      slime spritesheet calciumtrice (1)_99: -728199496
+      slime spritesheet calciumtrice (1)_110: 1400038932
+      slime spritesheet calciumtrice (1)_72: -1314878155
+      slime spritesheet calciumtrice (1)_50: 264159646
+      slime spritesheet calciumtrice (1)_117: 442288431
+      slime spritesheet calciumtrice (1)_44: 1344072656
+      slime spritesheet calciumtrice (1)_49: -1161941972
+      slime spritesheet calciumtrice (1)_107: 365047058
+      slime spritesheet calciumtrice (1)_136: 1524904799
+      slime spritesheet calciumtrice (1)_157: 702758372
+      slime spritesheet calciumtrice (1)_192: -1500472596
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

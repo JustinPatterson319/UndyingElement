@@ -19,6 +19,44 @@ public class GameController : MonoBehaviour
 
     MenuController menuController;
 
+    public bool chest1 = false;
+    public bool chest2 = false;
+    public bool chest3 = false;
+    public bool chest4 = false;
+    public bool chest5 = false;
+    public bool chest6 = false;
+    public bool chest7 = false;
+    public bool chest8 = false;
+    public bool chest9 = false;
+    public bool chest10 = false;
+    public bool chest11 = false;
+    public bool chest12 = false;
+    public bool chest13 = false;
+    public bool chest14 = false;
+    public bool chest15 = false;
+    public bool chest16 = false;
+    public bool chest17 = false;
+    public bool chest18 = false;
+    public bool chest19 = false;
+    public bool chest20 = false;
+    public bool chest21 = false;
+    public bool chest22 = false;
+    public bool chest23 = false;
+    public bool chest24 = false;
+    public bool chest25 = false;
+
+    public bool button1 = false;
+    public bool button2 = false;
+    public bool button3 = false;
+    public bool button4 = false;
+    public bool button5 = false;
+    public bool button6 = false;
+    public bool button7 = false;
+    public bool button8 = false;
+    public bool button9 = false;
+    public bool button10 = false;
+    public bool button11 = false;
+
     public void Awake()
     {
         Instance = this;
@@ -26,15 +64,19 @@ public class GameController : MonoBehaviour
         menuController = GetComponent<MenuController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }
+}
 
+
+    Fader fader;
     private void Start()
     {
+        fader = FindObjectOfType<Fader>();
         battleSystem.OnBattleOver += EndBattle;
         partyScreen.Init();
 
         DialogManager.Instance.OnShowDialog += () =>
         {
+            previousState = state;
             state = GameState.Dialog;
         };
 
@@ -42,7 +84,7 @@ public class GameController : MonoBehaviour
         {
             if(state == GameState.Dialog)
             {
-                state = GameState.FreeRoam;
+                state = previousState;
             }
         };
 
@@ -70,13 +112,28 @@ public class GameController : MonoBehaviour
     public void StartBattle()
     {
         state = GameState.Battle;
+        
+        //StartCoroutine(FadeIn());
+
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
+
+        //StartCoroutine(FadeOut());
 
         var playerParty = playerController.GetComponent<PlayerParty>();
         var wildEncounter = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildEncounter();
 
         battleSystem.StartBattle(playerParty, wildEncounter);
+    }
+
+    public IEnumerator FadeIn()
+    {
+        yield return fader.FadeIn(2f);
+    }
+
+    public IEnumerator FadeOut()
+    {
+        yield return fader.FadeOut(2f);
     }
 
     BossController boss;

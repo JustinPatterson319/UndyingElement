@@ -504,7 +504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_19
+      name: WaterFace
       rect:
         serializedVersion: 2
         x: 48
@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_22
+      name: Light Face
       rect:
         serializedVersion: 2
         x: 192
@@ -1390,6 +1390,7 @@ TextureImporter:
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_48: 467001644
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_11: 171886192
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_36: 120582850
+      Light Face: 1111379457
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_27: 1183520557
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_41: -1043471442
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_21: 1659128705
@@ -1418,9 +1419,8 @@ TextureImporter:
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_29: -436890527
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_37: -1617189870
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_30: -1846226482
-      48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_19: -1246959385
-      48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_22: 1111379457
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_58: -853237302
+      WaterFace: -1246959385
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_3: 387567463
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_42: -2007776535
       48x48_Faces_3rd_Sheet_Update_CharlesGabriel_OGA_4: 1391750965

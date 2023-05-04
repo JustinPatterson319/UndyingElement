@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9368c1aef9bea243850010312da2cac, type: 3}
+  m_Name: Sword Throw (2) Tome
+  m_EditorClassIdentifier: 
+  name: Sword Throw (2) Tome
+  description: A book that teaches the user the Sword Throw (2) ability.
+  icon: {fileID: -376479489, guid: 450b827542103da4a995d1d9011b5945, type: 3}
+  move: {fileID: 11400000, guid: aa3e87b0f11537c409432c61f371ad60, type: 2}
+  isHM: 1

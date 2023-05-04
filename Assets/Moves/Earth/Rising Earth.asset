@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Rising Earth
   description: 'Slam the target with a risen fragment of the ground. '
   type: 7
-  power: 20
+  power: 25
   accuracy: 100
   alwaysHits: 0
   magCost: 8

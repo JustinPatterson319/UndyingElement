@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Table Soldier
+  m_EditorClassIdentifier: 
+  name: Table Soldier
+  description: 
+  battleSprite: {fileID: 2127375882, guid: 43fc04a1ade03e948b018fb4b4b1b63c, type: 3}
+  partySprite: {fileID: 0}
+  faceSprite: {fileID: 513498330, guid: 3922e71c5098f0048839f65393998642, type: 3}
+  elementSprite: {fileID: 1159573283, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: 0}
+  type: 2
+  hp: 70
+  mp: 70
+  regAttack: 70
+  magAttack: 70
+  regDefense: 70
+  magDefense: 70
+  speed: 70
+  expYield: 120
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 5ebae6b324895d14cbe5f3a3156dc849, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 997a2b8c1e2367a4ba710798f7a7ec61, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 675a1151362a0f24e8e2e11e4f51427d, type: 2}
+    level: 0

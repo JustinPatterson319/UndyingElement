@@ -16,9 +16,10 @@ MonoBehaviour:
   description: Kicks up a dust cloud and lowers the opponents accuracy.
   type: 7
   power: 0
-  accuracy: 95
+  accuracy: 85
   alwaysHits: 0
   magCost: 4
+  priority: 0
   attackAnimationName: Cloud
   attackColor: {r: 1, g: 0.5928961, b: 0.1462264, a: 0.69411767}
   attackSound: {fileID: 8300000, guid: 687a0403c4759df42866e601571ce5ac, type: 3}

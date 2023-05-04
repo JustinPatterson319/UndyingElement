@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 'Pierce a target with small shards of ice. '
   type: 6
   power: 25
-  accuracy: 95
+  accuracy: 100
   alwaysHits: 0
   magCost: 1
   priority: 0

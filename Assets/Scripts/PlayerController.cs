@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -13,8 +14,18 @@ public class PlayerController : MonoBehaviour
     
     private Characters characters;
 
+    GameObject forSounds;
+    [SerializeField] AudioClip cave;
+    [SerializeField] AudioClip town;
+    [SerializeField] AudioClip home;
+    [SerializeField] AudioClip woods;
+    [SerializeField] AudioClip boss;
+
+    Scene currentScene;
+    String sceneName;
+
     // Start is called before the first frame update
-   
+
     private void Awake()
     {
         characters = GetComponent<Characters>();
@@ -23,6 +34,85 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
+
+        //Disable music during battle
+        forSounds = (GameObject.Find("Battle"));
+        if (forSounds != null)
+        {
+            if (forSounds.activeSelf)
+            {
+                this.GetComponent<AudioSource>().enabled = false;
+            }
+        }
+        else
+        {
+            this.GetComponent<AudioSource>().enabled = true;
+        }
+
+        //Scene music
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        if (sceneName == "Town")
+        {
+            if (GetComponent<AudioSource>().clip != town)
+            {
+                GetComponent<AudioSource>().clip = town;
+                GetComponent<AudioSource>().pitch = 0.9f;
+                GetComponent<AudioSource>().volume = 0.1f;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        else if (sceneName == "Woods")
+        {
+            if (GetComponent<AudioSource>().clip != woods)
+            {
+                GetComponent<AudioSource>().clip = woods;
+                GetComponent<AudioSource>().pitch = 1f;
+                GetComponent<AudioSource>().volume = 0.15f;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        else if (sceneName == "House 1" || sceneName == "House 2" || sceneName == "House 3" || sceneName == "Starting Room" || sceneName == "Starting Room (Empty)" || sceneName == "Cave Room")
+        {
+            if (GetComponent<AudioSource>().clip != home)
+            {
+                GetComponent<AudioSource>().clip = home;
+                GetComponent<AudioSource>().pitch = 1f;
+                GetComponent<AudioSource>().volume = 0.15f;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        else if (sceneName == "Cave Floor 1" || sceneName == "Cave Floor 2" || sceneName == "Cave Floor 3" || sceneName == "Cave Room 2" || sceneName == "Cave Room 3")
+        {
+            if (GetComponent<AudioSource>().clip != cave)
+            {
+                GetComponent<AudioSource>().clip = cave;
+                GetComponent<AudioSource>().pitch = 0.77f;
+                GetComponent<AudioSource>().volume = 0.1f;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        else if (sceneName == "Boss Room" || sceneName == "Cave Treasure")
+        {
+            if (GetComponent<AudioSource>().clip != boss)
+            {
+                GetComponent<AudioSource>().clip = boss;
+                GetComponent<AudioSource>().pitch = .9f;
+                GetComponent<AudioSource>().volume = 0.3f;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+
+
     }
 
     // Update is called once per frame

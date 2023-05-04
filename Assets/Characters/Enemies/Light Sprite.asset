@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8ab6b407fb9dd4090393bf1d3a439b, type: 3}
+  m_Name: Light Sprite
+  m_EditorClassIdentifier: 
+  name: Light Sprite
+  description: 
+  battleSprite: {fileID: -1684899056, guid: 3ed34881b7a427f45aef0e304721dde2, type: 3}
+  partySprite: {fileID: 1111379457, guid: a81b35f48903c744aaee36d2a57869ae, type: 3}
+  faceSprite: {fileID: 1111379457, guid: a81b35f48903c744aaee36d2a57869ae, type: 3}
+  elementSprite: {fileID: 1929573058, guid: 3e64bb85b4a8a8743a3c7cbd74c9ba91, type: 3}
+  fleeSprite: {fileID: 0}
+  type: 10
+  hp: 50
+  mp: 70
+  regAttack: 50
+  magAttack: 65
+  regDefense: 55
+  magDefense: 55
+  speed: 90
+  expYield: 90
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: b38811614c68e894f842a3f21739f334, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 0cc02fac52805a64dadf23e672db5881, type: 2}
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 70a30834afeb5ce40a6f527f6fdee1f0, type: 2}
+    level: 0

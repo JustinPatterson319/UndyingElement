@@ -16,8 +16,10 @@ MonoBehaviour:
   description: 'Summons a poisonous cloud that inflicts the target with venom. '
   type: 5
   power: 0
-  accuracy: 100
+  accuracy: 80
+  alwaysHits: 0
   magCost: 2
+  priority: 0
   attackAnimationName: Cloud
   attackColor: {r: 0.9690631, g: 0.23113209, b: 1, a: 0.5882353}
   attackSound: {fileID: 8300000, guid: c1a4f21269a0a1348bb61764b79479a0, type: 3}
@@ -25,4 +27,5 @@ MonoBehaviour:
   effects:
     boosts: []
     status: 2
+  secondaryEffects: []
   target: 0

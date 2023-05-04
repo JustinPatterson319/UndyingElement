@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 'Pull from the cosmos to look into the mind of an opponent, greatly
     damaging them in the process. One of Grey''s ultimate attacks. '
   type: 4
-  power: 150
+  power: 100
   accuracy: 100
   alwaysHits: 0
   magCost: 20

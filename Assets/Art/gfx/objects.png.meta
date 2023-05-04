@@ -105,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: objects_0
+      name: ChestClosed
       rect:
         serializedVersion: 2
         x: 0
         y: 304
-        width: 15
+        width: 14
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -126,10 +126,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_1
+      name: ChestOpened
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 304
         width: 14
         height: 16
@@ -2142,13 +2142,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_97
+      name: Button
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 14
-        height: 31
+        y: 162
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2163,13 +2163,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_98
+      name: ButtonPressed
       rect:
         serializedVersion: 2
         x: 16
-        y: 160
-        width: 14
-        height: 31
+        y: 162
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3055,8 +3055,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      objects_127: -1299895322
       objects_118: -420765686
-      objects_98: 1156435964
       objects_84: -664311703
       objects_44: 236860418
       objects_45: 1549784211
@@ -3070,7 +3070,6 @@ TextureImporter:
       objects_41: -529707140
       objects_89: 1542792317
       objects_109: 1349471904
-      objects_20: -2058281357
       objects_3: 533857618
       objects_119: 517419480
       objects_18: -1751901383
@@ -3086,13 +3085,12 @@ TextureImporter:
       objects_135: -1267340323
       objects_23: -698188619
       objects_49: 2077263319
+      Exclamation: -194060552
       objects_5: 59045677
       objects_137: 1559009930
       objects_82: -1861771968
       objects_12: -1489444031
-      Exclamation: -194060552
       objects_65: 1324757249
-      objects_1: 495688752
       objects_35: -1670031902
       objects_9: 814219293
       objects_30: 1373574106
@@ -3118,9 +3116,9 @@ TextureImporter:
       objects_131: -1311346028
       objects_87: 1436816340
       objects_104: -1848440402
-      objects_107: -1030797755
-      objects_7: -562994686
       objects_80: -1296826403
+      objects_7: -562994686
+      objects_107: -1030797755
       objects_22: 1365456578
       objects_47: -2082849041
       objects_42: 1022094443
@@ -3129,14 +3127,15 @@ TextureImporter:
       objects_34: 1339187888
       objects_72: 663135225
       objects_26: 1999499724
-      objects_97: -1740814148
       objects_101: 105171009
       objects_63: 1316304504
+      ButtonPressed: 1156435964
       objects_74: -541494417
       objects_105: -1047823599
       objects_16: -1734669644
       objects_52: -624555503
       objects_66: -1580269562
+      ChestClosed: -1520811658
       objects_15: -335710479
       objects_31: 1304250901
       objects_136: 1738069130
@@ -3150,7 +3149,6 @@ TextureImporter:
       objects_29: -2017156700
       objects_126: -1002447977
       objects_67: 1561382232
-      objects_0: -1520811658
       objects_46: 1092106567
       objects_6: -137097800
       objects_51: 813367898
@@ -3159,6 +3157,7 @@ TextureImporter:
       objects_112: -49022924
       objects_40: -996407246
       objects_121: -102891601
+      ChestOpened: 495688752
       objects_139: -811592725
       objects_32: -786621447
       objects_27: -399828199
@@ -3187,13 +3186,14 @@ TextureImporter:
       objects_85: 999410674
       objects_60: 1096750523
       objects_108: 2056921539
+      Button: -1740814148
       objects_17: 759375809
       objects_68: -2011658984
       objects_111: 2058064801
       objects_61: -525842684
       objects_88: -969687790
       objects_4: -590885889
-      objects_127: -1299895322
+      objects_20: -2058281357
       objects_128: 712934016
   spritePackingTag: 
   pSDRemoveMatte: 0

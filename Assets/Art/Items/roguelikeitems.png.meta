@@ -714,7 +714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_29
+      name: Phoenix Band
       rect:
         serializedVersion: 2
         x: 48
@@ -3381,7 +3381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeitems_156
+      name: Cleanse Leaf
       rect:
         serializedVersion: 2
         x: 16
@@ -4203,6 +4203,7 @@ TextureImporter:
       roguelikeitems_8: 390086374
       Earth Crystal: -2092552007
       roguelikeitems_141: -2144720583
+      Cleanse Leaf: 226530147
       roguelikeitems_184: -1661316185
       roguelikeitems_50: -440119770
       roguelikeitems_37: 770782970
@@ -4229,9 +4230,9 @@ TextureImporter:
       roguelikeitems_143: 397173999
       Ice Crystal: -1648021348
       roguelikeitems_105: -514974114
-      roguelikeitems_53: -631769377
-      roguelikeitems_138: -948652354
       roguelikeitems_123: 1502607516
+      roguelikeitems_138: -948652354
+      roguelikeitems_53: -631769377
       roguelikeitems_137: 2106460114
       roguelikeitems_30: -1989301080
       roguelikeitems_32: -2021903731
@@ -4277,7 +4278,6 @@ TextureImporter:
       roguelikeitems_66: -605725712
       roguelikeitems_114: -65776084
       roguelikeitems_127: 485425970
-      roguelikeitems_156: 226530147
       roguelikeitems_124: 546489712
       roguelikeitems_139: -1685204755
       roguelikeitems_115: 555700983
@@ -4300,6 +4300,7 @@ TextureImporter:
       roguelikeitems_26: -1191447952
       roguelikeitems_57: 2016601306
       roguelikeitems_45: -230731072
+      Phoenix Band: 723002696
       roguelikeitems_87: -1063422383
       roguelikeitems_144: 1454411342
       roguelikeitems_10: -1079437876
@@ -4359,7 +4360,6 @@ TextureImporter:
       roguelikeitems_7: 2016429282
       roguelikeitems_89: -1725256156
       Nature Crystal: 1144999010
-      roguelikeitems_29: 723002696
       roguelikeitems_155: 1756235563
   spritePackingTag: 
   pSDRemoveMatte: 0

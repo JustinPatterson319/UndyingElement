@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_22
+      name: Archer Face
       rect:
         serializedVersion: 2
         x: 192
@@ -1126,6 +1126,7 @@ TextureImporter:
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_46: 1011511454
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_24: -1145476327
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_20: 1042406147
+      Archer Face: -1793008091
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_13: -2115486871
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_23: 373742605
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_34: -2120671386
@@ -1139,7 +1140,6 @@ TextureImporter:
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_35: -55056451
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_29: 430101155
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_2: -225819366
-      48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_22: -1793008091
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_0: 1226330405
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_10: -443009568
       48x48_Faces_1st_Sheet_Update_CharlesGabriel_OGA (1)_32: 652766169
